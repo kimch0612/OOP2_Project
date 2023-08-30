@@ -12,8 +12,10 @@
 To be added.
 
 ## 구현해야 할 기능
-- [ ] To be added.
-- [x] To be added.
+- [X] README.md 파일 작성
+- [ ] 베이스 파일 작성
+- [ ] 메인 기능 구현
+  - [ ] To be added.
 
 ## 주차별 활동내역
 - 1주차
