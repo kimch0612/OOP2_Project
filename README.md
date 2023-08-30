@@ -8,5 +8,8 @@
 | Compiler | g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0 |
 | IDE | Code-Server (VSCode) v4.16.1 |
 
+## 빌드 및 실행방법
+To be added.
+
 ## 주차별 활동내역
 - 1주차: 조원 결성 및 개발 예정작 결정; Yacht Dice Board Game <br />
