@@ -16,4 +16,7 @@ To be added.
 - [x] To be added.
 
 ## 주차별 활동내역
-- 1주차: 조원 결성 및 개발 예정작 결정; Yacht Dice Board Game <br />
+- 1주차
+  - 조원 결성
+  - 개발 예정작 결정; Yacht Dice Board Game
+  - Project Repository create && initialize
