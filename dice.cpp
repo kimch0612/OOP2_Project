@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <time.h>
+#include "yacht.h"
 
 int dice_gen(void)
 {

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "yacht.h"
 
 using namespace std;
