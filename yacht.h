@@ -1,8 +1,10 @@
 #ifndef YACHT_H
 #define YACHT_H
 #include <iostream>
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
+#include <unistd.h>
+using namespace std;
 int dice_gen();
 char score_section();
 char dice_section();

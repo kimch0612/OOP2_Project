@@ -2,8 +2,6 @@
 
 int dice_gen(void)
 {
-    int i;
-    srand(time(NULL));
-    i = (random() % 6) + 1;
-    return i;
+    srand((unsigned int)time(NULL));
+    return (random() % 6) + 1;
 }
