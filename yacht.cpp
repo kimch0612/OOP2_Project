@@ -1,7 +1,9 @@
 #include <iostream>
+#include "yacht.h"
 
 using namespace std;
 int main(void)
 {
-    cout << "Hello World!" << endl;
+    int i = dice_gen();
+    cout << i << endl;
 }
