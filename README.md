@@ -34,3 +34,7 @@ To be added.
   - 조원 결성
   - 개발 예정작 결정; Yacht Dice Board Game
   - Project Repository create && initialize
+- 2주차
+  - 팀명 결정
+  - 대략적인 스케쥴 계획 수립
+  - UI 컨셉 결정
