@@ -5,7 +5,7 @@
 |:---|:---|
 | OS | Windows 11 22H2 22621.2283 |
 | Architecture | amd64 |
-| Compiler | To be added. |
+| Compiler | Developer Command Prompt for VS 2022 |
 | IDE | Visual Studio 2022 |
 
 ## 빌드 및 실행방법
