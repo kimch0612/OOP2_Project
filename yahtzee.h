@@ -1,9 +1,9 @@
-#ifndef YACHT_H
-#define YACHT_H
+#ifndef YAHTZEE_H
+#define YAHTZEE_H
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <unistd.h>
+#include <windows.h>
 using namespace std;
 int dice_gen();
 char score_section();

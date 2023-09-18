@@ -127,7 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="dice.cpp" />
+    <ClCompile Include="ui.cpp" />
     <ClCompile Include="Yahtzee Dice.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="yahtzee.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
