@@ -20,6 +20,8 @@ private slots:
 
     void on_exitbutton_clicked();
 
+    void on_creditsbutton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

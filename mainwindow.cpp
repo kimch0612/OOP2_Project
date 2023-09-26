@@ -21,6 +21,7 @@ void MainWindow::on_startbutton_clicked()
     ui->gamestart->setVisible(false);
     ui->startbutton->setVisible(false);
     ui->howtobutton->setVisible(false);
+    ui->creditsbutton->setVisible(false);
     ui->exitbutton->setVisible(false);
     ui->playingplayer->setText("Player 1 is now Playing...");
 }
@@ -29,5 +30,16 @@ void MainWindow::on_startbutton_clicked()
 void MainWindow::on_exitbutton_clicked()
 {
     QCoreApplication::exit(0);
+}
+
+
+void MainWindow::on_creditsbutton_clicked()
+{
+    ui->gamestart->setVisible(false);
+    ui->startbutton->setVisible(false);
+    ui->howtobutton->setVisible(false);
+    ui->creditsbutton->setVisible(false);
+    ui->exitbutton->setVisible(false);
+    ui->playingplayer->setText("이 프로그램에 사용한 Open Source / Copyleft Source");
 }
 
