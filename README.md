@@ -5,8 +5,8 @@
 |:---|:---|
 | OS | Windows 11 22H2 22621.2283 |
 | Architecture | amd64 |
-| Compiler | Developer Command Prompt for VS 2022 |
-| IDE | Visual Studio 2022 |
+| Compiler | Desktop Qt 6.5.2 MinGW 64-bit |
+| IDE | Qt Creator 11.0.2 && Code-Server (VSCode) |
 
 ## 빌드 및 실행방법
 To be added.
@@ -46,3 +46,5 @@ To be added.
   - 이후의 일정 계획 수립
   - 프로그램 동작 관련 Flow Chart 구성
   - (개발 로그) Windows에서 더 안정적인 실행을 위해 개발 환경을 변경함; Ubuntu Server -> Windows 11
+- 4주차
+  - (개발 로그) 더 안정적인 GUI 대응을 위해 최종적으로 개발 환경을 VS2022에서 Qt Creator로 변경함.
