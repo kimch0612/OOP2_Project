@@ -9,7 +9,8 @@
 | IDE | Qt Creator 11.0.2 && Code-Server (VSCode) |
 
 ## 빌드 및 실행방법
-To be added.
+- CMakeLists.txt 파일을 Qt Creator IDE로 실행합니다.
+- 디버깅 모드로 빌드 및 실행합니다.
 
 ## To do list
 구현하는데 있어서 더 높은 우선순위를 갖는 기능을 각 메뉴에서 더 상위에 위치하게끔 작성함.
