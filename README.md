@@ -8,6 +8,17 @@
 | Compiler | Desktop Qt 6.5.2 MinGW 64-bit |
 | IDE | Qt Creator 11.0.2 && Code-Server (VSCode) |
 
+## 폴더 구조
+
+    
+    ├── CMakeLists                   # 빌드환경을 위한 빌드 파일을 생성하는 유틸리티입니다.
+    ├── CMakeLists.txt.user          # 빌드환경을 위한 빌드 파일을 생성하는 유틸리티입니다.
+    ├── main.cpp                     # 이 프로그램의 메인 C++ 파일로, GUI를 불러오는 역할을 합니다.
+    ├── mainwindow.cpp               # 이 프로그램의 주 C++ 파일로, 프로그램의 구성 및 동작에 필요한 코드가 여기에 있습니다.
+    ├── mainwindow.h                 # 이 프로그램에서 사용된 함수나 기타 기능들이 정의돼있습니다.
+    ├── mainwindow.ui                # 이 프로그램의 GUI 관련 코드가 이곳에 있습니다.
+    └── README.md                    # 마크다운 문법으로 작성된 프로그램의 소개 페이지입니다.
+
 ## 빌드 및 실행방법
 - CMakeLists.txt 파일을 Qt Creator IDE로 실행합니다.
 - 디버깅 모드로 빌드 및 실행합니다.
