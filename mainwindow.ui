@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>872</width>
-    <height>487</height>
+    <height>471</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,32 +20,130 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
+      <x>2</x>
+      <y>-7</y>
       <width>236</width>
-      <height>41</height>
+      <height>58</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="score_title">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>|           Score            |</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>4</x>
+      <y>10</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>______________________________</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>-14</y>
+      <width>221</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>______________________________</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="score_title">
+    <property name="geometry">
+     <rect>
+      <x>2</x>
+      <y>2</y>
+      <width>234</width>
+      <height>56</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>|           Score            |</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="score_title_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>3</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Yahtzee Dice Board Game</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>26</y>
+      <width>21</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>13</pointsize>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;｜&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
