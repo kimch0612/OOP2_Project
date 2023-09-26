@@ -15,3 +15,19 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_startbutton_clicked()
+{
+    ui->gamestart->setVisible(false);
+    ui->startbutton->setVisible(false);
+    ui->howtobutton->setVisible(false);
+    ui->exitbutton->setVisible(false);
+    ui->playingplayer->setText("Player 1 is now Playing...");
+}
+
+
+void MainWindow::on_exitbutton_clicked()
+{
+    QCoreApplication::exit(0);
+}
+
