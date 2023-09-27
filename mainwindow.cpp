@@ -23,7 +23,7 @@ void MainWindow::on_startbutton_clicked()
     ui->howtobutton->setVisible(false);
     ui->creditsbutton->setVisible(false);
     ui->exitbutton->setVisible(false);
-    ui->playingplayer->setText("Player 1 is now Playing...");
+    ui->playingplayer->setText("Player 1 is in control...");
 }
 
 
