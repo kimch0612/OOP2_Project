@@ -659,6 +659,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -722,6 +725,9 @@
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string/>
@@ -1066,7 +1072,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_27">
+   <widget class="QLabel" name="totalone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -1075,14 +1081,17 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_28">
+   <widget class="QLabel" name="totaltwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -1091,11 +1100,368 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="oneonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>68</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="twoonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>93</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="threeonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>118</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fiveonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>168</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sixonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>192</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fouronebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>143</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bonusonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>216</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="choiceonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>252</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sstraightonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>340</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fkindonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>290</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="yahtzeeonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>388</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lstraightonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>364</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fullhouseonebutton">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>315</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fkindtwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>290</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fivetwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>168</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lstraighttwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>364</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="twotwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>93</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sstraighttwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>340</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="threetwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>118</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bonustwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>216</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fullhousetwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>315</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sixtwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>192</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fourtwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>143</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="choicetwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>252</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="onetwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>68</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="yahtzeetwobutton">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>388</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>✓</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backbutton">
+    <property name="geometry">
+     <rect>
+      <x>507</x>
+      <y>390</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 82, 83);</string>
+    </property>
+    <property name="text">
+     <string>back</string>
     </property>
    </widget>
   </widget>

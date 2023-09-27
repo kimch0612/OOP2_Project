@@ -22,6 +22,10 @@ private slots:
 
     void on_creditsbutton_clicked();
 
+    void on_oneonebutton_clicked();
+
+    void on_backbutton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
