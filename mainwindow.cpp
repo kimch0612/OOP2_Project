@@ -1,3 +1,4 @@
+#include "functions.h"
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
@@ -68,6 +69,7 @@ void MainWindow::on_startbutton_clicked()
     ui -> yahtzeeonebutton -> setVisible(true);
     ui -> totalone -> setVisible(true);
     ui -> totaltwo -> setVisible(true);
+    ui -> lefttime -> setText("3 left");
 }
 
 
