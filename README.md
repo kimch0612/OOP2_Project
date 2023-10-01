@@ -67,3 +67,6 @@
 - 4주차
   - 더 안정적인 GUI 대응을 위해 최종적으로 개발 환경을 VS2022에서 Qt Creator로 변경함.
   - Base UI 제작
+- 5주차
+  - Base UI 확정
+  - 기본 기능중 일부의 pipeline을 GUI에 연결함
