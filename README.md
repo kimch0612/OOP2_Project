@@ -1,5 +1,5 @@
-# 객체지향프로그래밍2 팀 프로젝트 Repository - Yahtzee Dice 게임
-
+# Object-oriented Programming Project - Yahtzee Dice
+### /// 스크린샷 추가 예정 ///
 ## 개발 환경
 | Type | Content |
 |:---|:---|
@@ -54,6 +54,7 @@
 ## 예상되는 문제점
 - Base UI의 크기를 유저가 임의로 조정했을때?
 - 개발할때 기준으로 잡은 해상도(1920x1080)보다 크거나 작은 환경에서 구동했을때?
+- 초저사양 환경에서 구동했을때?
 
 ## 주차별 활동내역
 - 1주차
