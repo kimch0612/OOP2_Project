@@ -1,5 +1,10 @@
 #include "functions.h"
 
+int user_score:: sum digit(int digit)
+{
+    
+}
+
 int dice_gen(void)
 {
     srand((unsigned int)time(NULL));
