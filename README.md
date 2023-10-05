@@ -75,6 +75,8 @@
 - 5주차
   - Base UI 확정 및 구현
   - 기본 기능중 일부의 pipeline을 GUI에 연결함
+    
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/52907e87-6091-471b-8469-c19200f601a2)
 - 6주차 
   - README.md 파일을 더 자세하게 작성함
   - 주사위 관련 icon을 제작함
