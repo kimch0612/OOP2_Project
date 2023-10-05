@@ -9,8 +9,8 @@
 | IDE | Qt Creator 11.0.2 && Code-Server (VSCode) |
 
 ## 폴더 구조
-
-    (중요하지 않은 파일은 미기재함)              
+     
+    ├── (중요하지 않은 파일은 미기재함) 
     ├── CMakeLists.txt               # 프로젝트를 빌드하기 위해 필요한 파일로써 프로젝트의 구조 등이 기재돼있습니다.
     ├── dict.cpp                     # C++와 GUI간의 더 원할한 소통을 위해 Object Name을 dictionary형으로 선언돼있습니다.
     ├── functions.cpp                # 이 프로그램에서 백엔드와 같은 역할을 담당했습니다.
