@@ -1,6 +1,6 @@
 #include "functions.h"
 
-int user_score:: sum digit(int digit)
+int user_score:: sum_digit(int digit)
 {
     
 }

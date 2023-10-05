@@ -16,5 +16,5 @@ public:
     int one, two, three, four, five, six;
     int chance, fourkind;
     int sum_digit(int digit);
-}
+};
 #endif
