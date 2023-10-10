@@ -81,3 +81,6 @@
   - README.md 파일을 더 자세하게 작성함
   - 주사위 관련 icon을 제작함
   - 이미지 경로를 절대경로에서 상대경로로 수정함 (resources.qrc)
+ 
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/53a0978a-86c5-43c6-afe1-a7fec2b7fa15)
+
