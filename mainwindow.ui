@@ -1701,6 +1701,22 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>300</y>
+      <width>50</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>oneone_4</zorder>
    <zorder>threeonebutton</zorder>
    <zorder>verticalLayoutWidget</zorder>
@@ -1799,6 +1815,7 @@
    <zorder>keep4</zorder>
    <zorder>keep5</zorder>
    <zorder>hourglass</zorder>
+   <zorder>label</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

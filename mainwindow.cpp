@@ -380,5 +380,12 @@ void MainWindow::refresh_dice()
 
 void MainWindow::on_reroll_clicked()
 {
-    refresh_dice();
+    ui -> label -> setText("asdf");
+//    QPixmap blank(":/dice/images/blank.png");
+//    ui -> diceone -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
+//    ui -> dicetwo -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
+//    ui -> dicethree -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
+//    ui -> dicefour -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
+//    ui -> dicefive -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
+//    refresh_dice();
 }
