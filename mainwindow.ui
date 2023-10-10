@@ -1188,19 +1188,6 @@
      <string>✓</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="bonusonebutton">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>216</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>✓</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="choiceonebutton">
     <property name="geometry">
      <rect>
@@ -1349,19 +1336,6 @@
      <rect>
       <x>177</x>
       <y>118</y>
-      <width>16</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>✓</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="bonustwobutton">
-    <property name="geometry">
-     <rect>
-      <x>177</x>
-      <y>216</y>
       <width>16</width>
       <height>16</height>
      </rect>
@@ -1611,6 +1585,203 @@
      <string>↺</string>
     </property>
    </widget>
+   <widget class="QLabel" name="creditone">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>100</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="keep2">
+    <property name="geometry">
+     <rect>
+      <x>461</x>
+      <y>171</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>keep</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="keep3">
+    <property name="geometry">
+     <rect>
+      <x>541</x>
+      <y>171</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>keep</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="keep4">
+    <property name="geometry">
+     <rect>
+      <x>621</x>
+      <y>171</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>keep</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="keep5">
+    <property name="geometry">
+     <rect>
+      <x>701</x>
+      <y>171</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>keep</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <zorder>oneone_4</zorder>
+   <zorder>threeonebutton</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>barline2</zorder>
+   <zorder>barline1</zorder>
+   <zorder>score_title</zorder>
+   <zorder>title</zorder>
+   <zorder>virticalline</zorder>
+   <zorder>startbutton</zorder>
+   <zorder>gamestart</zorder>
+   <zorder>howtobutton</zorder>
+   <zorder>creditsbutton</zorder>
+   <zorder>player</zorder>
+   <zorder>onetitle</zorder>
+   <zorder>twotitle</zorder>
+   <zorder>threetitle</zorder>
+   <zorder>fourtitle</zorder>
+   <zorder>fivetitle</zorder>
+   <zorder>sixtitle</zorder>
+   <zorder>bonustitle</zorder>
+   <zorder>barline2_2</zorder>
+   <zorder>choicetitle</zorder>
+   <zorder>barline2_3</zorder>
+   <zorder>kind4title</zorder>
+   <zorder>fullhousetitle</zorder>
+   <zorder>sstraighttitle</zorder>
+   <zorder>lstraighttititle</zorder>
+   <zorder>yahtzeetitle</zorder>
+   <zorder>barline2_4</zorder>
+   <zorder>totaltitle</zorder>
+   <zorder>playingplayer</zorder>
+   <zorder>exitbutton</zorder>
+   <zorder>oneone</zorder>
+   <zorder>oneone_2</zorder>
+   <zorder>oneone_3</zorder>
+   <zorder>oneone_5</zorder>
+   <zorder>oneone_6</zorder>
+   <zorder>oneone_7</zorder>
+   <zorder>oneone_8</zorder>
+   <zorder>oneone_9</zorder>
+   <zorder>oneone_10</zorder>
+   <zorder>oneone_11</zorder>
+   <zorder>oneone_12</zorder>
+   <zorder>oneone_13</zorder>
+   <zorder>oneone_14</zorder>
+   <zorder>oneone_15</zorder>
+   <zorder>oneone_16</zorder>
+   <zorder>oneone_17</zorder>
+   <zorder>oneone_18</zorder>
+   <zorder>oneone_19</zorder>
+   <zorder>oneone_20</zorder>
+   <zorder>oneone_21</zorder>
+   <zorder>oneone_22</zorder>
+   <zorder>oneone_23</zorder>
+   <zorder>oneone_24</zorder>
+   <zorder>oneone_25</zorder>
+   <zorder>oneone_26</zorder>
+   <zorder>totalone</zorder>
+   <zorder>totaltwo</zorder>
+   <zorder>oneonebutton</zorder>
+   <zorder>twoonebutton</zorder>
+   <zorder>fiveonebutton</zorder>
+   <zorder>sixonebutton</zorder>
+   <zorder>fouronebutton</zorder>
+   <zorder>choiceonebutton</zorder>
+   <zorder>sstraightonebutton</zorder>
+   <zorder>fkindonebutton</zorder>
+   <zorder>yahtzeeonebutton</zorder>
+   <zorder>lstraightonebutton</zorder>
+   <zorder>fullhouseonebutton</zorder>
+   <zorder>fkindtwobutton</zorder>
+   <zorder>fivetwobutton</zorder>
+   <zorder>lstraighttwobutton</zorder>
+   <zorder>twotwobutton</zorder>
+   <zorder>sstraighttwobutton</zorder>
+   <zorder>threetwobutton</zorder>
+   <zorder>fullhousetwobutton</zorder>
+   <zorder>sixtwobutton</zorder>
+   <zorder>fourtwobutton</zorder>
+   <zorder>choicetwobutton</zorder>
+   <zorder>onetwobutton</zorder>
+   <zorder>yahtzeetwobutton</zorder>
+   <zorder>backbutton</zorder>
+   <zorder>lefttime</zorder>
+   <zorder>test</zorder>
+   <zorder>test_2</zorder>
+   <zorder>test_3</zorder>
+   <zorder>test_4</zorder>
+   <zorder>test_5</zorder>
+   <zorder>category</zorder>
+   <zorder>keep1</zorder>
+   <zorder>reroll</zorder>
+   <zorder>creditone</zorder>
+   <zorder>keep2</zorder>
+   <zorder>keep3</zorder>
+   <zorder>keep4</zorder>
+   <zorder>keep5</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

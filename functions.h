@@ -5,6 +5,7 @@
 #include <ctime>
 #include <map>
 #include <QPixmap>
+#include <list>
 #include <windows.h>
 using namespace std;
 int dice_gen();
