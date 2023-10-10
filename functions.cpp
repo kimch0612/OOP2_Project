@@ -8,6 +8,7 @@ int user_score:: sum_digit(int digit)
 int dice_gen(void)
 {
     srand((unsigned int)time(NULL));
+    Sleep(1000);
     return (rand() % 6) + 1;
 }
 

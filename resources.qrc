@@ -9,5 +9,6 @@
         <file>images/six.png</file>
         <file>images/three.png</file>
         <file>images/two.png</file>
+		<file>images/hourglass.png</file>
     </qresource>
 </RCC>

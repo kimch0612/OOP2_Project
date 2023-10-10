@@ -1454,7 +1454,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="test">
+   <widget class="QLabel" name="diceone">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -1470,7 +1470,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="test_2">
+   <widget class="QLabel" name="dicetwo">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -1486,7 +1486,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="test_3">
+   <widget class="QLabel" name="dicethree">
     <property name="geometry">
      <rect>
       <x>530</x>
@@ -1502,7 +1502,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="test_4">
+   <widget class="QLabel" name="dicefour">
     <property name="geometry">
      <rect>
       <x>610</x>
@@ -1518,7 +1518,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="test_5">
+   <widget class="QLabel" name="dicefive">
     <property name="geometry">
      <rect>
       <x>690</x>
@@ -1685,6 +1685,22 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="hourglass">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>130</y>
+      <width>61</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>oneone_4</zorder>
    <zorder>threeonebutton</zorder>
    <zorder>verticalLayoutWidget</zorder>
@@ -1769,11 +1785,11 @@
    <zorder>yahtzeetwobutton</zorder>
    <zorder>backbutton</zorder>
    <zorder>lefttime</zorder>
-   <zorder>test</zorder>
-   <zorder>test_2</zorder>
-   <zorder>test_3</zorder>
-   <zorder>test_4</zorder>
-   <zorder>test_5</zorder>
+   <zorder>diceone</zorder>
+   <zorder>dicetwo</zorder>
+   <zorder>dicethree</zorder>
+   <zorder>dicefour</zorder>
+   <zorder>dicefive</zorder>
    <zorder>category</zorder>
    <zorder>keep1</zorder>
    <zorder>reroll</zorder>
@@ -1782,6 +1798,7 @@
    <zorder>keep3</zorder>
    <zorder>keep4</zorder>
    <zorder>keep5</zorder>
+   <zorder>hourglass</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

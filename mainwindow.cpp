@@ -3,7 +3,6 @@
 #include "./ui_mainwindow.h"
 
 int turn=0;
-list<int> dice_int(6);
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -91,20 +90,10 @@ void MainWindow::on_startbutton_clicked()
     else if (turn % 2 == 0)
         ui->playingplayer->setText("Player 2 is in control...");
 
+    refresh_dice();
+
     ui -> lefttime -> setText("3 left");
-
-    QPixmap pix_one(":/dice/images/one.png");
-    QPixmap pix_two(":/dice/images/two.png");
-    QPixmap pix_three(":/dice/images/three.png");
-    QPixmap pix_four(":/dice/images/four.png");
-    QPixmap pix_five(":/dice/images/five.png");
-    ui -> test -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-    ui -> test_2 -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-    ui -> test_3 -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-    ui -> test_4 -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-    ui -> test_5 -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
     ui -> category -> setText("← Choose category");
-
 }
 
 
@@ -313,3 +302,83 @@ void MainWindow::on_yahtzeetwobutton_clicked()
     ui -> oneone -> setText("0");
 }
 
+void MainWindow::refresh_dice()
+{
+    int i, dice[6];
+
+    for (i=0; i < 5; i++)
+        dice[i] = dice_gen();
+
+    QPixmap pix_one(":/dice/images/one.png");
+    QPixmap pix_two(":/dice/images/two.png");
+    QPixmap pix_three(":/dice/images/three.png");
+    QPixmap pix_four(":/dice/images/four.png");
+    QPixmap pix_five(":/dice/images/five.png");
+    QPixmap pix_six(":/dice/images/six.png");
+
+    if (dice[0] == 1)
+        ui -> diceone -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[0] == 2)
+        ui -> diceone -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[0] == 3)
+        ui -> diceone -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[0] == 4)
+        ui -> diceone -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[0] == 5)
+        ui -> diceone -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[0] == 6)
+        ui -> diceone -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+    if (dice[1] == 1)
+        ui -> dicetwo -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[1] == 2)
+        ui -> dicetwo -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[1] == 3)
+        ui -> dicetwo -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[1] == 4)
+        ui -> dicetwo -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[1] == 5)
+        ui -> dicetwo -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[1] == 6)
+        ui -> dicetwo -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+    if (dice[2] == 1)
+        ui -> dicethree -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[2] == 2)
+        ui -> dicethree -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[2] == 3)
+        ui -> dicethree -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[2] == 4)
+        ui -> dicethree -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[2] == 5)
+        ui -> dicethree -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[2] == 6)
+        ui -> dicethree -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+    if (dice[3] == 1)
+        ui -> dicefour -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[3] == 2)
+        ui -> dicefour -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[3] == 3)
+        ui -> dicefour -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[3] == 4)
+        ui -> dicefour -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[3] == 5)
+        ui -> dicefour -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[3] == 6)
+        ui -> dicefour -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+    if (dice[4] == 1)
+        ui -> dicefive -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[4] == 2)
+        ui -> dicefive -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[4] == 3)
+        ui -> dicefive -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[4] == 4)
+        ui -> dicefive -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[4] == 5)
+        ui -> dicefive -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
+    else if (dice[4] == 6)
+        ui -> dicefive -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+}
+
+void MainWindow::on_reroll_clicked()
+{
+    refresh_dice();
+}

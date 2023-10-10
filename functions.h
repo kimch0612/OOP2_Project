@@ -6,6 +6,7 @@
 #include <map>
 #include <QPixmap>
 #include <list>
+#include <string>
 #include <windows.h>
 using namespace std;
 int dice_gen();
