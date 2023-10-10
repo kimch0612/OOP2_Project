@@ -87,4 +87,10 @@
   - 이미지 경로를 절대경로에서 상대경로로 수정함 (resources.qrc)
  
 ![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/53a0978a-86c5-43c6-afe1-a7fec2b7fa15)
+- 7주차
+  - 랜덤으로 나온 숫자를 다이스 아이콘과 매칭함
+  - Player 1, 2 관련 Label 업데이트
+
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/bd8c1281-bfbb-4a8b-b125-19d37dc7b962)
+
 
