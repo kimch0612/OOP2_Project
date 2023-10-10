@@ -90,7 +90,8 @@
 - 7주차
   - 랜덤으로 나온 숫자를 다이스 아이콘과 매칭함
   - Player 1, 2 관련 Label 업데이트
+  - credit 작성
 
-![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/bd8c1281-bfbb-4a8b-b125-19d37dc7b962)
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/3b50de8f-02d0-4f9c-aec6-1bf28112e2d5)
 
 
