@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <map>
+#include <QPixmap>
 #include <windows.h>
 using namespace std;
 int dice_gen();
