@@ -8,6 +8,7 @@
 #include <list>
 #include <string>
 #include <windows.h>
+#include <random>
 using namespace std;
 int dice_gen();
 char score_section();

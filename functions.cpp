@@ -7,9 +7,10 @@ int user_score:: sum_digit(int digit)
 
 int dice_gen(void)
 {
-    srand((unsigned int)time(NULL));
-    Sleep(1000);
-    return (rand() % 6) + 1;
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dis(1, 6);
+    return dis(gen)
 }
 
 void reset_dice(int *index, char **reroll_flag)
