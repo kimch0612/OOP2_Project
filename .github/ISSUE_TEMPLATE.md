@@ -8,8 +8,7 @@
 
 ### Example (Please Delete when Open Issue)
 > ## Summary
-> - CAU Meal Function is not working properly
+> - 특정 Object가 동작하지 않는 조건을 찾았습니다.
 >
 > ## Description
-> - CAU Meal Function does not return any data
-> - It seems like to be related to SSL Version
+> - exit버튼을 누르고 esc로 취소하면 a object가 작동하지 않는 것을 확인했습니다.
