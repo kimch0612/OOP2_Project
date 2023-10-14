@@ -45,6 +45,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui -> keep3 -> setVisible(false);
     ui -> keep4 -> setVisible(false);
     ui -> keep5 -> setVisible(false);
+    ui -> backbutton -> setVisible(true);
+    ui -> creditone -> setText("<a href=\"https://www.pngwing.com/en/free-png-sptdk/\">Program Title icon</a>");
+    ui -> creditone -> setTextFormat(Qt::RichText);
+    ui -> creditone -> setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ui -> creditone -> setOpenExternalLinks(true);
+    ui -> creditone -> setVisible(false);
+    ui -> backbutton -> setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -105,17 +112,14 @@ void MainWindow::on_exitbutton_clicked()
 
 void MainWindow::on_creditsbutton_clicked()
 {
+    ui->playingplayer->setText("이 프로그램에 사용한 Open Source / Copyleft Source");
     ui->gamestart->setVisible(false);
     ui->startbutton->setVisible(false);
     ui->howtobutton->setVisible(false);
     ui->creditsbutton->setVisible(false);
     ui->exitbutton->setVisible(false);
-    ui->playingplayer->setText("이 프로그램에 사용한 Open Source / Copyleft Source");
+    ui -> creditone -> setVisible(true);
     ui -> backbutton -> setVisible(true);
-    ui -> creditone -> setText("<a href=\"https://www.pngwing.com/en/free-png-sptdk/\">Program Title icon</a>");
-    ui -> creditone -> setTextFormat(Qt::RichText);
-    ui -> creditone -> setTextInteractionFlags(Qt::TextBrowserInteraction);
-    ui -> creditone -> setOpenExternalLinks(true);
 }
 
 void MainWindow::on_backbutton_clicked()
