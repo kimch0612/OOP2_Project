@@ -86,6 +86,7 @@
   - Player 1, 2 관련 Label 업데이트
   - credit 작성
   - [Issue #3 해결](https://github.com/kimch0612/OOP2_Project/issues/3)
+  - [Issue #5 해결](https://github.com/kimch0612/OOP2_Project/issues/5)
   
 ![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/3b50de8f-02d0-4f9c-aec6-1bf28112e2d5)
 
