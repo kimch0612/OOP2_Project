@@ -103,6 +103,7 @@ void MainWindow::on_startbutton_clicked()
     ui -> category -> setText("← Choose category");
 }
 
+
 void MainWindow::on_exitbutton_clicked()
 {
     QCoreApplication::exit(0);
@@ -135,14 +136,13 @@ void MainWindow::on_backbutton_clicked()
 
 void MainWindow::on_oneonebutton_clicked()
 {
-    refresh_dice();
-//    ui -> oneonebutton -> setVisible(false);
-//    ui -> oneone -> setText("0");
-//    turn++;
-//    if (turn % 2 == 1)
-//        ui->playingplayer->setText("Player 1 is in control...");
-//    else if (turn % 2 == 0)
-//        ui->playingplayer->setText("Player 2 is in control...");
+    ui -> oneonebutton -> setVisible(false);
+    ui -> oneone -> setText("0");
+    turn++;
+    if (turn % 2 == 1)
+        ui->playingplayer->setText("Player 1 is in control...");
+    else if (turn % 2 == 0)
+        ui->playingplayer->setText("Player 2 is in control...");
 }
 
 
@@ -382,8 +382,8 @@ void MainWindow::refresh_dice()
         ui -> dicefive -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
 }
 
-void MainWindow::on_reroll_clicked()
+void MainWindow::on_pushButton_clicked()
 {
-    refresh_dice();
+
 }
 
