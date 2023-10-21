@@ -1,4 +1,4 @@
-# Yahtzee Dice 플레이 방법
+# Yahtzee Dice Manual
 
 ## 게임을 플레이하기 위한 최소사양
 - To be added.
