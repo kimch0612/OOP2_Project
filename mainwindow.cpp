@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-int turn=0;
+int turn=0, current_turn=3;
 user_score usr1;
 user_score usr2;
 
@@ -527,9 +527,16 @@ void MainWindow::refresh_dice()
 
 void MainWindow::on_reroll_clicked()
 {
-    refresh_dice();
+    if (current_turn > 0)
+    {
+        string temp;
+        refresh_dice();
+        current_turn--;
+        temp = to_string(current_turn) + " left";
+        QString lefttime_qstr = QString::fromStdString(temp);
+        ui -> lefttime -> setText(lefttime_qstr);
+    }
 }
-
 
 void MainWindow::on_keep1b_clicked()
 {
