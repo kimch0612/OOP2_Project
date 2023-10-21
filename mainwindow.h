@@ -62,6 +62,8 @@ private slots:
 
     void on_keep5b_clicked();
 
+    void on_howtobutton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

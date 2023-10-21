@@ -9,6 +9,7 @@
 #include <string>
 #include <windows.h>
 #include <random>
+#include <QDesktopServices>
 using namespace std;
 int dice_gen();
 char score_section();

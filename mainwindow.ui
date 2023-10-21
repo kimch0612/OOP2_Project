@@ -198,7 +198,7 @@
      <string notr="true">background-color: rgb(82, 83, 84);</string>
     </property>
     <property name="text">
-     <string>how to?</string>
+     <string>manual</string>
     </property>
    </widget>
    <widget class="QPushButton" name="creditsbutton">

@@ -612,3 +612,9 @@ void MainWindow::on_keep5b_clicked()
     }
 }
 
+
+void MainWindow::on_howtobutton_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/kimch0612/OOP2_Project/blob/master/manual.md", QUrl::TolerantMode));
+}
+
