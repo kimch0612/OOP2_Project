@@ -101,6 +101,7 @@
   - 버튼의 label 변경(Start -> start)
   - 게임 Window의 Size를 고정하는 기능 구현
   - 게임의 Score 기록 기능 구현
+  - Score의 Bonus 기능 구현
 
 ![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/e35fbd01-c04e-4618-8618-df0d61c0f6b2)
 ![week8](https://github.com/kimch0612/OOP2_Project/assets/10193967/cca95522-ac45-4e19-a980-ad5529deec23)
