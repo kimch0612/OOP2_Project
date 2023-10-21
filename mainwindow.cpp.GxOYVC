@@ -685,18 +685,18 @@ void MainWindow::refresh_player_button()
         ui -> lstraightonebutton -> setVisible(false);
         ui -> yahtzeeonebutton -> setVisible(false);
 
-        ui -> onetwobutton -> setVisible(true);
-        ui -> twotwobutton -> setVisible(true);
-        ui -> threetwobutton -> setVisible(true);
-        ui -> fourtwobutton -> setVisible(true);
-        ui -> fivetwobutton -> setVisible(true);
-        ui -> sixtwobutton -> setVisible(true);
-        ui -> choicetwobutton -> setVisible(true);
-        ui -> fkindtwobutton -> setVisible(true);
-        ui -> fullhousetwobutton -> setVisible(true);
-        ui -> sstraighttwobutton -> setVisible(true);
-        ui -> lstraighttwobutton -> setVisible(true);
-        ui -> yahtzeetwobutton -> setVisible(true);
+        ui -> onetwobutton -> setVisible(false);
+        ui -> twotwobutton -> setVisible(false);
+        ui -> threetwobutton -> setVisible(false);
+        ui -> fourtwobutton -> setVisible(false);
+        ui -> fivetwobutton -> setVisible(false);
+        ui -> sixtwobutton -> setVisible(false);
+        ui -> choicetwobutton -> setVisible(false);
+        ui -> fkindtwobutton -> setVisible(false);
+        ui -> fullhousetwobutton -> setVisible(false);
+        ui -> sstraighttwobutton -> setVisible(false);
+        ui -> lstraighttwobutton -> setVisible(false);
+        ui -> yahtzeetwobutton -> setVisible(false);
     }
 }
 

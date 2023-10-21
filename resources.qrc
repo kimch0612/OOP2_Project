@@ -3,13 +3,12 @@
         <file>images/icon.png</file>
     </qresource>
     <qresource prefix="/dice">
-		<file>images/blank.png</file>
+        <file>images/blank.png</file>
         <file>images/five.png</file>
         <file>images/four.png</file>
         <file>images/one.png</file>
         <file>images/six.png</file>
         <file>images/three.png</file>
         <file>images/two.png</file>
-		<file>images/hourglass.png</file>
     </qresource>
 </RCC>

@@ -47,6 +47,9 @@ private slots:
     void on_yahtzeetwobutton_clicked();
     void init_dice();
     void refresh_dice();
+    void set_next_turn();
+    void refresh_keep();
+    void refresh_player_button();
 
     void on_reroll_clicked();
 

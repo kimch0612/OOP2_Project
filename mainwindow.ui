@@ -685,7 +685,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_3">
+   <widget class="QLabel" name="twoone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -701,7 +701,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_4">
+   <widget class="QLabel" name="threeone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -710,6 +710,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -717,7 +720,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_5">
+   <widget class="QLabel" name="fourone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -736,7 +739,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_6">
+   <widget class="QLabel" name="fiveone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -745,6 +748,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -752,7 +758,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_7">
+   <widget class="QLabel" name="sixone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -761,6 +767,9 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
      <string/>
     </property>
@@ -768,7 +777,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_8">
+   <widget class="QLabel" name="bonusone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -1669,22 +1678,6 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="hourglass">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>130</y>
-      <width>61</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -1779,7 +1772,7 @@
      <string>✓</string>
     </property>
    </widget>
-   <zorder>oneone_4</zorder>
+   <zorder>threeone</zorder>
    <zorder>threeonebutton</zorder>
    <zorder>verticalLayoutWidget</zorder>
    <zorder>barline2</zorder>
@@ -1813,11 +1806,11 @@
    <zorder>exitbutton</zorder>
    <zorder>oneone</zorder>
    <zorder>oneone_2</zorder>
-   <zorder>oneone_3</zorder>
-   <zorder>oneone_5</zorder>
-   <zorder>oneone_6</zorder>
-   <zorder>oneone_7</zorder>
-   <zorder>oneone_8</zorder>
+   <zorder>twoone</zorder>
+   <zorder>fourone</zorder>
+   <zorder>fiveone</zorder>
+   <zorder>sixone</zorder>
+   <zorder>bonusone</zorder>
    <zorder>oneone_9</zorder>
    <zorder>oneone_10</zorder>
    <zorder>oneone_11</zorder>
@@ -1875,7 +1868,6 @@
    <zorder>keep3</zorder>
    <zorder>keep4</zorder>
    <zorder>keep5</zorder>
-   <zorder>hourglass</zorder>
    <zorder>label</zorder>
    <zorder>reroll</zorder>
    <zorder>keep1b</zorder>

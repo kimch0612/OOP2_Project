@@ -158,8 +158,6 @@ void MainWindow::set_next_turn()
     QString lefttime_qstr = QString::fromStdString(temp);
     ui -> lefttime -> setText(lefttime_qstr);
     init_dice();
-    refresh_keep();
-    refresh_player_button();
 }
 
 void MainWindow::on_oneonebutton_clicked()
@@ -253,23 +251,14 @@ void MainWindow::on_fouronebutton_clicked()
 
 
 void MainWindow::on_fiveonebutton_clicked()
-{
-    int score, all;
+{    int score;
 
     if (turn % 2 == 1)
-    {
         score = usr1.sum_digit(5, turn, usr1, usr2);
-        all = usr1.all;
-    }
     else
-    {
         score = usr2.sum_digit(5, turn, usr1, usr2);
-        all = usr2.all;
-    }
     QString text_qstr = QString::fromStdString(to_string(score));
-    QString all_qstr = QString::fromStdString(to_string(all));
     ui -> fiveone -> setText(text_qstr);
-    ui -> totalone -> setText(all_qstr);
     ui -> fiveonebutton -> setVisible(false);
     set_next_turn();
 }
@@ -277,22 +266,14 @@ void MainWindow::on_fiveonebutton_clicked()
 
 void MainWindow::on_sixonebutton_clicked()
 {
-    int score, all;
+    int score;
 
     if (turn % 2 == 1)
-    {
         score = usr1.sum_digit(6, turn, usr1, usr2);
-        all = usr1.all;
-    }
     else
-    {
         score = usr2.sum_digit(6, turn, usr1, usr2);
-        all = usr2.all;
-    }
     QString text_qstr = QString::fromStdString(to_string(score));
-    QString all_qstr = QString::fromStdString(to_string(all));
     ui -> sixone -> setText(text_qstr);
-    ui -> totalone -> setText(all_qstr);
     ui -> sixonebutton -> setVisible(false);
     set_next_turn();
 }
@@ -638,66 +619,6 @@ void MainWindow::refresh_keep()
     ui -> keep4b -> setVisible(true);
     ui -> keep5 -> setText("");
     ui -> keep5b -> setVisible(true);
-}
-
-void MainWindow::refresh_player_button()
-{
-    if (turn % 2 == 1)
-    {
-        ui -> onetwobutton -> setVisible(false);
-        ui -> twotwobutton -> setVisible(false);
-        ui -> threetwobutton -> setVisible(false);
-        ui -> fourtwobutton -> setVisible(false);
-        ui -> fivetwobutton -> setVisible(false);
-        ui -> sixtwobutton -> setVisible(false);
-        ui -> choicetwobutton -> setVisible(false);
-        ui -> fkindtwobutton -> setVisible(false);
-        ui -> fullhousetwobutton -> setVisible(false);
-        ui -> sstraighttwobutton -> setVisible(false);
-        ui -> lstraighttwobutton -> setVisible(false);
-        ui -> yahtzeetwobutton -> setVisible(false);
-
-        ui -> oneonebutton -> setVisible(true);
-        ui -> twoonebutton -> setVisible(true);
-        ui -> threeonebutton -> setVisible(true);
-        ui -> fouronebutton -> setVisible(true);
-        ui -> fiveonebutton -> setVisible(true);
-        ui -> sixonebutton -> setVisible(true);
-        ui -> choiceonebutton -> setVisible(true);
-        ui -> fkindonebutton -> setVisible(true);
-        ui -> fullhouseonebutton -> setVisible(true);
-        ui -> sstraightonebutton -> setVisible(true);
-        ui -> lstraightonebutton -> setVisible(true);
-        ui -> yahtzeeonebutton -> setVisible(true);
-    }
-    else
-    {
-        ui -> oneonebutton -> setVisible(false);
-        ui -> twoonebutton -> setVisible(false);
-        ui -> threeonebutton -> setVisible(false);
-        ui -> fouronebutton -> setVisible(false);
-        ui -> fiveonebutton -> setVisible(false);
-        ui -> sixonebutton -> setVisible(false);
-        ui -> choiceonebutton -> setVisible(false);
-        ui -> fkindonebutton -> setVisible(false);
-        ui -> fullhouseonebutton -> setVisible(false);
-        ui -> sstraightonebutton -> setVisible(false);
-        ui -> lstraightonebutton -> setVisible(false);
-        ui -> yahtzeeonebutton -> setVisible(false);
-
-        ui -> onetwobutton -> setVisible(true);
-        ui -> twotwobutton -> setVisible(true);
-        ui -> threetwobutton -> setVisible(true);
-        ui -> fourtwobutton -> setVisible(true);
-        ui -> fivetwobutton -> setVisible(true);
-        ui -> sixtwobutton -> setVisible(true);
-        ui -> choicetwobutton -> setVisible(true);
-        ui -> fkindtwobutton -> setVisible(true);
-        ui -> fullhousetwobutton -> setVisible(true);
-        ui -> sstraighttwobutton -> setVisible(true);
-        ui -> lstraighttwobutton -> setVisible(true);
-        ui -> yahtzeetwobutton -> setVisible(true);
-    }
 }
 
 void MainWindow::on_keep1b_clicked()

@@ -1,8 +1,132 @@
 #include "functions.h"
 
-int user_score:: sum_digit(int digit)
+int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_score& usr2)
 {
-    
+    int temp = 0;
+    switch(flag)
+    {
+        case 1:
+            if (current_turn % 2 == 1)
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr1.current_dice[i] == 1)
+                        temp += usr1.current_dice[i];
+                }
+                usr1.all += temp;
+            }
+            else
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr2.current_dice[i] == 1)
+                        temp += usr2.current_dice[i];
+                }
+                usr2.all += temp;
+            }
+            break;
+        case 2:
+            if (current_turn % 2 == 1)
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr1.current_dice[i] == 2)
+                        temp += usr1.current_dice[i];
+                }
+                usr1.all += temp;
+            }
+            else
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr2.current_dice[i] == 2)
+                        temp += usr2.current_dice[i];
+                }
+                usr2.all += temp;
+            }
+            break;
+        case 3:
+            if (current_turn % 2 == 1)
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr1.current_dice[i] == 3)
+                        temp += usr1.current_dice[i];
+                }
+                usr1.all += temp;
+            }
+            else
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr2.current_dice[i] == 3)
+                        temp += usr2.current_dice[i];
+                }
+                usr2.all += temp;
+            }
+            break;
+        case 4:
+            if (current_turn % 2 == 1)
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr1.current_dice[i] == 4)
+                        temp += usr1.current_dice[i];
+                }
+                usr1.all += temp;
+            }
+            else
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr2.current_dice[i] == 4)
+                        temp += usr2.current_dice[i];
+                }
+                usr2.all += temp;
+            }
+            break;
+        case 5:
+            if (current_turn % 2 == 1)
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr1.current_dice[i] == 5)
+                        temp += usr1.current_dice[i];
+                }
+                usr1.all += temp;
+            }
+            else
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr2.current_dice[i] == 5)
+                        temp += usr2.current_dice[i];
+                }
+                usr2.all += temp;
+            }
+            break;
+        case 6:
+            if (current_turn % 2 == 1)
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr1.current_dice[i] == 6)
+                        temp += usr1.current_dice[i];
+                }
+                usr1.all += temp;
+            }
+            else
+            {
+                for (int i=0; i<5; i++)
+                {
+                    if (usr2.current_dice[i] == 6)
+                        temp += usr2.current_dice[i];
+                }
+                usr2.all += temp;
+            }
+            break;
+    }
+    return temp;
 }
 
 int dice_gen(void)
