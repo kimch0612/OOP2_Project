@@ -20,5 +20,7 @@ public:
     int one, two, three, four, five, six;
     int chance, fourkind;
     int sum_digit(int digit);
+    int current_dice[5];
+    string check_keep[5] = {"0", "0", "0", "0", "0"};
 };
 #endif

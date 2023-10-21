@@ -45,11 +45,22 @@ private slots:
     void on_sstraighttwobutton_clicked();
     void on_lstraighttwobutton_clicked();
     void on_yahtzeetwobutton_clicked();
+    void init_dice();
     void refresh_dice();
 
     void on_reroll_clicked();
 
     void on_pushButton_clicked();
+
+    void on_keep1b_clicked();
+
+    void on_keep2b_clicked();
+
+    void on_keep3b_clicked();
+
+    void on_keep4b_clicked();
+
+    void on_keep5b_clicked();
 
 private:
     Ui::MainWindow *ui;

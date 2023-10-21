@@ -393,13 +393,6 @@ void MainWindow::init_dice()
         ui -> dicefive -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
     else if (dice[4] == 6)
         ui -> dicefive -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-    for (int i=0; i<5; i++)
-    {
-        if (turn % 2 == 1)
-            usr1.current_dice[i] = dice[i];
-        else
-            usr2.current_dice[i] = dice[i];
-    }
 }
 
 void MainWindow::refresh_dice()
@@ -412,8 +405,6 @@ void MainWindow::refresh_dice()
         {
             if (usr1.check_keep[i] != "1")
                 dice[i] = dice_gen();
-            else
-                dice[i] = usr1.current_dice[i];
         }
     }
     else
@@ -422,8 +413,6 @@ void MainWindow::refresh_dice()
         {
             if (usr2.check_keep[i] != "1")
                 dice[i] = dice_gen();
-            else
-                dice[i] = usr2.current_dice[i];
         }
     }
 
@@ -515,13 +504,6 @@ void MainWindow::refresh_dice()
                 break;
             }
         }
-    }
-    for (i=0; i<5; i++)
-    {
-        if (turn % 2 == 1)
-            usr1.current_dice[i] = dice[i];
-        else
-            usr2.current_dice[i] = dice[i];
     }
 }
 
