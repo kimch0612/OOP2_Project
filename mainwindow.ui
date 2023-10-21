@@ -1111,9 +1111,9 @@
    <widget class="QLabel" name="totalone">
     <property name="geometry">
      <rect>
-      <x>120</x>
+      <x>113</x>
       <y>423</y>
-      <width>16</width>
+      <width>31</width>
       <height>16</height>
      </rect>
     </property>
@@ -1130,9 +1130,9 @@
    <widget class="QLabel" name="totaltwo">
     <property name="geometry">
      <rect>
-      <x>177</x>
+      <x>170</x>
       <y>423</y>
-      <width>16</width>
+      <width>31</width>
       <height>16</height>
      </rect>
     </property>
@@ -1825,6 +1825,19 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>310</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cheat</string>
+    </property>
+   </widget>
    <zorder>threeone</zorder>
    <zorder>threeonebutton</zorder>
    <zorder>verticalLayoutWidget</zorder>
@@ -1930,6 +1943,7 @@
    <zorder>keep5b</zorder>
    <zorder>bonusonebutton</zorder>
    <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

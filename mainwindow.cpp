@@ -163,6 +163,22 @@ void MainWindow::set_next_turn()
             usr1.check_keep[i] = "0";
             usr1.current_dice[i] = 0;
         }
+        if (usr2.digits == 6 || usr2.bonus >= 63)
+        {
+            if (usr2.bonus >= 63)
+            {
+                ui -> bonustwo -> setText("✓");
+                usr2.all += 35;
+                QString all_qstr = QString::fromStdString(to_string(usr2.all));
+                ui -> totaltwo -> setText(all_qstr);
+                usr2.digits = 0;
+            }
+            else
+            {
+                ui -> bonustwo -> setText("X");
+                usr2.digits = 0;
+            }
+        }
     }
     else if (turn % 2 == 0)
     {
@@ -171,6 +187,22 @@ void MainWindow::set_next_turn()
         {
             usr2.check_keep[i] = "0";
             usr2.current_dice[i] = 0;
+        }
+        if (usr1.digits == 6 || usr1.bonus >= 63)
+        {
+            if (usr1.bonus >= 63)
+            {
+                usr1.all += 35;
+                ui -> bonusone -> setText("✓");
+                QString all_qstr = QString::fromStdString(to_string(usr1.all));
+                ui -> totalone -> setText(all_qstr);
+                usr1.digits = 0;
+            }
+            else
+            {
+                ui -> bonusone -> setText("X");
+                usr1.digits = 0;
+            }
         }
     }
     current_turn = 3;
@@ -900,5 +932,11 @@ void MainWindow::on_bonusonebutton_clicked()
 void MainWindow::on_pushButton_clicked()
 {
 
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    refresh_dice();
 }
 

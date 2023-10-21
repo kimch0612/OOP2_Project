@@ -13,6 +13,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr1.current_dice[i] == 1)
                         temp += usr1.current_dice[i];
                 }
+                usr1.digits++;
                 usr1.all += temp;
                 usr1.bonus += temp;
             }
@@ -23,6 +24,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr2.current_dice[i] == 1)
                         temp += usr2.current_dice[i];
                 }
+                usr2.digits++;
                 usr2.all += temp;
                 usr2.bonus += temp;
             }
@@ -35,6 +37,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr1.current_dice[i] == 2)
                         temp += usr1.current_dice[i];
                 }
+                usr1.digits++;
                 usr1.all += temp;
                 usr1.bonus += temp;
             }
@@ -45,6 +48,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr2.current_dice[i] == 2)
                         temp += usr2.current_dice[i];
                 }
+                usr2.digits++;
                 usr2.all += temp;
                 usr2.bonus += temp;
             }
@@ -57,6 +61,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr1.current_dice[i] == 3)
                         temp += usr1.current_dice[i];
                 }
+                usr1.digits++;
                 usr1.all += temp;
                 usr1.bonus += temp;
             }
@@ -67,6 +72,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr2.current_dice[i] == 3)
                         temp += usr2.current_dice[i];
                 }
+                usr2.digits++;
                 usr2.all += temp;
                 usr2.bonus += temp;
             }
@@ -79,6 +85,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr1.current_dice[i] == 4)
                         temp += usr1.current_dice[i];
                 }
+                usr1.digits++;
                 usr1.all += temp;
                 usr1.bonus += temp;
             }
@@ -89,6 +96,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr2.current_dice[i] == 4)
                         temp += usr2.current_dice[i];
                 }
+                usr2.digits++;
                 usr2.all += temp;
                 usr2.bonus += temp;
             }
@@ -101,6 +109,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr1.current_dice[i] == 5)
                         temp += usr1.current_dice[i];
                 }
+                usr1.digits++;
                 usr1.all += temp;
                 usr1.bonus += temp;
             }
@@ -111,6 +120,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr2.current_dice[i] == 5)
                         temp += usr2.current_dice[i];
                 }
+                usr2.digits++;
                 usr2.all += temp;
                 usr2.bonus += temp;
             }
@@ -123,6 +133,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr1.current_dice[i] == 6)
                         temp += usr1.current_dice[i];
                 }
+                usr1.digits++;
                 usr1.all += temp;
                 usr1.bonus += temp;
             }
@@ -133,9 +144,13 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     if (usr2.current_dice[i] == 6)
                         temp += usr2.current_dice[i];
                 }
+                usr2.digits++;
                 usr2.all += temp;
                 usr2.bonus += temp;
             }
+            break;
+        case 7:
+            all += 35;
             break;
     }
     return temp;
