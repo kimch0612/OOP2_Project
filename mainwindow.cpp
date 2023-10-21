@@ -103,7 +103,6 @@ void MainWindow::on_startbutton_clicked()
     ui -> category -> setText("← Choose category");
 }
 
-
 void MainWindow::on_exitbutton_clicked()
 {
     QCoreApplication::exit(0);
@@ -136,13 +135,14 @@ void MainWindow::on_backbutton_clicked()
 
 void MainWindow::on_oneonebutton_clicked()
 {
-    ui -> oneonebutton -> setVisible(false);
-    ui -> oneone -> setText("0");
-    turn++;
-    if (turn % 2 == 1)
-        ui->playingplayer->setText("Player 1 is in control...");
-    else if (turn % 2 == 0)
-        ui->playingplayer->setText("Player 2 is in control...");
+    refresh_dice();
+//    ui -> oneonebutton -> setVisible(false);
+//    ui -> oneone -> setText("0");
+//    turn++;
+//    if (turn % 2 == 1)
+//        ui->playingplayer->setText("Player 1 is in control...");
+//    else if (turn % 2 == 0)
+//        ui->playingplayer->setText("Player 2 is in control...");
 }
 
 
@@ -384,12 +384,6 @@ void MainWindow::refresh_dice()
 
 void MainWindow::on_reroll_clicked()
 {
-    ui -> label -> setText("asdf");
-//    QPixmap blank(":/dice/images/blank.png");
-//    ui -> diceone -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
-//    ui -> dicetwo -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
-//    ui -> dicethree -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
-//    ui -> dicefour -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
-//    ui -> dicefive -> setPixmap(blank.scaled(50, 50, Qt::KeepAspectRatio));
-//    refresh_dice();
+    refresh_dice();
 }
+
