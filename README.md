@@ -96,5 +96,7 @@
   - 주사위의 HOLD 기능 구현
   - 주사위의 REROLL 기능 구현
   - 게임의 TURN 기능 구현
+  - 게임의 MANUAL 기능 구현
+  - 버튼의 label 변경(how to? -> manual)
 
-![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/4ee08761-eb04-4d95-81f8-a98eb3281e7f)
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/e35fbd01-c04e-4618-8618-df0d61c0f6b2)
