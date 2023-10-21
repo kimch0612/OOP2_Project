@@ -24,6 +24,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr2.current_dice[i];
                 }
                 usr2.all += temp;
+                usr2.bonus += temp;
             }
             break;
         case 2:
@@ -45,6 +46,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr2.current_dice[i];
                 }
                 usr2.all += temp;
+                usr2.bonus += temp;
             }
             break;
         case 3:
@@ -66,6 +68,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr2.current_dice[i];
                 }
                 usr2.all += temp;
+                usr2.bonus += temp;
             }
             break;
         case 4:
@@ -87,6 +90,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr2.current_dice[i];
                 }
                 usr2.all += temp;
+                usr2.bonus += temp;
             }
             break;
         case 5:
@@ -108,6 +112,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr2.current_dice[i];
                 }
                 usr2.all += temp;
+                usr2.bonus += temp;
             }
             break;
         case 6:
@@ -129,6 +134,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr2.current_dice[i];
                 }
                 usr2.all += temp;
+                usr2.bonus += temp;
             }
             break;
     }

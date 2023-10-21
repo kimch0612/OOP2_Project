@@ -156,9 +156,23 @@ void MainWindow::set_next_turn()
     string temp;
     turn++;
     if (turn % 2 == 1)
+    {
         ui->playingplayer->setText("Player 1 is in control...");
+        for (int i=0; i<5; i++)
+        {
+            usr1.check_keep[i] = "0";
+            usr1.current_dice[i] = 0;
+        }
+    }
     else if (turn % 2 == 0)
+    {
         ui->playingplayer->setText("Player 2 is in control...");
+        for (int i=0; i<5; i++)
+        {
+            usr2.check_keep[i] = "0";
+            usr2.current_dice[i] = 0;
+        }
+    }
     current_turn = 3;
     temp = to_string(current_turn) + " left";
     QString lefttime_qstr = QString::fromStdString(temp);
@@ -172,18 +186,11 @@ void MainWindow::on_oneonebutton_clicked()
 {
     int score, all, bonus;
 
-    if (turn % 2 == 1)
-    {
-        score = usr1.sum_digit(1, turn, usr1, usr2);
-        all = usr1.all;
-        bonus = usr1.bonus;
-    }
-    else
-    {
-        score = usr2.sum_digit(1, turn, usr1, usr2);
-        all = usr2.all;
-        bonus = usr2.bonus;
-    }
+    score = usr1.sum_digit(1, turn, usr1, usr2);
+    all = usr1.all;
+    bonus = usr1.bonus;
+    usr1.blank_flag[0] = 1;
+
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     QString bonus_qstr = QString::fromStdString(to_string(bonus));
@@ -198,18 +205,11 @@ void MainWindow::on_twoonebutton_clicked()
 {
     int score, all, bonus;
 
-    if (turn % 2 == 1)
-    {
-        score = usr1.sum_digit(2, turn, usr1, usr2);
-        all = usr1.all;
-        bonus = usr1.bonus;
-    }
-    else
-    {
-        score = usr2.sum_digit(2, turn, usr1, usr2);
-        all = usr2.all;
-        bonus = usr2.bonus;
-    }
+    score = usr1.sum_digit(2, turn, usr1, usr2);
+    all = usr1.all;
+    bonus = usr1.bonus;
+    usr1.blank_flag[1] = 1;
+
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     QString bonus_qstr = QString::fromStdString(to_string(bonus));
@@ -224,18 +224,11 @@ void MainWindow::on_threeonebutton_clicked()
 {
     int score, all, bonus;
 
-    if (turn % 2 == 1)
-    {
-        score = usr1.sum_digit(3, turn, usr1, usr2);
-        all = usr1.all;
-        bonus = usr1.bonus;
-    }
-    else
-    {
-        score = usr2.sum_digit(3, turn, usr1, usr2);
-        all = usr2.all;
-        bonus = usr2.bonus;
-    }
+    score = usr1.sum_digit(3, turn, usr1, usr2);
+    all = usr1.all;
+    bonus = usr1.bonus;
+    usr1.blank_flag[2] = 1;
+
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     QString bonus_qstr = QString::fromStdString(to_string(bonus));
@@ -251,18 +244,11 @@ void MainWindow::on_fouronebutton_clicked()
 {
     int score, all, bonus;
 
-    if (turn % 2 == 1)
-    {
-        score = usr1.sum_digit(4, turn, usr1, usr2);
-        all = usr1.all;
-        bonus = usr1.bonus;
-    }
-    else
-    {
-        score = usr2.sum_digit(4, turn, usr1, usr2);
-        all = usr2.all;
-        bonus = usr2.bonus;
-    }
+    score = usr1.sum_digit(4, turn, usr1, usr2);
+    all = usr1.all;
+    bonus = usr1.bonus;
+    usr1.blank_flag[3] = 1;
+
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     QString bonus_qstr = QString::fromStdString(to_string(bonus));
@@ -278,18 +264,11 @@ void MainWindow::on_fiveonebutton_clicked()
 {
     int score, all, bonus;
 
-    if (turn % 2 == 1)
-    {
-        score = usr1.sum_digit(5, turn, usr1, usr2);
-        all = usr1.all;
-        bonus = usr1.bonus;
-    }
-    else
-    {
-        score = usr2.sum_digit(5, turn, usr1, usr2);
-        all = usr2.all;
-        bonus = usr2.bonus;
-    }
+    score = usr1.sum_digit(5, turn, usr1, usr2);
+    all = usr1.all;
+    bonus = usr1.bonus;
+    usr1.blank_flag[4] = 1;
+
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     QString bonus_qstr = QString::fromStdString(to_string(bonus));
@@ -305,18 +284,11 @@ void MainWindow::on_sixonebutton_clicked()
 {
     int score, all, bonus;
 
-    if (turn % 2 == 1)
-    {
-        score = usr1.sum_digit(6, turn, usr1, usr2);
-        all = usr1.all;
-        bonus = usr1.bonus;
-    }
-    else
-    {
-        score = usr2.sum_digit(6, turn, usr1, usr2);
-        all = usr2.all;
-        bonus = usr2.bonus;
-    }
+    score = usr1.sum_digit(6, turn, usr1, usr2);
+    all = usr1.all;
+    bonus = usr1.bonus;
+    usr1.blank_flag[5] = 1;
+
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     QString bonus_qstr = QString::fromStdString(to_string(bonus));
@@ -366,36 +338,120 @@ void MainWindow::on_yahtzeeonebutton_clicked()
 
 void MainWindow::on_onetwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(1, turn, usr1, usr2);
+    all = usr2.all;
+    bonus = usr2.bonus;
+    usr2.blank_flag[0] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    ui -> onetwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    ui -> bonustwo -> setText(bonus_qstr);
     ui -> onetwobutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_twotwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(2, turn, usr1, usr2);
+    all = usr2.all;
+    bonus = usr2.bonus;
+    usr2.blank_flag[1] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    ui -> twotwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    ui -> bonustwo -> setText(bonus_qstr);
     ui -> twotwobutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_threetwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(3, turn, usr1, usr2);
+    all = usr2.all;
+    bonus = usr2.bonus;
+    usr2.blank_flag[2] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    ui -> threetwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    ui -> bonustwo -> setText(bonus_qstr);
+    set_next_turn();
     ui -> threetwobutton -> setVisible(false);
 }
 
 
 void MainWindow::on_fourtwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(4, turn, usr1, usr2);
+    all = usr2.all;
+    bonus = usr2.bonus;
+    usr2.blank_flag[3] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    ui -> fourtwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    ui -> bonustwo -> setText(bonus_qstr);
+    set_next_turn();
     ui -> fourtwobutton -> setVisible(false);
 }
 
 
 void MainWindow::on_fivetwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(5, turn, usr1, usr2);
+    all = usr2.all;
+    bonus = usr2.bonus;
+    usr2.blank_flag[4] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    ui -> fivetwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    ui -> bonustwo -> setText(bonus_qstr);
+    set_next_turn();
     ui -> fivetwobutton -> setVisible(false);
 }
 
 
 void MainWindow::on_sixtwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(6, turn, usr1, usr2);
+    all = usr2.all;
+    bonus = usr2.bonus;
+    usr2.blank_flag[5] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    ui -> sixtwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    ui -> bonustwo -> setText(bonus_qstr);
+    set_next_turn();
     ui -> sixtwobutton -> setVisible(false);
 }
 
@@ -687,18 +743,30 @@ void MainWindow::refresh_player_button()
         ui -> lstraighttwobutton -> setVisible(false);
         ui -> yahtzeetwobutton -> setVisible(false);
 
-        ui -> oneonebutton -> setVisible(true);
-        ui -> twoonebutton -> setVisible(true);
-        ui -> threeonebutton -> setVisible(true);
-        ui -> fouronebutton -> setVisible(true);
-        ui -> fiveonebutton -> setVisible(true);
-        ui -> sixonebutton -> setVisible(true);
-        ui -> choiceonebutton -> setVisible(true);
-        ui -> fkindonebutton -> setVisible(true);
-        ui -> fullhouseonebutton -> setVisible(true);
-        ui -> sstraightonebutton -> setVisible(true);
-        ui -> lstraightonebutton -> setVisible(true);
-        ui -> yahtzeeonebutton -> setVisible(true);
+        if (usr1.blank_flag[0] != 1)
+            ui -> oneonebutton -> setVisible(true);
+        if (usr1.blank_flag[1] != 1)
+            ui -> twoonebutton -> setVisible(true);
+        if (usr1.blank_flag[2] != 1)
+            ui -> threeonebutton -> setVisible(true);
+        if (usr1.blank_flag[3] != 1)
+            ui -> fouronebutton -> setVisible(true);
+        if (usr1.blank_flag[4] != 1)
+            ui -> fiveonebutton -> setVisible(true);
+        if (usr1.blank_flag[5] != 1)
+            ui -> sixonebutton -> setVisible(true);
+        if (usr1.blank_flag[6] != 1)
+            ui -> choiceonebutton -> setVisible(true);
+        if (usr1.blank_flag[7] != 1)
+            ui -> fkindonebutton -> setVisible(true);
+        if (usr1.blank_flag[8] != 1)
+            ui -> fullhouseonebutton -> setVisible(true);
+        if (usr1.blank_flag[9] != 1)
+            ui -> sstraightonebutton -> setVisible(true);
+        if (usr1.blank_flag[10] != 1)
+            ui -> lstraightonebutton -> setVisible(true);
+        if (usr1.blank_flag[11] != 1)
+            ui -> yahtzeeonebutton -> setVisible(true);
     }
     else
     {
@@ -715,18 +783,30 @@ void MainWindow::refresh_player_button()
         ui -> lstraightonebutton -> setVisible(false);
         ui -> yahtzeeonebutton -> setVisible(false);
 
-        ui -> onetwobutton -> setVisible(true);
-        ui -> twotwobutton -> setVisible(true);
-        ui -> threetwobutton -> setVisible(true);
-        ui -> fourtwobutton -> setVisible(true);
-        ui -> fivetwobutton -> setVisible(true);
-        ui -> sixtwobutton -> setVisible(true);
-        ui -> choicetwobutton -> setVisible(true);
-        ui -> fkindtwobutton -> setVisible(true);
-        ui -> fullhousetwobutton -> setVisible(true);
-        ui -> sstraighttwobutton -> setVisible(true);
-        ui -> lstraighttwobutton -> setVisible(true);
-        ui -> yahtzeetwobutton -> setVisible(true);
+        if (usr2.blank_flag[0] != 1)
+            ui -> onetwobutton -> setVisible(true);
+        if (usr2.blank_flag[1] != 1)
+            ui -> twotwobutton -> setVisible(true);
+        if (usr2.blank_flag[2] != 1)
+            ui -> threetwobutton -> setVisible(true);
+        if (usr2.blank_flag[3] != 1)
+            ui -> fourtwobutton -> setVisible(true);
+        if (usr2.blank_flag[4] != 1)
+            ui -> fivetwobutton -> setVisible(true);
+        if (usr2.blank_flag[5] != 1)
+            ui -> sixtwobutton -> setVisible(true);
+        if (usr2.blank_flag[6] != 1)
+            ui -> choicetwobutton -> setVisible(true);
+        if (usr2.blank_flag[7] != 1)
+            ui -> fkindtwobutton -> setVisible(true);
+        if (usr2.blank_flag[8] != 1)
+            ui -> fullhousetwobutton -> setVisible(true);
+        if (usr2.blank_flag[9] != 1)
+            ui -> sstraighttwobutton -> setVisible(true);
+        if (usr2.blank_flag[10] != 1)
+            ui -> lstraighttwobutton -> setVisible(true);
+        if (usr2.blank_flag[11] != 1)
+            ui -> yahtzeetwobutton -> setVisible(true);
     }
 }
 
