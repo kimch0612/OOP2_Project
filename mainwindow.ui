@@ -669,7 +669,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_2">
+   <widget class="QLabel" name="onetwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -693,6 +693,9 @@
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string/>
@@ -796,7 +799,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_9">
+   <widget class="QLabel" name="twotwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -812,7 +815,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_10">
+   <widget class="QLabel" name="fourtwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -828,7 +831,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_11">
+   <widget class="QLabel" name="fivetwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -863,7 +866,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_13">
+   <widget class="QLabel" name="threetwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -879,7 +882,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_14">
+   <widget class="QLabel" name="sixtwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -895,7 +898,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_15">
+   <widget class="QLabel" name="sstraighttwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -911,7 +914,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_16">
+   <widget class="QLabel" name="fullhouseone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -927,7 +930,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_17">
+   <widget class="QLabel" name="sstraightone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -943,7 +946,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_18">
+   <widget class="QLabel" name="yahtzeeone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -959,7 +962,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_19">
+   <widget class="QLabel" name="lstraighttwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -975,7 +978,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_20">
+   <widget class="QLabel" name="fkindtwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -991,7 +994,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_21">
+   <widget class="QLabel" name="yahtzeetwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -1007,7 +1010,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_22">
+   <widget class="QLabel" name="fkindone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -1023,7 +1026,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_23">
+   <widget class="QLabel" name="fullhousetwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -1039,7 +1042,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_24">
+   <widget class="QLabel" name="lstraightone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -1055,7 +1058,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_25">
+   <widget class="QLabel" name="choiceone">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -1071,7 +1074,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_26">
+   <widget class="QLabel" name="choicetwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -1778,6 +1781,32 @@
      <string>✓</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="bonusonebutton">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>400</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>420</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>threeone</zorder>
    <zorder>threeonebutton</zorder>
    <zorder>verticalLayoutWidget</zorder>
@@ -1811,30 +1840,30 @@
    <zorder>playingplayer</zorder>
    <zorder>exitbutton</zorder>
    <zorder>oneone</zorder>
-   <zorder>oneone_2</zorder>
+   <zorder>onetwo</zorder>
    <zorder>twoone</zorder>
    <zorder>fourone</zorder>
    <zorder>fiveone</zorder>
    <zorder>sixone</zorder>
    <zorder>bonusone</zorder>
-   <zorder>oneone_9</zorder>
-   <zorder>oneone_10</zorder>
-   <zorder>oneone_11</zorder>
+   <zorder>twotwo</zorder>
+   <zorder>fourtwo</zorder>
+   <zorder>fivetwo</zorder>
    <zorder>bonustwo</zorder>
-   <zorder>oneone_13</zorder>
-   <zorder>oneone_14</zorder>
-   <zorder>oneone_15</zorder>
-   <zorder>oneone_16</zorder>
-   <zorder>oneone_17</zorder>
-   <zorder>oneone_18</zorder>
-   <zorder>oneone_19</zorder>
-   <zorder>oneone_20</zorder>
-   <zorder>oneone_21</zorder>
-   <zorder>oneone_22</zorder>
-   <zorder>oneone_23</zorder>
-   <zorder>oneone_24</zorder>
-   <zorder>oneone_25</zorder>
-   <zorder>oneone_26</zorder>
+   <zorder>threetwo</zorder>
+   <zorder>sixtwo</zorder>
+   <zorder>sstraighttwo</zorder>
+   <zorder>fullhouseone</zorder>
+   <zorder>sstraightone</zorder>
+   <zorder>yahtzeeone</zorder>
+   <zorder>lstraighttwo</zorder>
+   <zorder>fkindtwo</zorder>
+   <zorder>yahtzeetwo</zorder>
+   <zorder>fkindone</zorder>
+   <zorder>fullhousetwo</zorder>
+   <zorder>lstraightone</zorder>
+   <zorder>choiceone</zorder>
+   <zorder>choicetwo</zorder>
    <zorder>totalone</zorder>
    <zorder>totaltwo</zorder>
    <zorder>oneonebutton</zorder>
@@ -1881,6 +1910,8 @@
    <zorder>keep3b</zorder>
    <zorder>keep4b</zorder>
    <zorder>keep5b</zorder>
+   <zorder>bonusonebutton</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
