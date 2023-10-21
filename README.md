@@ -41,6 +41,8 @@
     - [X] 주사위 5개가 랜덤으로 나오는 기능
     - [x] 랜덤으로 나온 수와 주사위 이미지를 매칭시켜서 출력하는 기능
     - [X] 주사위의 HOLD 기능
+    - [X] 주사위의 reroll 기능
+    - [X] reroll시 turn이 감소하고, turn이 0이 되면 사용할 수 없게 막는 기능
   - [ ] Yahtzee 룰 관련 기능
     - [ ] 주사위 1~6 눈금의 합
     - [ ] Choice~Yahtzee 족보
@@ -92,5 +94,7 @@
 - 8주차
   - [Issues #4 해결](https://github.com/kimch0612/OOP2_Project/issues/4)
   - 주사위의 HOLD 기능 구현
+  - 주사위의 REROLL 기능 구현
+  - 게임의 TURN 기능 구현
 
 ![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/4ee08761-eb04-4d95-81f8-a98eb3281e7f)
