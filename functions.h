@@ -17,7 +17,7 @@ char dice_section();
 char final_score();
 class user_score{
 public:
-    int all, digit;
+    int all, bonus;
     int one, two, three, four, five, six;
     int chance, fourkind;
     int sum_digit(int flag, int current_turn, user_score& usr1, user_score& usr2);

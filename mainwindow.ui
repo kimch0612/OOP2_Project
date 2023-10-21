@@ -786,8 +786,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -841,7 +844,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="oneone_12">
+   <widget class="QLabel" name="bonustwo">
     <property name="geometry">
      <rect>
       <x>177</x>
@@ -850,8 +853,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
     <property name="text">
-     <string/>
+     <string>0</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
@@ -1814,7 +1820,7 @@
    <zorder>oneone_9</zorder>
    <zorder>oneone_10</zorder>
    <zorder>oneone_11</zorder>
-   <zorder>oneone_12</zorder>
+   <zorder>bonustwo</zorder>
    <zorder>oneone_13</zorder>
    <zorder>oneone_14</zorder>
    <zorder>oneone_15</zorder>

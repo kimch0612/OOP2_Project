@@ -14,6 +14,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr1.current_dice[i];
                 }
                 usr1.all += temp;
+                usr1.bonus += temp;
             }
             else
             {
@@ -34,6 +35,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr1.current_dice[i];
                 }
                 usr1.all += temp;
+                usr1.bonus += temp;
             }
             else
             {
@@ -54,6 +56,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr1.current_dice[i];
                 }
                 usr1.all += temp;
+                usr1.bonus += temp;
             }
             else
             {
@@ -74,6 +77,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr1.current_dice[i];
                 }
                 usr1.all += temp;
+                usr1.bonus += temp;
             }
             else
             {
@@ -94,6 +98,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr1.current_dice[i];
                 }
                 usr1.all += temp;
+                usr1.bonus += temp;
             }
             else
             {
@@ -114,6 +119,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                         temp += usr1.current_dice[i];
                 }
                 usr1.all += temp;
+                usr1.bonus += temp;
             }
             else
             {

@@ -59,6 +59,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui -> creditone -> setOpenExternalLinks(true);
     ui -> creditone -> setVisible(false);
     ui -> backbutton -> setVisible(false);
+    ui -> bonusone -> setVisible(false);
+    ui -> bonustwo -> setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -99,6 +101,8 @@ void MainWindow::on_startbutton_clicked()
     ui -> keep3b -> setVisible(true);
     ui -> keep4b -> setVisible(true);
     ui -> keep5b -> setVisible(true);
+    ui -> bonusone -> setVisible(true);
+    ui -> bonustwo -> setVisible(true);
 
     if (turn == 27)
         final_score();
@@ -164,66 +168,78 @@ void MainWindow::set_next_turn()
 
 void MainWindow::on_oneonebutton_clicked()
 {
-    int score, all;
+    int score, all, bonus;
 
     if (turn % 2 == 1)
     {
         score = usr1.sum_digit(1, turn, usr1, usr2);
         all = usr1.all;
+        bonus = usr1.bonus;
     }
     else
     {
         score = usr2.sum_digit(1, turn, usr1, usr2);
         all = usr2.all;
+        bonus = usr2.bonus;
     }
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
     ui -> oneone -> setText(text_qstr);
     ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
     ui -> oneonebutton -> setVisible(false);
     set_next_turn();
 }
 
 void MainWindow::on_twoonebutton_clicked()
 {
-    int score, all;
+    int score, all, bonus;
 
     if (turn % 2 == 1)
     {
         score = usr1.sum_digit(2, turn, usr1, usr2);
         all = usr1.all;
+        bonus = usr1.bonus;
     }
     else
     {
         score = usr2.sum_digit(2, turn, usr1, usr2);
         all = usr2.all;
+        bonus = usr2.bonus;
     }
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
     ui -> twoone -> setText(text_qstr);
     ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
     ui -> twoonebutton -> setVisible(false);
     set_next_turn();
 }
 
 void MainWindow::on_threeonebutton_clicked()
 {
-    int score, all;
+    int score, all, bonus;
 
     if (turn % 2 == 1)
     {
         score = usr1.sum_digit(3, turn, usr1, usr2);
         all = usr1.all;
+        bonus = usr1.bonus;
     }
     else
     {
         score = usr2.sum_digit(3, turn, usr1, usr2);
         all = usr2.all;
+        bonus = usr2.bonus;
     }
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
     ui -> threeone -> setText(text_qstr);
     ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
     ui -> threeonebutton -> setVisible(false);
     set_next_turn();
 }
@@ -231,22 +247,26 @@ void MainWindow::on_threeonebutton_clicked()
 
 void MainWindow::on_fouronebutton_clicked()
 {
-    int score, all;
+    int score, all, bonus;
 
     if (turn % 2 == 1)
     {
         score = usr1.sum_digit(4, turn, usr1, usr2);
         all = usr1.all;
+        bonus = usr1.bonus;
     }
     else
     {
         score = usr2.sum_digit(4, turn, usr1, usr2);
         all = usr2.all;
+        bonus = usr2.bonus;
     }
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
     ui -> fourone -> setText(text_qstr);
     ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
     ui -> fouronebutton -> setVisible(false);
     set_next_turn();
 }
@@ -254,22 +274,26 @@ void MainWindow::on_fouronebutton_clicked()
 
 void MainWindow::on_fiveonebutton_clicked()
 {
-    int score, all;
+    int score, all, bonus;
 
     if (turn % 2 == 1)
     {
         score = usr1.sum_digit(5, turn, usr1, usr2);
         all = usr1.all;
+        bonus = usr1.bonus;
     }
     else
     {
         score = usr2.sum_digit(5, turn, usr1, usr2);
         all = usr2.all;
+        bonus = usr2.bonus;
     }
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
     ui -> fiveone -> setText(text_qstr);
     ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
     ui -> fiveonebutton -> setVisible(false);
     set_next_turn();
 }
@@ -277,22 +301,26 @@ void MainWindow::on_fiveonebutton_clicked()
 
 void MainWindow::on_sixonebutton_clicked()
 {
-    int score, all;
+    int score, all, bonus;
 
     if (turn % 2 == 1)
     {
         score = usr1.sum_digit(6, turn, usr1, usr2);
         all = usr1.all;
+        bonus = usr1.bonus;
     }
     else
     {
         score = usr2.sum_digit(6, turn, usr1, usr2);
         all = usr2.all;
+        bonus = usr2.bonus;
     }
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
     ui -> sixone -> setText(text_qstr);
     ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
     ui -> sixonebutton -> setVisible(false);
     set_next_turn();
 }
