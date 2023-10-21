@@ -36,11 +36,11 @@
     - [ ] 현재 주사위의 족보로 취득할 수 있는 점수를 알려주는 기능
     - [ ] 게임이 끝날시 끝났다고 알려줄 UI
     - [ ] how to? UI 구현
-    - [ ] credits UI 구현
-  - [ ] 주사위 기능 구현
+    - [x] credits UI 구현
+  - [X] 주사위 기능 구현
     - [X] 주사위 5개가 랜덤으로 나오는 기능
     - [x] 랜덤으로 나온 수와 주사위 이미지를 매칭시켜서 출력하는 기능
-    - [ ] 주사위의 HOLD 기능
+    - [X] 주사위의 HOLD 기능
   - [ ] Yahtzee 룰 관련 기능
     - [ ] 주사위 1~6 눈금의 합
     - [ ] Choice~Yahtzee 족보
@@ -85,9 +85,12 @@
   - 랜덤으로 나온 숫자를 다이스 아이콘과 매칭함
   - Player 1, 2 관련 Label 업데이트
   - credit 작성
-  - [Issue #3 해결](https://github.com/kimch0612/OOP2_Project/issues/3)
-  - [Issue #5 해결](https://github.com/kimch0612/OOP2_Project/issues/5)
+  - [Issues #3 해결](https://github.com/kimch0612/OOP2_Project/issues/3)
+  - [Issues #5 해결](https://github.com/kimch0612/OOP2_Project/issues/5)
   
 ![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/3b50de8f-02d0-4f9c-aec6-1bf28112e2d5)
+- 8주차
+  - [Issues #4 해결](https://github.com/kimch0612/OOP2_Project/issues/4)
+  - 주사위의 HOLD 기능 구현
 
-
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/4ee08761-eb04-4d95-81f8-a98eb3281e7f)
