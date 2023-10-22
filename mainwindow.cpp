@@ -106,9 +106,6 @@ void MainWindow::on_startbutton_clicked()
     ui -> bonusone -> setVisible(true);
     ui -> bonustwo -> setVisible(true);
 
-    if (turn == 27)
-        final_score();
-
     turn++;
     if (turn % 2 == 1)
         ui->playingplayer->setText("Player 1 is in control...");
