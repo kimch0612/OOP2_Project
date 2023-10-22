@@ -863,75 +863,155 @@ void MainWindow::refresh_player_button()
 
 void MainWindow::on_keep1b_clicked()
 {
-    ui -> keep1 -> setText("keep");
-    ui -> keep1b -> setVisible(false);
     if (turn % 2 == 1)
     {
-        usr1.check_keep[0] = "1";
+        if (usr1.check_keep[0] == "0")
+        {
+            ui -> keep1 -> setText("keep");
+            usr1.check_keep[0] = "1";
+        }
+        else
+        {
+            ui -> keep1 -> setText("");
+            usr1.check_keep[0] = "0";
+        }
     }
     else
     {
-        usr2.check_keep[0] = "1";
+        if (usr2.check_keep[0] == "0")
+        {
+            ui -> keep1 -> setText("keep");
+            usr2.check_keep[0] = "1";
+        }
+        else
+        {
+            ui -> keep1 -> setText("");
+            usr2.check_keep[0] = "0";
+        }
     }
 }
 
 
 void MainWindow::on_keep2b_clicked()
 {
-    ui -> keep2 -> setText("keep");
-    ui -> keep2b -> setVisible(false);
     if (turn % 2 == 1)
     {
-        usr1.check_keep[1] = "1";
+        if (usr1.check_keep[1] == "0")
+        {
+            ui -> keep2 -> setText("keep");
+            usr1.check_keep[1] = "1";
+        }
+        else
+        {
+            ui -> keep2 -> setText("");
+            usr1.check_keep[1] = "0";
+        }
     }
     else
     {
-        usr2.check_keep[1] = "1";
+        if (usr2.check_keep[1] == "0")
+        {
+            ui -> keep2 -> setText("keep");
+            usr2.check_keep[1] = "1";
+        }
+        else
+        {
+            ui -> keep2 -> setText("");
+            usr2.check_keep[1] = "0";
+        }
     }
 }
 
 
 void MainWindow::on_keep3b_clicked()
 {
-    ui -> keep3 -> setText("keep");
-    ui -> keep3b -> setVisible(false);
     if (turn % 2 == 1)
     {
-        usr1.check_keep[2] = "1";
+        if (usr1.check_keep[2] == "0")
+        {
+            ui -> keep3 -> setText("keep");
+            usr1.check_keep[2] = "1";
+        }
+        else
+        {
+            ui -> keep3 -> setText("");
+            usr1.check_keep[2] = "0";
+        }
     }
     else
     {
-        usr2.check_keep[2] = "1";
+        if (usr2.check_keep[2] == "0")
+        {
+            ui -> keep3 -> setText("keep");
+            usr2.check_keep[2] = "1";
+        }
+        else
+        {
+            ui -> keep3 -> setText("");
+            usr2.check_keep[2] = "0";
+        }
     }
 }
 
 
 void MainWindow::on_keep4b_clicked()
 {
-    ui -> keep4 -> setText("keep");
-    ui -> keep4b -> setVisible(false);
     if (turn % 2 == 1)
     {
-        usr1.check_keep[3] = "1";
+        if (usr1.check_keep[3] == "0")
+        {
+            ui -> keep4 -> setText("keep");
+            usr1.check_keep[3] = "1";
+        }
+        else
+        {
+            ui -> keep4 -> setText("");
+            usr1.check_keep[3] = "0";
+        }
     }
     else
     {
-        usr2.check_keep[3] = "1";
+        if (usr2.check_keep[3] == "0")
+        {
+            ui -> keep4 -> setText("keep");
+            usr2.check_keep[3] = "1";
+        }
+        else
+        {
+            ui -> keep4 -> setText("");
+            usr2.check_keep[3] = "0";
+        }
     }
 }
 
 
 void MainWindow::on_keep5b_clicked()
 {
-    ui -> keep5 -> setText("keep");
-    ui -> keep5b -> setVisible(false);
     if (turn % 2 == 1)
     {
-        usr1.check_keep[4] = "1";
+        if (usr1.check_keep[4] == "0")
+        {
+            ui -> keep5 -> setText("keep");
+            usr1.check_keep[4] = "1";
+        }
+        else
+        {
+            ui -> keep5 -> setText("");
+            usr1.check_keep[4] = "0";
+        }
     }
     else
     {
-        usr2.check_keep[4] = "1";
+        if (usr2.check_keep[4] == "0")
+        {
+            ui -> keep5 -> setText("keep");
+            usr2.check_keep[4] = "1";
+        }
+        else
+        {
+            ui -> keep5 -> setText("");
+            usr2.check_keep[4] = "0";
+        }
     }
 }
 
