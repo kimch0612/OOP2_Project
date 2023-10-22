@@ -50,6 +50,11 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
         case 7:
             all += 35;
             break;
+        case 8:
+            for (int i=0; i<5; i++)
+                temp += current_dice[i];
+            all += temp;
+            break;
     }
     return temp;
 }

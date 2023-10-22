@@ -331,6 +331,17 @@ void MainWindow::on_sixonebutton_clicked()
 
 void MainWindow::on_choiceonebutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr1.sum_digit(8, turn, usr1, usr2);
+    all = usr1.all;
+    usr1.blank_flag[6] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> choiceone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
+    set_next_turn();
     ui -> choiceonebutton -> setVisible(false);
 }
 
@@ -487,6 +498,17 @@ void MainWindow::on_sixtwobutton_clicked()
 
 void MainWindow::on_choicetwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(8, turn, usr1, usr2);
+    all = usr2.all;
+    usr2.blank_flag[6] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> choicetwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    set_next_turn();
     ui -> choicetwobutton -> setVisible(false);
 }
 
