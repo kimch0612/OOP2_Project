@@ -108,3 +108,5 @@
   - 주사위의 HOLD 기능 개선
   - Score Choice, 4kind, s.straight, l.straight, yahtzee 기능 구현
   - 라벨 변경 (keep -> hold)
+
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/815d0084-172a-4f67-8a00-23d283892133)
