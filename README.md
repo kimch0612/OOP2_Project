@@ -109,5 +109,4 @@
   - Score Choice, 4kind, s.straight, l.straight, yahtzee 기능 구현
   - 라벨 변경 (keep -> hold)
 
-![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/815d0084-172a-4f67-8a00-23d283892133)
 ![녹음 2023-10-23 210700](https://github.com/kimch0612/OOP2_Project/assets/10193967/b4a5ac34-3fc3-4d86-b735-96ad81b192bf)
