@@ -332,13 +332,35 @@ void MainWindow::on_fullhouseonebutton_clicked()
 
 void MainWindow::on_sstraightonebutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr1.sum_digit(11, turn, usr1, usr2);
+    all = usr1.all;
+    usr1.blank_flag[9] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> sstraightone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
     set_next_turn();
+    ui -> sstraightonebutton -> setVisible(false);
 }
 
 
 void MainWindow::on_lstraightonebutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr1.sum_digit(12, turn, usr1, usr2);
+    all = usr1.all;
+    usr1.blank_flag[10] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> lstraightone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
     set_next_turn();
+    ui -> lstraightonebutton -> setVisible(false);
 }
 
 
@@ -532,13 +554,35 @@ void MainWindow::on_fullhousetwobutton_clicked()
 
 void MainWindow::on_sstraighttwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(11, turn, usr1, usr2);
+    all = usr2.all;
+    usr2.blank_flag[9] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> sstraighttwo -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
     set_next_turn();
+    ui -> sstraighttwobutton -> setVisible(false);
 }
 
 
 void MainWindow::on_lstraighttwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(12, turn, usr1, usr2);
+    all = usr2.all;
+    usr2.blank_flag[10] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> lstraighttwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
     set_next_turn();
+    ui -> lstraighttwobutton -> setVisible(false);
 }
 
 
