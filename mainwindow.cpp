@@ -704,7 +704,7 @@ void MainWindow::on_keep1b_clicked()
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[0] : usr2.check_keep[0];
 
     if (CheckKeep == "0") {
-        ui->keep1->setText("keep");
+        ui->keep1->setText("hold");
         CheckKeep = "1";
     } else {
         ui->keep1->setText("");
@@ -717,7 +717,7 @@ void MainWindow::on_keep2b_clicked()
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[1] : usr2.check_keep[1];
 
     if (CheckKeep == "0") {
-        ui->keep2->setText("keep");
+        ui->keep2->setText("hold");
         CheckKeep = "1";
     } else {
         ui->keep2->setText("");
@@ -731,7 +731,7 @@ void MainWindow::on_keep3b_clicked()
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[2] : usr2.check_keep[2];
 
     if (CheckKeep == "0") {
-        ui->keep3->setText("keep");
+        ui->keep3->setText("hold");
         CheckKeep = "1";
     } else {
         ui->keep3->setText("");
@@ -745,7 +745,7 @@ void MainWindow::on_keep4b_clicked()
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[3] : usr2.check_keep[3];
 
     if (CheckKeep == "0") {
-        ui->keep4->setText("keep");
+        ui->keep4->setText("hold");
         CheckKeep = "1";
     } else {
         ui->keep4->setText("");
@@ -759,7 +759,7 @@ void MainWindow::on_keep5b_clicked()
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[4] : usr2.check_keep[4];
 
     if (CheckKeep == "0") {
-        ui->keep5->setText("keep");
+        ui->keep5->setText("hold");
         CheckKeep = "1";
     } else {
         ui->keep5->setText("");
