@@ -91,8 +91,6 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
             for (i=0; i<5; i++)
                 tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
-                cout << tmp[i] << endl;
-            for (i=0; i<6; i++)
                 if (tmp[i] == 1) check_num++;
                 else if (tmp[i] == 2 && flag1){
                     check_num++;

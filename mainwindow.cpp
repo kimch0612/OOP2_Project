@@ -853,6 +853,8 @@ void MainWindow::Final_Score()
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
     }
+    ui->gamestart->setVisible(true);
+    ui->gamestart->setText("Game Set!");
 }
 
 
