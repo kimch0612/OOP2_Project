@@ -807,17 +807,18 @@ void MainWindow::refresh_player_button()
         ui->lstraighttwobutton,
         ui->yahtzeetwobutton
     };
-    if (turn % 2 == 1)
-    {
-        for (QPushButton* button : usr2_buttons) // 함수포인터를 이용해서 코드를 간결하게 최적화.
+    if (turn % 2 == 1) {
+        /*
+         * 함수포인터를 이용해서 코드를 간결하게 최적화.
+         * https://github.com/kimch0612/OOP2_Project/commit/3aa930bcb2ee8e69e83b7ac70dc1077a4f46ce75
+        */
+        for (QPushButton* button : usr2_buttons)
             button->setVisible(false);
         for (int i = 0; i < 12; i++) {
             if (usr1.blank_flag[i] != 1)
                 usr1_buttons[i]->setVisible(true);
         }
-    }
-    else
-    {
+    } else {
         for (QPushButton* button : usr1_buttons)
             button->setVisible(false);
         for (int i = 0; i < 12; i++) {
@@ -829,155 +830,69 @@ void MainWindow::refresh_player_button()
 
 void MainWindow::on_keep1b_clicked()
 {
-    if (turn % 2 == 1)
-    {
-        if (usr1.check_keep[0] == "0")
-        {
-            ui -> keep1 -> setText("keep");
-            usr1.check_keep[0] = "1";
-        }
-        else
-        {
-            ui -> keep1 -> setText("");
-            usr1.check_keep[0] = "0";
-        }
-    }
-    else
-    {
-        if (usr2.check_keep[0] == "0")
-        {
-            ui -> keep1 -> setText("keep");
-            usr2.check_keep[0] = "1";
-        }
-        else
-        {
-            ui -> keep1 -> setText("");
-            usr2.check_keep[0] = "0";
-        }
+    string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[0] : usr2.check_keep[0];
+
+    if (CheckKeep == "0") {
+        ui->keep1->setText("keep");
+        CheckKeep = "1";
+    } else {
+        ui->keep1->setText("");
+        CheckKeep = "0";
     }
 }
 
-
 void MainWindow::on_keep2b_clicked()
 {
-    if (turn % 2 == 1)
-    {
-        if (usr1.check_keep[1] == "0")
-        {
-            ui -> keep2 -> setText("keep");
-            usr1.check_keep[1] = "1";
-        }
-        else
-        {
-            ui -> keep2 -> setText("");
-            usr1.check_keep[1] = "0";
-        }
-    }
-    else
-    {
-        if (usr2.check_keep[1] == "0")
-        {
-            ui -> keep2 -> setText("keep");
-            usr2.check_keep[1] = "1";
-        }
-        else
-        {
-            ui -> keep2 -> setText("");
-            usr2.check_keep[1] = "0";
-        }
+    string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[1] : usr2.check_keep[1];
+
+    if (CheckKeep == "0") {
+        ui->keep2->setText("keep");
+        CheckKeep = "1";
+    } else {
+        ui->keep2->setText("");
+        CheckKeep = "0";
     }
 }
 
 
 void MainWindow::on_keep3b_clicked()
 {
-    if (turn % 2 == 1)
-    {
-        if (usr1.check_keep[2] == "0")
-        {
-            ui -> keep3 -> setText("keep");
-            usr1.check_keep[2] = "1";
-        }
-        else
-        {
-            ui -> keep3 -> setText("");
-            usr1.check_keep[2] = "0";
-        }
-    }
-    else
-    {
-        if (usr2.check_keep[2] == "0")
-        {
-            ui -> keep3 -> setText("keep");
-            usr2.check_keep[2] = "1";
-        }
-        else
-        {
-            ui -> keep3 -> setText("");
-            usr2.check_keep[2] = "0";
-        }
+    string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[2] : usr2.check_keep[2];
+
+    if (CheckKeep == "0") {
+        ui->keep3->setText("keep");
+        CheckKeep = "1";
+    } else {
+        ui->keep3->setText("");
+        CheckKeep = "0";
     }
 }
 
 
 void MainWindow::on_keep4b_clicked()
 {
-    if (turn % 2 == 1)
-    {
-        if (usr1.check_keep[3] == "0")
-        {
-            ui -> keep4 -> setText("keep");
-            usr1.check_keep[3] = "1";
-        }
-        else
-        {
-            ui -> keep4 -> setText("");
-            usr1.check_keep[3] = "0";
-        }
-    }
-    else
-    {
-        if (usr2.check_keep[3] == "0")
-        {
-            ui -> keep4 -> setText("keep");
-            usr2.check_keep[3] = "1";
-        }
-        else
-        {
-            ui -> keep4 -> setText("");
-            usr2.check_keep[3] = "0";
-        }
+    string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[3] : usr2.check_keep[3];
+
+    if (CheckKeep == "0") {
+        ui->keep4->setText("keep");
+        CheckKeep = "1";
+    } else {
+        ui->keep4->setText("");
+        CheckKeep = "0";
     }
 }
 
 
 void MainWindow::on_keep5b_clicked()
 {
-    if (turn % 2 == 1)
-    {
-        if (usr1.check_keep[4] == "0")
-        {
-            ui -> keep5 -> setText("keep");
-            usr1.check_keep[4] = "1";
-        }
-        else
-        {
-            ui -> keep5 -> setText("");
-            usr1.check_keep[4] = "0";
-        }
-    }
-    else
-    {
-        if (usr2.check_keep[4] == "0")
-        {
-            ui -> keep5 -> setText("keep");
-            usr2.check_keep[4] = "1";
-        }
-        else
-        {
-            ui -> keep5 -> setText("");
-            usr2.check_keep[4] = "0";
-        }
+    string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[4] : usr2.check_keep[4];
+
+    if (CheckKeep == "0") {
+        ui->keep4->setText("keep");
+        CheckKeep = "1";
+    } else {
+        ui->keep4->setText("");
+        CheckKeep = "0";
     }
 }
 
