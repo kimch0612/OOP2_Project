@@ -12,7 +12,6 @@
      
     ├── (중요하지 않은 파일은 미기재함) 
     ├── CMakeLists.txt               # 프로젝트를 빌드하기 위해 필요한 파일로써 프로젝트의 구조 등이 기재돼있습니다.
-    ├── dict.cpp                     # C++와 GUI간의 더 원할한 소통을 위해 Object Name을 dictionary형으로 선언돼있습니다.
     ├── functions.cpp                # 이 프로그램에서 백엔드와 같은 역할을 담당했습니다.
     ├── functions.h                  # 더 원할한 프로그램 구현을 위해 추가로 선언한 헤더파일입니다.
     ├── main.cpp                     # 이 프로그램의 메인 C++ 파일로, GUI를 불러오는 역할을 합니다.
@@ -101,7 +100,12 @@
   - 버튼의 label 변경(Start -> start)
   - 게임 Window의 Size를 고정하는 기능 구현
   - 게임의 Score 기록 기능 구현
+  - Score 1~6 기능 구현
   - Score의 Bonus 기능 구현
 
 ![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/e35fbd01-c04e-4618-8618-df0d61c0f6b2)
 ![week8](https://github.com/kimch0612/OOP2_Project/assets/10193967/cca95522-ac45-4e19-a980-ad5529deec23)
+- 9주차
+  - 주사위의 HOLD 기능 개선
+  - Score Choice, 4kind, yahtzee 기능 구현
+  - 라벨 변경 (keep -> hold)
