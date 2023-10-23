@@ -44,7 +44,7 @@
     - [X] reroll시 turn이 감소하고, turn이 0이 되면 사용할 수 없게 막는 기능
   - [ ] Yahtzee 룰 관련 기능
     - [x] 주사위 1~6 눈금의 합
-    - [ ] Choice~Yahtzee 족보
+    - [x] Choice~Yahtzee 족보
     - [x] 위의 총합이 63일때 추가점수
     - [ ] 라운드마다 시간제한 기능
     - [ ] 점수 비교 후 승자 결정
@@ -107,5 +107,5 @@
 ![week8](https://github.com/kimch0612/OOP2_Project/assets/10193967/cca95522-ac45-4e19-a980-ad5529deec23)
 - 9주차
   - 주사위의 HOLD 기능 개선
-  - Score Choice, 4kind, yahtzee 기능 구현
+  - Score Choice, 4kind, s.straight, l.straight, yahtzee 기능 구현
   - 라벨 변경 (keep -> hold)
