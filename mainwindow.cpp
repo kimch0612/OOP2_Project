@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-int turn=0, current_turn=3;
+int turn=1, current_turn=3;
 user_score usr1;
 user_score usr2;
 
@@ -14,55 +14,23 @@ MainWindow::MainWindow(QWidget *parent)
     setStyleSheet("background-color:blck");
     QMainWindow::setWindowFlags( Qt::WindowTitleHint |  Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint );
     ui->setupUi(this);
-    ui -> oneonebutton -> setVisible(false);
-    ui -> twoonebutton -> setVisible(false);
-    ui -> threeonebutton -> setVisible(false);
-    ui -> fouronebutton -> setVisible(false);
-    ui -> fiveonebutton -> setVisible(false);
-    ui -> sixonebutton -> setVisible(false);
-    ui -> choiceonebutton -> setVisible(false);
-    ui -> fkindonebutton -> setVisible(false);
-    ui -> fullhouseonebutton -> setVisible(false);
-    ui -> sstraightonebutton -> setVisible(false);
-    ui -> lstraightonebutton -> setVisible(false);
-    ui -> yahtzeeonebutton -> setVisible(false);
-    ui -> totalone -> setVisible(false);
-    ui -> onetwobutton -> setVisible(false);
-    ui -> twotwobutton -> setVisible(false);
-    ui -> threetwobutton -> setVisible(false);
-    ui -> fourtwobutton -> setVisible(false);
-    ui -> fivetwobutton -> setVisible(false);
-    ui -> sixtwobutton -> setVisible(false);
-    ui -> choicetwobutton -> setVisible(false);
-    ui -> fkindtwobutton -> setVisible(false);
-    ui -> fullhousetwobutton -> setVisible(false);
-    ui -> sstraighttwobutton -> setVisible(false);
-    ui -> lstraighttwobutton -> setVisible(false);
-    ui -> yahtzeetwobutton -> setVisible(false);
-    ui -> totaltwo -> setVisible(false);
-    ui -> backbutton -> setVisible(false);
-    ui -> reroll -> setVisible(false);
-    ui -> keep1 -> setVisible(false);
-    ui -> keep2 -> setVisible(false);
-    ui -> keep3 -> setVisible(false);
-    ui -> keep4 -> setVisible(false);
-    ui -> keep5 -> setVisible(false);
-    ui -> keep1b -> setVisible(false);
-    ui -> keep2b -> setVisible(false);
-    ui -> keep3b -> setVisible(false);
-    ui -> keep4b -> setVisible(false);
-    ui -> keep5b -> setVisible(false);
+    QList<QWidget*> widgetsToHide = {
+        ui->oneonebutton, ui->twoonebutton, ui->threeonebutton, ui->fouronebutton, ui->fiveonebutton, ui->sixonebutton,
+        ui->choiceonebutton, ui->fkindonebutton, ui->fullhouseonebutton, ui->sstraightonebutton, ui->lstraightonebutton, ui->yahtzeeonebutton,
+        ui->totalone, ui->onetwobutton, ui->twotwobutton, ui->threetwobutton, ui->fourtwobutton, ui->fivetwobutton, ui->sixtwobutton,
+        ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
+        ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
+        ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
+        ui->bonusonebutton, ui->pushButton
+    };
+    for (QWidget* widget : widgetsToHide) {
+        widget->setVisible(false);
+    }
     ui -> backbutton -> setVisible(true);
     ui -> creditone -> setText("<a href=\"https://www.pngwing.com/en/free-png-sptdk/\">Program Title icon</a>");
     ui -> creditone -> setTextFormat(Qt::RichText);
     ui -> creditone -> setTextInteractionFlags(Qt::TextBrowserInteraction);
     ui -> creditone -> setOpenExternalLinks(true);
-    ui -> creditone -> setVisible(false);
-    ui -> backbutton -> setVisible(false);
-    ui -> bonusone -> setVisible(false);
-    ui -> bonustwo -> setVisible(false);
-    ui -> bonusonebutton -> setVisible(false);
-    ui -> pushButton -> setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -72,48 +40,26 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_startbutton_clicked()
 {
-    bool flag = true;
-    ui->gamestart->setVisible(false);
-    ui->startbutton->setVisible(false);
-    ui->howtobutton->setVisible(false);
-    ui->creditsbutton->setVisible(false);
-    ui->exitbutton->setVisible(false);
-    ui -> oneonebutton -> setVisible(true);
-    ui -> twoonebutton -> setVisible(true);
-    ui -> threeonebutton -> setVisible(true);
-    ui -> fouronebutton -> setVisible(true);
-    ui -> fiveonebutton -> setVisible(true);
-    ui -> sixonebutton -> setVisible(true);
-    ui -> choiceonebutton -> setVisible(true);
-    ui -> fkindonebutton -> setVisible(true);
-    ui -> fullhouseonebutton -> setVisible(true);
-    ui -> sstraightonebutton -> setVisible(true);
-    ui -> lstraightonebutton -> setVisible(true);
-    ui -> yahtzeeonebutton -> setVisible(true);
-    ui -> totalone -> setVisible(true);
-    ui -> totaltwo -> setVisible(true);
-    ui -> reroll -> setVisible(true);
-    ui -> keep1 -> setVisible(true);
-    ui -> keep2 -> setVisible(true);
-    ui -> keep3 -> setVisible(true);
-    ui -> keep4 -> setVisible(true);
-    ui -> keep5 -> setVisible(true);
-    ui -> keep1b -> setVisible(true);
-    ui -> keep2b -> setVisible(true);
-    ui -> keep3b -> setVisible(true);
-    ui -> keep4b -> setVisible(true);
-    ui -> keep5b -> setVisible(true);
-    ui -> bonusone -> setVisible(true);
-    ui -> bonustwo -> setVisible(true);
+    QList<QWidget*> widgetsToHide = {ui->gamestart, ui->startbutton, ui->howtobutton, ui->creditsbutton, ui->exitbutton};
+    for (QWidget* widget : widgetsToHide) {
+        widget->setVisible(false);
+    }
+    QList<QWidget*> widgetsToShow = {
+        ui->oneonebutton, ui->twoonebutton, ui->threeonebutton, ui->fouronebutton, ui->fiveonebutton, ui->sixonebutton,
+        ui->choiceonebutton, ui->fkindonebutton, ui->fullhouseonebutton, ui->sstraightonebutton, ui->lstraightonebutton, ui->yahtzeeonebutton,
+        ui->totalone, ui->totaltwo, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
+        ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->bonusone, ui->bonustwo
+    };
+    for (QWidget* widget : widgetsToShow) {
+        widget->setVisible(true);
+    }
 
-    turn++;
     if (turn % 2 == 1)
         ui->playingplayer->setText("Player 1 is in control...");
     else if (turn % 2 == 0)
         ui->playingplayer->setText("Player 2 is in control...");
 
     init_dice();
-
     ui -> lefttime -> setText("3 left");
     ui -> category -> setText("← Choose category");
 }
@@ -544,211 +490,84 @@ void MainWindow::on_yahtzeetwobutton_clicked()
 
 void MainWindow::init_dice()
 {
-    int dice[6];
+    QPixmap dice_images[6];
+    dice_images[0].load(":/dice/images/one.png");
+    dice_images[1].load(":/dice/images/two.png");
+    dice_images[2].load(":/dice/images/three.png");
+    dice_images[3].load(":/dice/images/four.png");
+    dice_images[4].load(":/dice/images/five.png");
+    dice_images[5].load(":/dice/images/six.png");
+    int dice[5];
 
-    for (int i=0; i < 5; i++)
+    for (int i = 0; i < 5; i++) {
         dice[i] = dice_gen();
+        QLabel* diceLabel = nullptr;
 
-    QPixmap pix_one(":/dice/images/one.png");
-    QPixmap pix_two(":/dice/images/two.png");
-    QPixmap pix_three(":/dice/images/three.png");
-    QPixmap pix_four(":/dice/images/four.png");
-    QPixmap pix_five(":/dice/images/five.png");
-    QPixmap pix_six(":/dice/images/six.png");
-    if (dice[0] == 1)
-        ui -> diceone -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[0] == 2)
-        ui -> diceone -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[0] == 3)
-        ui -> diceone -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[0] == 4)
-        ui -> diceone -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[0] == 5)
-        ui -> diceone -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[0] == 6)
-        ui -> diceone -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-    if (dice[1] == 1)
-        ui -> dicetwo -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[1] == 2)
-        ui -> dicetwo -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[1] == 3)
-        ui -> dicetwo -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[1] == 4)
-        ui -> dicetwo -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[1] == 5)
-        ui -> dicetwo -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[1] == 6)
-        ui -> dicetwo -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+        switch (i) {
+        case 0:
+            diceLabel = ui->diceone;
+            break;
+        case 1:
+            diceLabel = ui->dicetwo;
+            break;
+        case 2:
+            diceLabel = ui->dicethree;
+            break;
+        case 3:
+            diceLabel = ui->dicefour;
+            break;
+        case 4:
+            diceLabel = ui->dicefive;
+            break;
+        }
 
-    if (dice[2] == 1)
-        ui -> dicethree -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[2] == 2)
-        ui -> dicethree -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[2] == 3)
-        ui -> dicethree -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[2] == 4)
-        ui -> dicethree -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[2] == 5)
-        ui -> dicethree -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[2] == 6)
-        ui -> dicethree -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
+        if (diceLabel) {
+            diceLabel->setPixmap(dice_images[dice[i] - 1].scaled(50, 50, Qt::KeepAspectRatio));
 
-    if (dice[3] == 1)
-        ui -> dicefour -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[3] == 2)
-        ui -> dicefour -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[3] == 3)
-        ui -> dicefour -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[3] == 4)
-        ui -> dicefour -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[3] == 5)
-        ui -> dicefour -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[3] == 6)
-        ui -> dicefour -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-
-    if (dice[4] == 1)
-        ui -> dicefive -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[4] == 2)
-        ui -> dicefive -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[4] == 3)
-        ui -> dicefive -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[4] == 4)
-        ui -> dicefive -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[4] == 5)
-        ui -> dicefive -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-    else if (dice[4] == 6)
-        ui -> dicefive -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-    for (int i=0; i<5; i++)
-    {
-        if (turn % 2 == 1)
-            usr1.current_dice[i] = dice[i];
-        else
-            usr2.current_dice[i] = dice[i];
+            if (turn % 2 == 1) {
+                usr1.current_dice[i] = dice[i];
+            } else {
+                usr2.current_dice[i] = dice[i];
+            }
+        }
     }
 }
 
 void MainWindow::refresh_dice()
 {
-    int i, dice[5];
+    QPixmap dice_images[6];
+    dice_images[0].load(":/dice/images/one.png");
+    dice_images[1].load(":/dice/images/two.png");
+    dice_images[2].load(":/dice/images/three.png");
+    dice_images[3].load(":/dice/images/four.png");
+    dice_images[4].load(":/dice/images/five.png");
+    dice_images[5].load(":/dice/images/six.png");
+    int dice[5];
+    user_score& currentUser = (turn % 2 == 1) ? usr1 : usr2;
 
-    if (turn % 2 == 1)
-    {
-        for (i=0; i < 5; i++)
-        {
-            if (usr1.check_keep[i] != "1")
-                dice[i] = dice_gen();
-            else
-                dice[i] = usr1.current_dice[i];
-        }
-    }
-    else
-    {
-        for (i=0; i < 5; i++)
-        {
-            if (usr2.check_keep[i] != "1")
-                dice[i] = dice_gen();
-            else
-                dice[i] = usr2.current_dice[i];
-        }
-    }
+    QLabel* diceLabels[5] = {
+        ui->diceone,
+        ui->dicetwo,
+        ui->dicethree,
+        ui->dicefour,
+        ui->dicefive
+    };
 
-    QPixmap pix_one(":/dice/images/one.png");
-    QPixmap pix_two(":/dice/images/two.png");
-    QPixmap pix_three(":/dice/images/three.png");
-    QPixmap pix_four(":/dice/images/four.png");
-    QPixmap pix_five(":/dice/images/five.png");
-    QPixmap pix_six(":/dice/images/six.png");
-
-    i = -1;
-    while (dice[++i])
+    for (int i = 0; i < 5; i++)
     {
-        if (dice[i] == 0)
-            continue;
+        if (currentUser.check_keep[i] != "1")
+            dice[i] = dice_gen();
         else
-        {
-            switch(i)
-            {
-            case 0:
-                if (dice[0] == 1)
-                    ui -> diceone -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[0] == 2)
-                    ui -> diceone -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[0] == 3)
-                    ui -> diceone -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[0] == 4)
-                    ui -> diceone -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[0] == 5)
-                    ui -> diceone -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[0] == 6)
-                    ui -> diceone -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-                break;
-            case 1:
-                if (dice[1] == 1)
-                    ui -> dicetwo -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[1] == 2)
-                    ui -> dicetwo -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[1] == 3)
-                    ui -> dicetwo -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[1] == 4)
-                    ui -> dicetwo -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[1] == 5)
-                    ui -> dicetwo -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[1] == 6)
-                    ui -> dicetwo -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-                break;
-            case 2:
-                if (dice[2] == 1)
-                    ui -> dicethree -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[2] == 2)
-                    ui -> dicethree -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[2] == 3)
-                    ui -> dicethree -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[2] == 4)
-                    ui -> dicethree -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[2] == 5)
-                    ui -> dicethree -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[2] == 6)
-                    ui -> dicethree -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-                break;
-            case 3:
-                if (dice[3] == 1)
-                    ui -> dicefour -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[3] == 2)
-                    ui -> dicefour -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[3] == 3)
-                    ui -> dicefour -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[3] == 4)
-                    ui -> dicefour -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[3] == 5)
-                    ui -> dicefour -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[3] == 6)
-                    ui -> dicefour -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-                break;
-            case 4:
-                if (dice[4] == 1)
-                    ui -> dicefive -> setPixmap(pix_one.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[4] == 2)
-                    ui -> dicefive -> setPixmap(pix_two.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[4] == 3)
-                    ui -> dicefive -> setPixmap(pix_three.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[4] == 4)
-                    ui -> dicefive -> setPixmap(pix_four.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[4] == 5)
-                    ui -> dicefive -> setPixmap(pix_five.scaled(50, 50, Qt::KeepAspectRatio));
-                else if (dice[4] == 6)
-                    ui -> dicefive -> setPixmap(pix_six.scaled(50, 50, Qt::KeepAspectRatio));
-                break;
-            }
-        }
+            dice[i] = currentUser.current_dice[i];
+
+        int diceValue = dice[i];
+        if (diceValue >= 1 && diceValue <= 6)
+            diceLabels[i]->setPixmap(dice_images[diceValue - 1].scaled(50, 50, Qt::KeepAspectRatio));
     }
-    for (i=0; i<5; i++)
-    {
-        if (turn % 2 == 1)
-            usr1.current_dice[i] = dice[i];
-        else
-            usr2.current_dice[i] = dice[i];
-    }
+    for (int i = 0; i < 5; i++)
+        currentUser.current_dice[i] = dice[i];
 }
+
 
 void MainWindow::on_reroll_clicked()
 {
@@ -809,8 +628,8 @@ void MainWindow::refresh_player_button()
     };
     if (turn % 2 == 1) {
         /*
-         * 함수포인터를 이용해서 코드를 간결하게 최적화.
-         * https://github.com/kimch0612/OOP2_Project/commit/3aa930bcb2ee8e69e83b7ac70dc1077a4f46ce75
+        함수포인터를 이용해서 코드를 최적화함.
+        https://github.com/kimch0612/OOP2_Project/commit/3aa930bcb2ee8e69e83b7ac70dc1077a4f46ce75
         */
         for (QPushButton* button : usr2_buttons)
             button->setVisible(false);
@@ -830,6 +649,10 @@ void MainWindow::refresh_player_button()
 
 void MainWindow::on_keep1b_clicked()
 {
+    /*
+    삼항연산자를 이용해서 코드를 최적화함.
+    https://github.com/kimch0612/OOP2_Project/commit/504bcc9730df1c0c0766fda9070860a7a0c94cf2
+    */
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[0] : usr2.check_keep[0];
 
     if (CheckKeep == "0") {
