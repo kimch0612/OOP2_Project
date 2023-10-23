@@ -69,6 +69,22 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
             }
             break;
         case 10: // Full House
+            for (int i=0; i<5; i++)
+                tmp[current_dice[i] - 1] += 1;
+            for (int i=0; i<5; i++)
+            {
+                if (tmp[i] == 2)
+                {
+                    for (int index=0; index<5; index++)
+                    {
+                        if (tmp[index] == 3)
+                        {
+                            temp = tmp[i]*(i+1) + tmp[index]*(index+1);
+                            all += temp;
+                        }
+                    }
+                }
+            }
             break;
         case 11: // S. Straight
             break;

@@ -315,7 +315,18 @@ void MainWindow::on_fkindonebutton_clicked()
 
 void MainWindow::on_fullhouseonebutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr1.sum_digit(10, turn, usr1, usr2);
+    all = usr1.all;
+    usr1.blank_flag[8] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> fullhouseone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
     set_next_turn();
+    ui -> fullhouseonebutton -> setVisible(false);
 }
 
 
@@ -504,7 +515,18 @@ void MainWindow::on_fkindtwobutton_clicked()
 
 void MainWindow::on_fullhousetwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(10, turn, usr1, usr2);
+    all = usr2.all;
+    usr2.blank_flag[8] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> fullhousetwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
     set_next_turn();
+    ui -> fullhousetwobutton -> setVisible(false);
 }
 
 
