@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
         ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
         ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
-        ui->bonusonebutton, ui->pushButton, ui->backbutton
+        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->pushButton_2
     };
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
