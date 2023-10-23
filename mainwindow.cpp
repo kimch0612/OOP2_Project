@@ -21,12 +21,11 @@ MainWindow::MainWindow(QWidget *parent)
         ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
         ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
         ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
-        ui->bonusonebutton, ui->pushButton
+        ui->bonusonebutton, ui->pushButton, ui->backbutton
     };
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
     }
-    ui -> backbutton -> setVisible(true);
     ui -> creditone -> setText("<a href=\"https://www.pngwing.com/en/free-png-sptdk/\">Program Title icon</a>");
     ui -> creditone -> setTextFormat(Qt::RichText);
     ui -> creditone -> setTextInteractionFlags(Qt::TextBrowserInteraction);
@@ -40,7 +39,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_startbutton_clicked()
 {
-    QList<QWidget*> widgetsToHide = {ui->gamestart, ui->startbutton, ui->howtobutton, ui->creditsbutton, ui->exitbutton};
+    QList<QWidget*> widgetsToHide = {ui->gamestart, ui->startbutton, ui->howtobutton, ui->creditsbutton, ui->exitbutton, ui->backbutton};
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
     }
@@ -97,64 +96,69 @@ void MainWindow::on_backbutton_clicked()
 void MainWindow::set_next_turn()
 {
     string temp;
-    turn++;
-    if (turn % 2 == 1)
+
+    if (++turn <= 24)
     {
-        ui->playingplayer->setText("Player 1 is in control...");
-        for (int i=0; i<5; i++)
+        if (turn % 2 == 1)
         {
-            usr1.check_keep[i] = "0";
-            usr1.current_dice[i] = 0;
+            ui->playingplayer->setText("Player 1 is in control...");
+            for (int i=0; i<5; i++)
+            {
+                usr1.check_keep[i] = "0";
+                usr1.current_dice[i] = 0;
+            }
+            if (usr2.digits == 6 || usr2.bonus >= 63)
+            {
+                if (usr2.bonus >= 63)
+                {
+                    ui -> bonustwo -> setText("✓");
+                    usr2.all += 35;
+                    QString all_qstr = QString::fromStdString(to_string(usr2.all));
+                    ui -> totaltwo -> setText(all_qstr);
+                    usr2.digits = 0;
+                }
+                else
+                {
+                    ui -> bonustwo -> setText("X");
+                    usr2.digits = 0;
+                }
+            }
         }
-        if (usr2.digits == 6 || usr2.bonus >= 63)
+        else if (turn % 2 == 0)
         {
-            if (usr2.bonus >= 63)
+            ui->playingplayer->setText("Player 2 is in control...");
+            for (int i=0; i<5; i++)
             {
-                ui -> bonustwo -> setText("✓");
-                usr2.all += 35;
-                QString all_qstr = QString::fromStdString(to_string(usr2.all));
-                ui -> totaltwo -> setText(all_qstr);
-                usr2.digits = 0;
+                usr2.check_keep[i] = "0";
+                usr2.current_dice[i] = 0;
             }
-            else
+            if (usr1.digits == 6 || usr1.bonus >= 63)
             {
-                ui -> bonustwo -> setText("X");
-                usr2.digits = 0;
+                if (usr1.bonus >= 63)
+                {
+                    usr1.all += 35;
+                    ui -> bonusone -> setText("✓");
+                    QString all_qstr = QString::fromStdString(to_string(usr1.all));
+                    ui -> totalone -> setText(all_qstr);
+                    usr1.digits = 0;
+                }
+                else
+                {
+                    ui -> bonusone -> setText("X");
+                    usr1.digits = 0;
+                }
             }
         }
+        current_turn = 3;
+        temp = to_string(current_turn) + " left";
+        QString lefttime_qstr = QString::fromStdString(temp);
+        ui -> lefttime -> setText(lefttime_qstr);
+        init_dice();
+        refresh_keep();
+        refresh_player_button();
+    } else {
+        Final_Score();
     }
-    else if (turn % 2 == 0)
-    {
-        ui->playingplayer->setText("Player 2 is in control...");
-        for (int i=0; i<5; i++)
-        {
-            usr2.check_keep[i] = "0";
-            usr2.current_dice[i] = 0;
-        }
-        if (usr1.digits == 6 || usr1.bonus >= 63)
-        {
-            if (usr1.bonus >= 63)
-            {
-                usr1.all += 35;
-                ui -> bonusone -> setText("✓");
-                QString all_qstr = QString::fromStdString(to_string(usr1.all));
-                ui -> totalone -> setText(all_qstr);
-                usr1.digits = 0;
-            }
-            else
-            {
-                ui -> bonusone -> setText("X");
-                usr1.digits = 0;
-            }
-        }
-    }
-    current_turn = 3;
-    temp = to_string(current_turn) + " left";
-    QString lefttime_qstr = QString::fromStdString(temp);
-    ui -> lefttime -> setText(lefttime_qstr);
-    init_dice();
-    refresh_keep();
-    refresh_player_button();
 }
 
 void MainWindow::on_oneonebutton_clicked()
@@ -294,30 +298,52 @@ void MainWindow::on_choiceonebutton_clicked()
 
 void MainWindow::on_fkindonebutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr1.sum_digit(9, turn, usr1, usr2);
+    all = usr1.all;
+    usr1.blank_flag[7] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> fkindone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
+    set_next_turn();
     ui -> fkindonebutton -> setVisible(false);
 }
 
 
 void MainWindow::on_fullhouseonebutton_clicked()
 {
-    ui -> fullhouseonebutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_sstraightonebutton_clicked()
 {
-    ui -> sstraightonebutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_lstraightonebutton_clicked()
 {
-    ui -> lstraightonebutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_yahtzeeonebutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr1.sum_digit(13, turn, usr1, usr2);
+    all = usr1.all;
+    usr1.blank_flag[11] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> yahtzeeone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
+    set_next_turn();
     ui -> yahtzeeonebutton -> setVisible(false);
 }
 
@@ -461,30 +487,52 @@ void MainWindow::on_choicetwobutton_clicked()
 
 void MainWindow::on_fkindtwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(9, turn, usr1, usr2);
+    all = usr2.all;
+    usr2.blank_flag[7] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> fkindtwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    set_next_turn();
     ui -> fkindtwobutton -> setVisible(false);
 }
 
 
 void MainWindow::on_fullhousetwobutton_clicked()
 {
-    ui -> fullhousetwobutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_sstraighttwobutton_clicked()
 {
-    ui -> sstraighttwobutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_lstraighttwobutton_clicked()
 {
-    ui -> lstraighttwobutton -> setVisible(false);
+    set_next_turn();
 }
 
 
 void MainWindow::on_yahtzeetwobutton_clicked()
 {
+    int score, all, bonus;
+
+    score = usr2.sum_digit(13, turn, usr1, usr2);
+    all = usr2.all;
+    usr2.blank_flag[11] = 1;
+
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    ui -> yahtzeetwo -> setText(text_qstr);
+    ui -> totaltwo -> setText(all_qstr);
+    set_next_turn();
     ui -> yahtzeetwobutton -> setVisible(false);
 }
 
@@ -711,10 +759,10 @@ void MainWindow::on_keep5b_clicked()
     string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[4] : usr2.check_keep[4];
 
     if (CheckKeep == "0") {
-        ui->keep4->setText("keep");
+        ui->keep5->setText("keep");
         CheckKeep = "1";
     } else {
-        ui->keep4->setText("");
+        ui->keep5->setText("");
         CheckKeep = "0";
     }
 }
@@ -725,21 +773,27 @@ void MainWindow::on_howtobutton_clicked()
     QDesktopServices::openUrl(QUrl("https://github.com/kimch0612/OOP2_Project/blob/master/manual.md", QUrl::TolerantMode));
 }
 
-
-void MainWindow::on_bonusonebutton_clicked()
+void MainWindow::Final_Score()
 {
-
+    QList<QWidget*> widgetsToHide = {
+        ui->category, ui->playingplayer, ui->diceone,
+        ui->dicetwo, ui->dicethree, ui->dicefour,
+        ui->dicefive, ui->keep1b, ui->keep2b,
+        ui->keep3b, ui->keep4b, ui->keep5b,
+        ui->reroll, ui->lefttime, ui->keep1,
+        ui->keep2, ui->keep3, ui->keep4,
+        ui->keep5
+    };
+    for (QWidget* widget : widgetsToHide) {
+        widget->setVisible(false);
+    }
 }
 
 
-void MainWindow::on_pushButton_clicked()
-{
-
-}
+void MainWindow::on_bonusonebutton_clicked(){}
 
 
-void MainWindow::on_pushButton_2_clicked()
-{
-    refresh_dice();
-}
+void MainWindow::on_pushButton_clicked(){}
 
+
+void MainWindow::on_pushButton_2_clicked(){ refresh_dice(); }

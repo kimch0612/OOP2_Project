@@ -69,6 +69,8 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void Final_Score();
+
 private:
     Ui::MainWindow *ui;
 };
