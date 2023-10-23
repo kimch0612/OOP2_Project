@@ -1799,7 +1799,7 @@
    <widget class="QPushButton" name="keep3b">
     <property name="geometry">
      <rect>
-      <x>545</x>
+      <x>547</x>
       <y>176</y>
       <width>20</width>
       <height>20</height>
