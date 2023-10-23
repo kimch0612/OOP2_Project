@@ -779,85 +779,51 @@ void MainWindow::refresh_keep()
 
 void MainWindow::refresh_player_button()
 {
+    QPushButton* usr1_buttons[] = {
+        ui->oneonebutton,
+        ui->twoonebutton,
+        ui->threeonebutton,
+        ui->fouronebutton,
+        ui->fiveonebutton,
+        ui->sixonebutton,
+        ui->choiceonebutton,
+        ui->fkindonebutton,
+        ui->fullhouseonebutton,
+        ui->sstraightonebutton,
+        ui->lstraightonebutton,
+        ui->yahtzeeonebutton
+    };
+    QPushButton* usr2_buttons[] = {
+        ui->onetwobutton,
+        ui->twotwobutton,
+        ui->threetwobutton,
+        ui->fourtwobutton,
+        ui->fivetwobutton,
+        ui->sixtwobutton,
+        ui->choicetwobutton,
+        ui->fkindtwobutton,
+        ui->fullhousetwobutton,
+        ui->sstraighttwobutton,
+        ui->lstraighttwobutton,
+        ui->yahtzeetwobutton
+    };
     if (turn % 2 == 1)
     {
-        ui -> onetwobutton -> setVisible(false);
-        ui -> twotwobutton -> setVisible(false);
-        ui -> threetwobutton -> setVisible(false);
-        ui -> fourtwobutton -> setVisible(false);
-        ui -> fivetwobutton -> setVisible(false);
-        ui -> sixtwobutton -> setVisible(false);
-        ui -> choicetwobutton -> setVisible(false);
-        ui -> fkindtwobutton -> setVisible(false);
-        ui -> fullhousetwobutton -> setVisible(false);
-        ui -> sstraighttwobutton -> setVisible(false);
-        ui -> lstraighttwobutton -> setVisible(false);
-        ui -> yahtzeetwobutton -> setVisible(false);
-
-        if (usr1.blank_flag[0] != 1)
-            ui -> oneonebutton -> setVisible(true);
-        if (usr1.blank_flag[1] != 1)
-            ui -> twoonebutton -> setVisible(true);
-        if (usr1.blank_flag[2] != 1)
-            ui -> threeonebutton -> setVisible(true);
-        if (usr1.blank_flag[3] != 1)
-            ui -> fouronebutton -> setVisible(true);
-        if (usr1.blank_flag[4] != 1)
-            ui -> fiveonebutton -> setVisible(true);
-        if (usr1.blank_flag[5] != 1)
-            ui -> sixonebutton -> setVisible(true);
-        if (usr1.blank_flag[6] != 1)
-            ui -> choiceonebutton -> setVisible(true);
-        if (usr1.blank_flag[7] != 1)
-            ui -> fkindonebutton -> setVisible(true);
-        if (usr1.blank_flag[8] != 1)
-            ui -> fullhouseonebutton -> setVisible(true);
-        if (usr1.blank_flag[9] != 1)
-            ui -> sstraightonebutton -> setVisible(true);
-        if (usr1.blank_flag[10] != 1)
-            ui -> lstraightonebutton -> setVisible(true);
-        if (usr1.blank_flag[11] != 1)
-            ui -> yahtzeeonebutton -> setVisible(true);
+        for (QPushButton* button : usr2_buttons) // 함수포인터를 이용해서 코드를 간결하게 최적화.
+            button->setVisible(false);
+        for (int i = 0; i < 12; i++) {
+            if (usr1.blank_flag[i] != 1)
+                usr1_buttons[i]->setVisible(true);
+        }
     }
     else
     {
-        ui -> oneonebutton -> setVisible(false);
-        ui -> twoonebutton -> setVisible(false);
-        ui -> threeonebutton -> setVisible(false);
-        ui -> fouronebutton -> setVisible(false);
-        ui -> fiveonebutton -> setVisible(false);
-        ui -> sixonebutton -> setVisible(false);
-        ui -> choiceonebutton -> setVisible(false);
-        ui -> fkindonebutton -> setVisible(false);
-        ui -> fullhouseonebutton -> setVisible(false);
-        ui -> sstraightonebutton -> setVisible(false);
-        ui -> lstraightonebutton -> setVisible(false);
-        ui -> yahtzeeonebutton -> setVisible(false);
-
-        if (usr2.blank_flag[0] != 1)
-            ui -> onetwobutton -> setVisible(true);
-        if (usr2.blank_flag[1] != 1)
-            ui -> twotwobutton -> setVisible(true);
-        if (usr2.blank_flag[2] != 1)
-            ui -> threetwobutton -> setVisible(true);
-        if (usr2.blank_flag[3] != 1)
-            ui -> fourtwobutton -> setVisible(true);
-        if (usr2.blank_flag[4] != 1)
-            ui -> fivetwobutton -> setVisible(true);
-        if (usr2.blank_flag[5] != 1)
-            ui -> sixtwobutton -> setVisible(true);
-        if (usr2.blank_flag[6] != 1)
-            ui -> choicetwobutton -> setVisible(true);
-        if (usr2.blank_flag[7] != 1)
-            ui -> fkindtwobutton -> setVisible(true);
-        if (usr2.blank_flag[8] != 1)
-            ui -> fullhousetwobutton -> setVisible(true);
-        if (usr2.blank_flag[9] != 1)
-            ui -> sstraighttwobutton -> setVisible(true);
-        if (usr2.blank_flag[10] != 1)
-            ui -> lstraighttwobutton -> setVisible(true);
-        if (usr2.blank_flag[11] != 1)
-            ui -> yahtzeetwobutton -> setVisible(true);
+        for (QPushButton* button : usr1_buttons)
+            button->setVisible(false);
+        for (int i = 0; i < 12; i++) {
+            if (usr2.blank_flag[i] != 1)
+                usr2_buttons[i]->setVisible(true);
+        }
     }
 }
 
