@@ -60,7 +60,7 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
         case 9: // 4 kind
             for (i=0; i<5; i++)
                 tmp[current_dice[i] - 1] += 1;
-            for (i=0; i<5; i++)
+            for (i=0; i<6; i++)
             {
                 if (tmp[i] >= 4)
                 {
