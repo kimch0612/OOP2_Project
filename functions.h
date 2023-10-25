@@ -11,10 +11,6 @@
 #include <random>
 #include <QDesktopServices>
 using namespace std;
-int dice_gen();
-char score_section();
-char dice_section();
-char final_score();
 class user_score{
 public:
     int all, bonus, chance, fourkind, digits;
@@ -23,4 +19,6 @@ public:
     int blank_flag[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     string check_keep[5] = {"0", "0", "0", "0", "0"};
 };
+int dice_gen();
+int calc_score(user_score usr1, user_score usr2);
 #endif

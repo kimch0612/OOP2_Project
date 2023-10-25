@@ -129,3 +129,8 @@ int dice_gen(void)
     std::uniform_int_distribution<int> dis(1, 6);
     return dis(gen);
 }
+
+int calc_score(user_score usr1, user_score usr2)
+{
+    return 0;
+}

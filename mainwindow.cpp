@@ -563,7 +563,7 @@ void MainWindow::on_sstraighttwobutton_clicked()
     QString text_qstr = QString::fromStdString(to_string(score));
     QString all_qstr = QString::fromStdString(to_string(all));
     ui -> sstraighttwo -> setText(text_qstr);
-    ui -> totalone -> setText(all_qstr);
+    ui -> totaltwo -> setText(all_qstr);
     set_next_turn();
     ui -> sstraighttwobutton -> setVisible(false);
 }
