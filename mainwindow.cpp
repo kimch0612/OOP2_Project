@@ -855,6 +855,12 @@ void MainWindow::Final_Score()
     }
     ui->gamestart->setVisible(true);
     ui->gamestart->setText("Game Set!");
+    if (calc_score(usr1, usr2) == 0)
+        ui->gameset->setText("User 1 Win!");
+    else if (calc_score(usr1, usr2) == 1)
+        ui->gameset->setText("User 2 Win!");
+    else
+        ui->gameset->setText("Draw");
 }
 
 

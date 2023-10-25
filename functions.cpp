@@ -132,5 +132,7 @@ int dice_gen(void)
 
 int calc_score(user_score usr1, user_score usr2)
 {
-    return 0;
+    if (usr1.all > usr2.all) return 0;
+    else if (usr1.all < usr2.all) return 1;
+    else return 2;
 }
