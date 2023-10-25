@@ -50,26 +50,17 @@ private slots:
     void set_next_turn();
     void refresh_keep();
     void refresh_player_button();
-
     void on_reroll_clicked();
-
     void on_pushButton_clicked();
-
     void on_keep1b_clicked();
-
     void on_keep2b_clicked();
-
     void on_keep3b_clicked();
-
     void on_keep4b_clicked();
-
     void on_keep5b_clicked();
-
     void on_howtobutton_clicked();
-
     void on_pushButton_2_clicked();
-
     void Final_Score();
+    void restart_game();
 
 private:
     Ui::MainWindow *ui;

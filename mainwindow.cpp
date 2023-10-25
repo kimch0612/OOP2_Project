@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
         ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
         ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
-        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->pushButton_2
+        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->pushButton_2, ui->restart
     };
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
@@ -861,6 +861,8 @@ void MainWindow::Final_Score()
         ui->gameset->setText("User 2 Win!");
     else
         ui->gameset->setText("Draw");
+    ui->restart->setVisible(true);
+    ui->exitbutton->setVisible(true);
 }
 
 
@@ -871,3 +873,9 @@ void MainWindow::on_pushButton_clicked(){}
 
 
 void MainWindow::on_pushButton_2_clicked(){ refresh_dice(); }
+
+
+void MainWindow::restart_game()
+{
+
+}

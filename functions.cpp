@@ -96,7 +96,6 @@ int user_score:: sum_digit(int flag, int current_turn, user_score& usr1, user_sc
                     check_num++;
                     flag1 = false;
                 }
-            cout << check_num << endl;
             if (check_num >= 4)
                 temp = 15;
             all += temp;

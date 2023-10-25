@@ -1898,6 +1898,46 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="gameset">
+    <property name="geometry">
+     <rect>
+      <x>412</x>
+      <y>199</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="restart">
+    <property name="geometry">
+     <rect>
+      <x>507</x>
+      <y>252</y>
+      <width>80</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(81, 82, 83);</string>
+    </property>
+    <property name="text">
+     <string>restart</string>
+    </property>
+   </widget>
    <zorder>threeone</zorder>
    <zorder>threeonebutton</zorder>
    <zorder>verticalLayoutWidget</zorder>
@@ -2005,6 +2045,8 @@
    <zorder>pushButton</zorder>
    <zorder>pushButton_2</zorder>
    <zorder>label_2</zorder>
+   <zorder>gameset</zorder>
+   <zorder>restart</zorder>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
