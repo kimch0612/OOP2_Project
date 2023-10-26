@@ -10,6 +10,7 @@
 #include <windows.h>
 #include <random>
 #include <QDesktopServices>
+#include <QTimer>
 using namespace std;
 class user_score{
 public:

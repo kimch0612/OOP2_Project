@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-int turn=1, current_turn=3;
+int turn=1, current_turn=3, timer=29;
 user_score usr1;
 user_score usr2;
 
@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
         ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
         ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
-        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->restart
+        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->restart, ui->pushButton_2
     };
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
@@ -62,6 +62,12 @@ void MainWindow::on_startbutton_clicked()
     ui -> lefttime -> setText("3 left");
     ui -> category -> setText("← Choose category");
     Calc_Current_Score();
+    Timer = new QTimer(this);
+    connect(Timer, SIGNAL(timeout()), this, SLOT(timeout()));
+    Timer->start(30000);
+    Timer_label = new QTimer(this);
+    connect(Timer_label, SIGNAL(timeout()), this, SLOT(timer_update()));
+    Timer_label->start(1000);
 }
 
 void MainWindow::on_exitbutton_clicked()
@@ -158,6 +164,11 @@ void MainWindow::set_next_turn()
         refresh_keep();
         refresh_player_button();
         Calc_Current_Score();
+        timer = 29;
+        Timer->stop();
+        Timer_label->stop();
+        Timer->start(30000);
+        Timer_label->start(1000);
     } else {
         Final_Score();
     }
@@ -929,4 +940,21 @@ void MainWindow::on_pushButton_2_clicked(){ refresh_dice(); Calc_Current_Score()
 void MainWindow::restart_game()
 {
 
+}
+
+void MainWindow:: timer_update()
+{
+    timer--;
+    string temp = to_string(timer) + "sec";
+    QString lefttimer = QString::fromStdString(temp);
+    ui->timer_label->setText(lefttimer);
+}
+
+void MainWindow:: timeout()
+{
+    current_turn = 0;
+    string temp = "timeout!";
+    QString lefttime_qstr = QString::fromStdString(temp);
+    ui -> lefttime -> setText(lefttime_qstr);
+    Timer_label->stop();
 }

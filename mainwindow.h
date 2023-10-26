@@ -62,9 +62,13 @@ private slots:
     void Final_Score();
     void restart_game();
     void Calc_Current_Score();
+    void timer_update();
+    void timeout();
 
 private:
     Ui::MainWindow *ui;
+    QTimer *Timer;
+    QTimer *Timer_label;
 };
 
 
