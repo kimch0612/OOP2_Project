@@ -250,7 +250,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -272,7 +272,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -294,7 +294,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -316,7 +316,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -338,7 +338,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -360,7 +360,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -382,7 +382,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -425,7 +425,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -468,7 +468,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -490,7 +490,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -512,7 +512,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -534,7 +534,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -556,7 +556,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -592,14 +592,14 @@
     <property name="geometry">
      <rect>
       <x>9</x>
-      <y>409</y>
+      <y>406</y>
       <width>61</width>
       <height>50</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>9</pointsize>
+      <pointsize>10</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -654,10 +654,15 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>67</y>
+      <y>66</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -673,10 +678,15 @@
     <property name="geometry">
      <rect>
       <x>177</x>
-      <y>67</y>
+      <y>66</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -692,10 +702,15 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>92</y>
+      <y>91</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -711,10 +726,15 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>117</y>
+      <y>116</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -730,10 +750,15 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>142</y>
+      <y>141</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -749,10 +774,15 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>167</y>
+      <y>166</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -768,10 +798,15 @@
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>191</y>
+      <y>190</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -792,6 +827,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -806,10 +846,15 @@
     <property name="geometry">
      <rect>
       <x>177</x>
-      <y>92</y>
+      <y>91</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -825,10 +870,15 @@
     <property name="geometry">
      <rect>
       <x>177</x>
-      <y>142</y>
+      <y>141</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -844,10 +894,15 @@
     <property name="geometry">
      <rect>
       <x>177</x>
-      <y>167</y>
+      <y>166</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -868,6 +923,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -882,10 +942,15 @@
     <property name="geometry">
      <rect>
       <x>177</x>
-      <y>117</y>
+      <y>116</y>
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -901,10 +966,15 @@
     <property name="geometry">
      <rect>
       <x>177</x>
-      <y>191</y>
-      <width>16</width>
+      <y>190</y>
+      <width>21</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -925,6 +995,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -944,6 +1019,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -962,6 +1042,11 @@
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -1001,6 +1086,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -1019,6 +1109,11 @@
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -1058,6 +1153,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -1077,6 +1177,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -1095,6 +1200,11 @@
       <width>16</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
@@ -1153,6 +1263,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -1172,6 +1287,11 @@
       <height>16</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
@@ -1185,11 +1305,16 @@
    <widget class="QPushButton" name="oneonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>68</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>67</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1198,11 +1323,16 @@
    <widget class="QPushButton" name="twoonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>93</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>92</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1211,11 +1341,16 @@
    <widget class="QPushButton" name="threeonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>118</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>117</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1224,11 +1359,16 @@
    <widget class="QPushButton" name="fiveonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>168</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>167</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1237,11 +1377,16 @@
    <widget class="QPushButton" name="sixonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>192</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>191</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1250,11 +1395,16 @@
    <widget class="QPushButton" name="fouronebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>143</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>142</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1263,11 +1413,16 @@
    <widget class="QPushButton" name="choiceonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>252</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>251</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1276,11 +1431,16 @@
    <widget class="QPushButton" name="sstraightonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>340</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>338</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1289,11 +1449,16 @@
    <widget class="QPushButton" name="fkindonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>290</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>288</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1302,11 +1467,16 @@
    <widget class="QPushButton" name="yahtzeeonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>386</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1315,11 +1485,16 @@
    <widget class="QPushButton" name="lstraightonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>364</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>362</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1328,11 +1503,16 @@
    <widget class="QPushButton" name="fullhouseonebutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>315</y>
-      <width>16</width>
-      <height>16</height>
+      <x>118</x>
+      <y>313</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1341,11 +1521,16 @@
    <widget class="QPushButton" name="fkindtwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>290</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>288</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1354,11 +1539,16 @@
    <widget class="QPushButton" name="fivetwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>168</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>167</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1367,11 +1557,16 @@
    <widget class="QPushButton" name="lstraighttwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>364</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>362</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1380,11 +1575,16 @@
    <widget class="QPushButton" name="twotwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>93</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>92</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1393,11 +1593,16 @@
    <widget class="QPushButton" name="sstraighttwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>340</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>338</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1406,11 +1611,16 @@
    <widget class="QPushButton" name="threetwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>118</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>117</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1419,11 +1629,16 @@
    <widget class="QPushButton" name="fullhousetwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>315</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>313</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1432,11 +1647,16 @@
    <widget class="QPushButton" name="sixtwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>192</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>191</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1445,11 +1665,16 @@
    <widget class="QPushButton" name="fourtwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>143</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>142</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1458,11 +1683,16 @@
    <widget class="QPushButton" name="choicetwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>252</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>251</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1471,11 +1701,16 @@
    <widget class="QPushButton" name="onetwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>68</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>67</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>
@@ -1484,11 +1719,16 @@
    <widget class="QPushButton" name="yahtzeetwobutton">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>388</y>
-      <width>16</width>
-      <height>16</height>
+      <x>175</x>
+      <y>386</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>✓</string>

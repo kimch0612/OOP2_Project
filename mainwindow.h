@@ -61,6 +61,7 @@ private slots:
     void on_pushButton_2_clicked();
     void Final_Score();
     void restart_game();
+    void Calc_Current_Score();
 
 private:
     Ui::MainWindow *ui;

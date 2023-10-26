@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
         ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
         ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
-        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->pushButton_2, ui->restart
+        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->restart
     };
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
@@ -61,6 +61,7 @@ void MainWindow::on_startbutton_clicked()
     init_dice();
     ui -> lefttime -> setText("3 left");
     ui -> category -> setText("← Choose category");
+    Calc_Current_Score();
 }
 
 void MainWindow::on_exitbutton_clicked()
@@ -156,6 +157,7 @@ void MainWindow::set_next_turn()
         init_dice();
         refresh_keep();
         refresh_player_button();
+        Calc_Current_Score();
     } else {
         Final_Score();
     }
@@ -165,7 +167,7 @@ void MainWindow::on_oneonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(1, turn, usr1, usr2);
+    score = usr1.sum_digit(1, usr1, usr2);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[0] = 1;
@@ -184,7 +186,7 @@ void MainWindow::on_twoonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(2, turn, usr1, usr2);
+    score = usr1.sum_digit(2, usr1, usr2);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[1] = 1;
@@ -203,7 +205,7 @@ void MainWindow::on_threeonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(3, turn, usr1, usr2);
+    score = usr1.sum_digit(3, usr1, usr2);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[2] = 1;
@@ -223,7 +225,7 @@ void MainWindow::on_fouronebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(4, turn, usr1, usr2);
+    score = usr1.sum_digit(4, usr1, usr2);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[3] = 1;
@@ -243,7 +245,7 @@ void MainWindow::on_fiveonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(5, turn, usr1, usr2);
+    score = usr1.sum_digit(5, usr1, usr2);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[4] = 1;
@@ -263,7 +265,7 @@ void MainWindow::on_sixonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(6, turn, usr1, usr2);
+    score = usr1.sum_digit(6, usr1, usr2);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[5] = 1;
@@ -283,7 +285,7 @@ void MainWindow::on_choiceonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(8, turn, usr1, usr2);
+    score = usr1.sum_digit(8, usr1, usr2);
     all = usr1.all;
     usr1.blank_flag[6] = 1;
 
@@ -300,7 +302,7 @@ void MainWindow::on_fkindonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(9, turn, usr1, usr2);
+    score = usr1.sum_digit(9, usr1, usr2);
     all = usr1.all;
     usr1.blank_flag[7] = 1;
 
@@ -317,7 +319,7 @@ void MainWindow::on_fullhouseonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(10, turn, usr1, usr2);
+    score = usr1.sum_digit(10, usr1, usr2);
     all = usr1.all;
     usr1.blank_flag[8] = 1;
 
@@ -334,7 +336,7 @@ void MainWindow::on_sstraightonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(11, turn, usr1, usr2);
+    score = usr1.sum_digit(11, usr1, usr2);
     all = usr1.all;
     usr1.blank_flag[9] = 1;
 
@@ -351,7 +353,7 @@ void MainWindow::on_lstraightonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(12, turn, usr1, usr2);
+    score = usr1.sum_digit(12, usr1, usr2);
     all = usr1.all;
     usr1.blank_flag[10] = 1;
 
@@ -368,7 +370,7 @@ void MainWindow::on_yahtzeeonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(13, turn, usr1, usr2);
+    score = usr1.sum_digit(13, usr1, usr2);
     all = usr1.all;
     usr1.blank_flag[11] = 1;
 
@@ -385,7 +387,7 @@ void MainWindow::on_onetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(1, turn, usr1, usr2);
+    score = usr2.sum_digit(1, usr1, usr2);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[0] = 1;
@@ -405,7 +407,7 @@ void MainWindow::on_twotwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(2, turn, usr1, usr2);
+    score = usr2.sum_digit(2, usr1, usr2);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[1] = 1;
@@ -425,7 +427,7 @@ void MainWindow::on_threetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(3, turn, usr1, usr2);
+    score = usr2.sum_digit(3, usr1, usr2);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[2] = 1;
@@ -445,7 +447,7 @@ void MainWindow::on_fourtwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(4, turn, usr1, usr2);
+    score = usr2.sum_digit(4, usr1, usr2);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[3] = 1;
@@ -465,7 +467,7 @@ void MainWindow::on_fivetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(5, turn, usr1, usr2);
+    score = usr2.sum_digit(5, usr1, usr2);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[4] = 1;
@@ -485,7 +487,7 @@ void MainWindow::on_sixtwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(6, turn, usr1, usr2);
+    score = usr2.sum_digit(6, usr1, usr2);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[5] = 1;
@@ -505,7 +507,7 @@ void MainWindow::on_choicetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(8, turn, usr1, usr2);
+    score = usr2.sum_digit(8, usr1, usr2);
     all = usr2.all;
     usr2.blank_flag[6] = 1;
 
@@ -522,7 +524,7 @@ void MainWindow::on_fkindtwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(9, turn, usr1, usr2);
+    score = usr2.sum_digit(9, usr1, usr2);
     all = usr2.all;
     usr2.blank_flag[7] = 1;
 
@@ -539,7 +541,7 @@ void MainWindow::on_fullhousetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(10, turn, usr1, usr2);
+    score = usr2.sum_digit(10, usr1, usr2);
     all = usr2.all;
     usr2.blank_flag[8] = 1;
 
@@ -556,7 +558,7 @@ void MainWindow::on_sstraighttwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(11, turn, usr1, usr2);
+    score = usr2.sum_digit(11, usr1, usr2);
     all = usr2.all;
     usr2.blank_flag[9] = 1;
 
@@ -573,7 +575,7 @@ void MainWindow::on_lstraighttwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(12, turn, usr1, usr2);
+    score = usr2.sum_digit(12, usr1, usr2);
     all = usr2.all;
     usr2.blank_flag[10] = 1;
 
@@ -590,7 +592,7 @@ void MainWindow::on_yahtzeetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(13, turn, usr1, usr2);
+    score = usr2.sum_digit(13, usr1, usr2);
     all = usr2.all;
     usr2.blank_flag[11] = 1;
 
@@ -693,6 +695,55 @@ void MainWindow::on_reroll_clicked()
         temp = to_string(current_turn) + " left";
         QString lefttime_qstr = QString::fromStdString(temp);
         ui -> lefttime -> setText(lefttime_qstr);
+        Calc_Current_Score();
+    }
+}
+
+void MainWindow::Calc_Current_Score()
+{
+    QPushButton* usr1_buttons[] = {
+        ui->oneonebutton,
+        ui->twoonebutton,
+        ui->threeonebutton,
+        ui->fouronebutton,
+        ui->fiveonebutton,
+        ui->sixonebutton,
+        ui->choiceonebutton,
+        ui->fkindonebutton,
+        ui->fullhouseonebutton,
+        ui->sstraightonebutton,
+        ui->lstraightonebutton,
+        ui->yahtzeeonebutton
+    };
+    QPushButton* usr2_buttons[] = {
+        ui->onetwobutton,
+        ui->twotwobutton,
+        ui->threetwobutton,
+        ui->fourtwobutton,
+        ui->fivetwobutton,
+        ui->sixtwobutton,
+        ui->choicetwobutton,
+        ui->fkindtwobutton,
+        ui->fullhousetwobutton,
+        ui->sstraighttwobutton,
+        ui->lstraighttwobutton,
+        ui->yahtzeetwobutton
+    };
+    if (turn%2==1)
+    {
+        for (int i=0; i<12; i++)
+        {
+            QString tmp_qstr = QString::fromStdString(to_string(usr1.calc_current_score(i, usr1, usr2)));
+            usr1_buttons[i]->setText(tmp_qstr);
+        }
+    }
+    else
+    {
+        for (int i=0; i<12; i++)
+        {
+            QString tmp_qstr = QString::fromStdString(to_string(usr2.calc_current_score(i, usr1, usr2)));
+            usr2_buttons[i]->setText(tmp_qstr);
+        }
     }
 }
 
@@ -872,7 +923,7 @@ void MainWindow::on_bonusonebutton_clicked(){}
 void MainWindow::on_pushButton_clicked(){}
 
 
-void MainWindow::on_pushButton_2_clicked(){ refresh_dice(); }
+void MainWindow::on_pushButton_2_clicked(){ refresh_dice(); Calc_Current_Score(); }
 
 
 void MainWindow::restart_game()
