@@ -1,30 +1,30 @@
 ## Conventions
 
-- 모든 작업내용은 Issue로 작성한 뒤, Fork된 Repository에서 Branch를 분리하여 작업하고, PR을 통해 상호간 Code-Review 이후 마지막에 Approve한 Reviewer가 Master Branch에 Merge 합니다.
+- Team Leader를 제외한 이들의 모든 작업내용은 Issue로 작성한 뒤, Fork된 Repository에서 Branch를 분리하여 작업하고, PR을 통해 상호간 Code-Review 이후 마지막에 Approve한 Reviewer가 Master Branch에 Merge 합니다.
 
 ---
 
 ### Commit Rule
 ```
-__Action__ __FileName__ : __Description__
+__Action__ __FileName__; __Description__
 ```
 - Action 은 다음과 같이 두가지 종류로 구분됩니다.
-    - Added : 새로운 파일을 추가한 경우
-    - Update : 특정 파일을 수정한 경우
-    - Remove : 특정 파일을 삭제한 경우
+    - add  : 새로운 파일을 추가한 경우
+    - edit : 특정 파일을 수정한 경우
+    - rm   : 특정 파일을 삭제한 경우
 - FileName 은 추가 혹은 수정한 파일의 이름을 의미합니다.
     - Gradle, Gitignore과 같이 프로젝트 전역의 설정 파일을 수정하거나 패키지 혹은 라이브러리를 추가한 경우에는 ```Update Project```와 같이 작성합니다.
 - Description 은 Commit에서 변경된 내용을 한 문장으로 요약합니다.
 
 #### Commit Example
 ```
-Added README.md
+add README.md
 ```
 ```
-Update MainActivity : Added Login Button on Base Component
+edit MainActivity; Added Login Button on Base Component
 ```
 ```
-Update Project : Set Gradle Version to 7.3.1
+edit Project; Set Gradle Version to 7.3.1
 ```
 
 ---
@@ -36,9 +36,9 @@ Update Project : Set Gradle Version to 7.3.1
 [TYPE] TITLE
 ```
 - TYPE 은 다음 중 하나를 선택합니다.
-    - DEV : 일반적인 개발 사항
-    - FIX : 기존에 개발된 내용을 수정하는 사항
-    - DOC : README 등 문서에 관련된 사항
+    - Critical : 프로그램을 개발하는데 있어서 치명적인 결함/이슈
+    - Servere  : Cricital에 준하진 않지만, 유저가 불편함을 느낄 정도의 결함/이슈
+    - Major    : 사소하거나 말하지 않으면 모를 정도의 결함/이슈
 
 ####  Content
 ```markdown
