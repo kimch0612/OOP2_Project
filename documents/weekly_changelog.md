@@ -56,5 +56,6 @@
   - 전체적으로 코드를 최적화
   - 승자 결정 기능 추가
   - 현재 보유한 패로 흭득할 수 있는 점수를 알려주는 기능 추가
-  
-![녹음 2023-10-27 005003](https://github.com/kimch0612/OOP2_Project/assets/10193967/d888f66f-c2ae-4fe7-871c-a6c140ad6c2c)
+
+![녹음 2023-10-27 012755](https://github.com/kimch0612/OOP2_Project/assets/10193967/6f536ef7-5a24-4cee-84a2-2d21d652f009)
+
