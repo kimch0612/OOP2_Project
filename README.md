@@ -24,8 +24,8 @@
 - 디버깅 모드로 빌드 및 실행합니다.
 
 ## 이 프로젝트에서 사용하는 문서들
+- [Project Convention](./documents/Convention.md)
 - [Troubleshooting](https://github.com/kimch0612/OOP2_Project/issues/6)
 - [To do list](./documents/to_do_list.md)
 - [주차별 개발 현황](./documents/weekly_changelog.md)
 - [게임 매뉴얼](./documents/manual.md)
-- [Project Convention](./documents/Convention.md)
