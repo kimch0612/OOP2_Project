@@ -65,6 +65,8 @@ private slots:
     void timer_update();
     void timeout();
 
+    void on_dicethree_linkActivated(const QString &link);
+
 private:
     Ui::MainWindow *ui;
     QTimer *Timer;

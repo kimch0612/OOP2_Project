@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-int turn=1, current_turn=3, timer=29;
+int turn=1, current_turn=3, timer=29, cheat=0;
 user_score usr1;
 user_score usr2;
 
@@ -899,6 +899,7 @@ void MainWindow::on_keep5b_clicked()
 void MainWindow::on_howtobutton_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://github.com/kimch0612/OOP2_Project/blob/master/documents/manual.md", QUrl::TolerantMode));
+    if (++cheat==3) ui->pushButton_2->setVisible(true);
 }
 
 void MainWindow::Final_Score()
@@ -945,7 +946,7 @@ void MainWindow::restart_game()
 void MainWindow:: timer_update()
 {
     timer--;
-    string temp = to_string(timer) + "sec";
+    string temp = "⏳" + to_string(timer) + "sec";
     QString lefttimer = QString::fromStdString(temp);
     ui->timer_label->setText(lefttimer);
 }
