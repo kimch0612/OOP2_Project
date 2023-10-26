@@ -28,3 +28,4 @@
 - [To do list](./documents/to_do_list.md)
 - [주차별 개발 현황](./documents/weekly_changelog.md)
 - [게임 매뉴얼](./documents/manual.md)
+- [Project Convention](./documents/Convention.md)
