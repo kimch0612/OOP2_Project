@@ -36,9 +36,10 @@ edit Project; Set Gradle Version to 7.3.1
 [TYPE] TITLE
 ```
 - TYPE 은 다음 중 하나를 선택합니다.
-    - Critical : 프로그램을 개발하는데 있어서 치명적인 결함/이슈
+    - Critical   : 프로그램을 개발하는데 있어서 치명적인 결함/이슈
     - Servere  : Cricital에 준하진 않지만, 유저가 불편함을 느낄 정도의 결함/이슈
-    - Major    : 사소하거나 말하지 않으면 모를 정도의 결함/이슈
+    - Major     : 사소하거나 말하지 않으면 모를 정도의 결함/이슈
+    - Normal   : 결함이 아닌 단순 기능 추가 등
 
 ####  Content
 ```markdown
@@ -66,7 +67,7 @@ Detail Description of Issue or PR
 ```
 TYPE/BRANCH_NAME
 ```
-- 기본적으로 Branch의 이름은 Issue의 이름을 따릅니다.
+- 기본적으로 Branch의 이름은 Issue의 문서 번호를 따릅니다만, 아래의 항목에 해당하지 않는 예외사항이라 생각될 경우 수정내역을 간단하게 요약해서 사용합니다.
 - TYPE은 다음 중 하나를 해당하는 Issue의 Type과 동일하게 선택합니다.
   - dev : 일반적인 개발 사항
   - fix : 버그 픽스 등 기존에 개발된 내용을 수정하는 사항
