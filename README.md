@@ -27,7 +27,7 @@
 - 이 Repository의 Issue 항목을 확인해주세요.
 
 ## 그 외 문서들
+- [Troubleshooting](https://github.com/kimch0612/OOP2_Project/issues/6)
 - [To do list](./documents/to_do_list.md)
 - [주차별 개발 현황](./documents/weekly_changelog.md)
 - [게임 매뉴얼](./documents/manual.md)
-- [Troubleshooting](https://github.com/kimch0612/OOP2_Project/issues/6)
