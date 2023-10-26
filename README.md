@@ -23,10 +23,7 @@
 - CMakeLists.txt 파일을 Qt Creator IDE로 실행합니다.
 - 디버깅 모드로 빌드 및 실행합니다.
 
-## 현재 문제점 및 예상되는 문제점
-- 이 Repository의 Issue 항목을 확인해주세요.
-
-## 그 외 문서들
+## 이 프로젝트에서 사용하는 문서들
 - [Troubleshooting](https://github.com/kimch0612/OOP2_Project/issues/6)
 - [To do list](./documents/to_do_list.md)
 - [주차별 개발 현황](./documents/weekly_changelog.md)
