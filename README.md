@@ -1,5 +1,6 @@
 # Object-oriented Programming Project - Yahtzee Dice
-### /// 스크린샷 추가 예정 ///
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/75fd683f-7617-45fe-b90d-7483fd3351e6)
+
 ## 개발 환경
 | Type | Content |
 |:---|:---|
