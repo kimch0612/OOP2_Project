@@ -2,7 +2,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
-int turn=1, current_turn=3, timer=29, cheat=0;
+int turn=1, current_turn=3, timer=30, cheat=0;
 user_score usr1;
 user_score usr2;
 
@@ -39,7 +39,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_startbutton_clicked()
 {
-    QList<QWidget*> widgetsToHide = {ui->gamestart, ui->startbutton, ui->howtobutton, ui->creditsbutton, ui->exitbutton, ui->backbutton};
+    QList<QWidget*> widgetsToHide = {ui->gamestart, ui->startbutton, ui->howtobutton, ui->creditsbutton, ui->exitbutton, ui->backbutton, ui->gamestart, ui->restart};
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
     }
@@ -164,7 +164,7 @@ void MainWindow::set_next_turn()
         refresh_keep();
         refresh_player_button();
         Calc_Current_Score();
-        timer = 29;
+        timer = 30;
         Timer->stop();
         Timer_label->stop();
         Timer->start(30000);
@@ -911,7 +911,7 @@ void MainWindow::Final_Score()
         ui->keep3b, ui->keep4b, ui->keep5b,
         ui->reroll, ui->lefttime, ui->keep1,
         ui->keep2, ui->keep3, ui->keep4,
-        ui->keep5
+        ui->keep5, ui->timer_label
     };
     for (QWidget* widget : widgetsToHide) {
         widget->setVisible(false);
@@ -938,11 +938,6 @@ void MainWindow::on_pushButton_clicked(){}
 void MainWindow::on_pushButton_2_clicked(){ refresh_dice(); Calc_Current_Score(); }
 
 
-void MainWindow::restart_game()
-{
-
-}
-
 void MainWindow:: timer_update()
 {
     timer--;
@@ -954,8 +949,49 @@ void MainWindow:: timer_update()
 void MainWindow:: timeout()
 {
     current_turn = 0;
-    string temp = "timeout!";
-    QString lefttime_qstr = QString::fromStdString(temp);
+    string temp2 = "⏳0sec";
+    QString lefttimer = QString::fromStdString(temp2);
+    ui->timer_label->setText(lefttimer);
+    string temp1 = "timeout!";
+    QString lefttime_qstr = QString::fromStdString(temp1);
     ui -> lefttime -> setText(lefttime_qstr);
     Timer_label->stop();
 }
+
+void MainWindow::on_restart_clicked()
+{
+    QList<QLabel*> widgetsToReset = {
+        ui->oneone, ui->twoone, ui->threeone, ui->fourone, ui->fiveone, ui->sixone,
+        ui->choiceone, ui->fkindone, ui->fullhouseone, ui->sstraightone, ui->lstraightone, ui->yahtzeeone,
+        ui->onetwo, ui->twotwo, ui->threetwo, ui->fourtwo, ui->fivetwo, ui->sixtwo,
+        ui->choicetwo, ui->fkindtwo, ui->fullhousetwo, ui->sstraighttwo, ui->lstraighttwo, ui->yahtzeetwo
+    };
+    for (QLabel* widget : widgetsToReset) {
+        widget->setText("");
+    }
+    QList<QWidget*> widgetsToShow = {
+        ui->oneonebutton, ui->twoonebutton, ui->threeonebutton, ui->fouronebutton, ui->fiveonebutton, ui->sixonebutton,
+        ui->choiceonebutton, ui->fkindonebutton, ui->fullhouseonebutton, ui->sstraightonebutton, ui->lstraightonebutton, ui->yahtzeeonebutton,
+        ui->totalone, ui->totaltwo, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
+        ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->bonusone, ui->bonustwo, ui->category, ui->playingplayer, ui->diceone,
+        ui->dicetwo, ui->dicethree, ui->dicefour, ui->dicefive, ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b,
+        ui->reroll, ui->lefttime, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5, ui->timer_label
+    };
+    for (QWidget* widget : widgetsToShow) {
+        widget->setVisible(true);
+    }
+    ui->restart->setVisible(false);
+    ui->exitbutton->setVisible(false);
+    ui->totalone->setText("0");
+    ui->totaltwo->setText("0");
+    ui->bonusone->setText("0");
+    ui->bonustwo->setText("0");
+    ui->gameset->setText("");
+    usr1.reset_variable();
+    usr2.reset_variable();
+    turn=1, current_turn=3;
+    Timer->stop();
+    Timer_label->stop();
+    on_startbutton_clicked();
+}
+

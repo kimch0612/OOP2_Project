@@ -965,7 +965,7 @@
    <widget class="QLabel" name="sixtwo">
     <property name="geometry">
      <rect>
-      <x>177</x>
+      <x>174</x>
       <y>190</y>
       <width>21</width>
       <height>16</height>
@@ -1753,7 +1753,7 @@
    <widget class="QLabel" name="lefttime">
     <property name="geometry">
      <rect>
-      <x>556</x>
+      <x>565</x>
       <y>326</y>
       <width>50</width>
       <height>16</height>
@@ -2186,7 +2186,7 @@
    <widget class="QLabel" name="timer_label">
     <property name="geometry">
      <rect>
-      <x>456</x>
+      <x>465</x>
       <y>324</y>
       <width>131</width>
       <height>20</height>

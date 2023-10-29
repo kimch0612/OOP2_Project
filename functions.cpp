@@ -229,3 +229,15 @@ int calc_score(user_score usr1, user_score usr2)
     else if (usr1.all < usr2.all) return 1;
     else return 2;
 }
+
+void user_score:: reset_variable()
+{
+    all=0, bonus=0, chance=0, fourkind=0, digits=0;
+    for (int i=0; i<5; i++)
+    {
+        current_dice[i] = 0;
+        check_keep[i] = "0";
+    }
+    for (int i=0; i<12; i++)
+        blank_flag[i] = 0;
+}
