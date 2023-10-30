@@ -1,10 +1,10 @@
-# Yahztee Dice Program Flowchart
+# Yahztee Dice Program Description
 
 ## 목차
 1. [1. GUI 파트에서 사용한 Object들의 Object-Name 설명](#1-gui-파트에서-사용한-object들의-object-name-설명)
 2. [2. 프로그램에서 사용한 변수 설명](#2-프로그램에서-사용한-변수-설명)
 3. [3. 프로그램에서 사용한 함수 설명](#3-프로그램에서-사용한-함수-설명)
-4. [4. user_socre Class 설명](#4-user_score-class-설명)
+4. [4. user_socre class 설명](#4-user_score-class-설명)
 
 ---
 ### 1. GUI 파트에서 사용한 Object의 Object Name 설명
@@ -31,7 +31,7 @@
 ---
 ### 3. 프로그램에서 사용한 함수 설명
 ---
-### 4. user_score Class 설명
+### 4. user_score class 설명
 ```c++
 class user_score{
 public:
