@@ -33,6 +33,12 @@
 | int | check_num | straight 시리즈에서 값이 유효한지 확인하기 위한 지역변수 |
 | int | tmp[] | (위와 동일) |
 | bool | flag1 | (위와 동일) |
+#### functions.h file
+| Type | Name | Purpose |
+|:---|:---|:---|
+| int | all | 점수의 총 합이 저장되어있는 변수 |
+| int | bonus | 1부터 6까지의 점수가 더해져있는 변수 |
+| int | digits | digit dice section에서 1부터 6까지 점수가 다 들어갔는지 판별하는 용도로 사용됨 |
 ---
 ### 3. 프로젝트에서 사용한 함수 설명
 ---
@@ -40,11 +46,6 @@
 ```c++
 class user_score{
 public:
-    /*
-    all: 점수의 총 합이 저장되어있음
-    bonus: 1부터 6까지의 점수가 더해져있음
-    digits: digit dice section에서 1부터 6까지 점수가 다 들어갔는지 판별하는 용도로 사용됨
-    */
     int all, bonus, digits;
     int sum_digit(int flag, user_score& usr1, user_score& usr2); // 점수를 계산해 저장하기 위한 함수
     int calc_current_score(int flag, user_score& usr1, user_score& usr2); // 현재 가지고있는 주사위로 취득할 수 있는 점수가 몇점인지 확인하는 함수
