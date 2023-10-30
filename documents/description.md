@@ -29,7 +29,10 @@
 #### functions.cpp file
 | Type | Name | Purpose |
 |:---|:---|:---|
-| - | - | - |
+| int | temp | sum_digit()함수에서 값을 return하기 전까지 결괏값을 임시 저장하는 지역변수 |
+| int | check_num | straight 시리즈에서 값이 유효한지 확인하기 위한 지역변수 |
+| int | tmp[] | (위와 동일) |
+| bool | flag1 | (위와 동일) |
 ---
 ### 3. 프로젝트에서 사용한 함수 설명
 ---
