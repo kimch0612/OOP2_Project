@@ -8,9 +8,9 @@
 
 ---
 ### 1. GUI 파트에서 사용한 Object의 Object Name 설명
-| Type | Name | Purpose |
-|:---|:---|:---|
-| - | - | - |
+| Section | Type | Name | Purpose |
+|:---|:---|:---|:---|
+| - | - | - | - |
 ---
 ### 2. 프로젝트에서 사용한 변수 설명
 #### mainwindow.cpp file
