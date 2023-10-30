@@ -7,7 +7,7 @@
 - To be added.
 
 ## 룰 설명
-- To be added.
+- [이곳을 클릭해주세요](./rules.md)
 
 ## 기타
 - To be added.
