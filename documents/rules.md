@@ -11,3 +11,11 @@
   - (ex. 5가 4개, 3이 1개 나왔다고 가정하면, 다음 턴에 Yahtzee를 노리기 위해 현재 나온 패를 1에 박아 점수를 0점을 획득하고 턴을 넘긴다.)
 ---
 ### 2. 점수의 획득 조건
+#### digits dice section에서의 조건
+- Aces: 
+- Ceuces: 
+- Threes: 
+#### c-y dice section에서의 조건
+- Choice: 
+- 4 Kind of: 
+- Full House: 
