@@ -28,6 +28,7 @@
 - [Project Convention](./documents/Convention.md)
 - [Troubleshooting](https://github.com/kimch0612/OOP2_Project/issues/6)
 - [To do list](./documents/to_do_list.md)
+- [Program Flowchart](./documents/flowchart.md)
 - [주차별 개발 현황](./documents/weekly_changelog.md)
 - [게임 매뉴얼](./documents/manual.md)
 - [게임 룰](./documents/rules.md)
