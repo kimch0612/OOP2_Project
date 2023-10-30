@@ -25,7 +25,7 @@
 | int | bonus | digits dice score에서 bonus label을 업데이트하기 위한 지역변수 |
 | int | dice[5] | dice_gen() 함수를 통해 생성한 난수를 저장해두기 위한 지역배열 |
 | string | temp | 함수 내에서 임시적으로 string문을 처리하기 위한 지역변수 |
-| string | check_keep | 이 주사위가 현재 hold되어있는지 확인하는 지역배열 |
+| string | check_keep | 이 주사위가 현재 hold되어있는지 확인하는 지역 문자열 |
 #### functions.cpp file
 | Type | Name | Purpose |
 |:---|:---|:---|
