@@ -673,8 +673,7 @@ void MainWindow::refresh_dice()
         else
             dice[i] = currentUser.current_dice[i];
 
-        if (dice[i] >= 1 && dice[i] <= 6)
-            diceLabels[i]->setPixmap(dice_images[dice[i] - 1].scaled(50, 50, Qt::KeepAspectRatio));
+        diceLabels[i]->setPixmap(dice_images[dice[i] - 1].scaled(50, 50, Qt::KeepAspectRatio));
     }
     for (int i = 0; i < 5; i++)
         currentUser.current_dice[i] = dice[i];
