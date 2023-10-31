@@ -165,4 +165,9 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
     return temp; // 계산한 값을 label에도 적용해줘야 하므로 temp값을 return 해준다.
 }
 ``` 
+#### user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2)
+```c++
+/*작동 방식은 sum_digit 함수와 완전히 동일하고, 점수를 반영할 필요가 없으므로
+all에 값을 더하는 작업만 삭제된 함수이다.*/
+``` 
 ---
