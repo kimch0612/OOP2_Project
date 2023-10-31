@@ -217,9 +217,9 @@ int user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2
 
 int dice_gen(void)
 {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<int> dis(1, 6);
+    random_device rd;
+    mt19937 gen(rd());
+    uniform_int_distribution<int> dis(1, 6);
     return dis(gen);
 }
 
