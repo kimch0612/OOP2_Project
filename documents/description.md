@@ -1,16 +1,10 @@
 # Yahztee Dice Program Description
 
 ## 목차
-1. [GUI 파트에서 사용한 Object들의 Object-Name 설명](#1-gui-파트에서-사용한-object의-object-name-설명)
-2. [프로젝트에서 사용한 변수 설명](#2-프로젝트에서-사용한-변수-설명)
-3. [프로젝트에서 사용한 함수 설명](#3-프로젝트에서-사용한-함수-설명)
+1. [프로젝트에서 사용한 변수 설명](#2-프로젝트에서-사용한-변수-설명)
+2. [프로젝트에서 사용한 함수 설명](#3-프로젝트에서-사용한-함수-설명)
 ---
-### 1. GUI 파트에서 사용한 Object의 Object Name 설명
-| Section | Type | Name | Purpose |
-|:---|:---|:---|:---|
-| - | - | - | - |
----
-### 2. 프로젝트에서 사용한 변수 설명
+### 1. 프로젝트에서 사용한 변수 설명
 #### mainwindow.cpp
 | Type | Name | Purpose |
 |:---|:---|:---|
@@ -41,7 +35,7 @@
 | int | blank_flag[12] | score section에서 점수를 기입해둔 곳은 button이 활성화되지 않게끔 막는 배열 |
 | string | check_keep[5] | 주사위를 hold했는지 여부를 저장해두는 배열 |
 ---
-### 3. 프로젝트에서 사용한 함수 설명
+### 2. 프로젝트에서 사용한 함수 설명
 ### mainwindow.cpp
 #### MainWindow::MainWindow(QWidget *parent)
 ```c++
