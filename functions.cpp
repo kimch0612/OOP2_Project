@@ -64,10 +64,11 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
             {
                 if (tmp[i] >= 4)
                 {
-                    temp = tmp[i] * (i + 1);
-                    all += temp;
+                    for (int index=0; index<6; index++)
+                        temp += tmp[index] * (index + 1);
                 }
             }
+            all += temp;
             break;
         case 10: // Full House
             for (i=0; i<5; i++)
@@ -80,7 +81,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
                     {
                         if (tmp[index] == 3)
                         {
-                            temp = tmp[i]*(i+1) + tmp[index]*(index+1);
+                            temp += tmp[i]*(i+1) + tmp[index]*(index+1);
                             all += temp;
                         }
                     }
@@ -163,7 +164,8 @@ int user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2
             {
                 if (tmp[i] >= 4)
                 {
-                    temp = tmp[i] * (i + 1);
+                    for (int index=0; index<6; index++)
+                        temp += tmp[index] * (index + 1);
                 }
             }
             break;
@@ -177,9 +179,7 @@ int user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2
                     for (int index=0; index<6; index++)
                     {
                         if (tmp[index] == 3)
-                        {
                             temp = tmp[i]*(i+1) + tmp[index]*(index+1);
-                        }
                     }
                 }
             }
