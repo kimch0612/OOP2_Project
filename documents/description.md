@@ -130,8 +130,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
                 (ex. 주사위가 1 1 2 3 4 인 경우에도 S. Straight가 성립함.)
                 check_num에 1을 더하고 flag1를 꺾는다.
                 이후에 또 주사위가 2개인 경우가 나타나다면 flag1이 꺾여있는 상태이므로
-                조건을 만족하지 못해 else if문을 돌지 못한다.
-                */
+                조건을 만족하지 못해 else if문을 돌지 못한다.*/
                 else if (tmp[i] == 2 && flag1){
                     check_num++;
                     flag1 = false;
