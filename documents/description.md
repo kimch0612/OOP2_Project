@@ -4,7 +4,6 @@
 1. [GUI 파트에서 사용한 Object들의 Object-Name 설명](#1-gui-파트에서-사용한-object들의-object-name-설명)
 2. [프로젝트에서 사용한 변수 설명](#2-프로젝트에서-사용한-변수-설명)
 3. [프로젝트에서 사용한 함수 설명](#3-프로젝트에서-사용한-함수-설명)
-4. [user_socre class 설명](#4-user_score-class-설명)
 
 ---
 ### 1. GUI 파트에서 사용한 Object의 Object Name 설명
@@ -39,20 +38,12 @@
 | int | all | 점수의 총 합이 저장되어있는 변수 |
 | int | bonus | 1부터 6까지의 점수가 더해져있는 변수 |
 | int | digits | digit dice section에서 1부터 6까지 점수가 다 들어갔는지 판별하는 용도로 사용하는 변수 |
+| int | current_dice[5] | 현재 주사위가 각각 몇점(눈금)인지 저장해두는 배열 |
+| int | blank_flag[12] | score section에서 점수를 기입해둔 곳은 button이 활성화되지 않게끔 막는 배열 |
+| string | check_keep[5] | 주사위를 hold했는지 여부를 저장해두는 배열 |
 ---
 ### 3. 프로젝트에서 사용한 함수 설명
----
-### 4. user_score class 설명
+#### mainwindow.cpp file
 ```c++
-class user_score{
-public:
-    int all, bonus, digits;
-    int sum_digit(int flag, user_score& usr1, user_score& usr2); // 점수를 계산해 저장하기 위한 함수
-    int calc_current_score(int flag, user_score& usr1, user_score& usr2); // 현재 가지고있는 주사위로 취득할 수 있는 점수가 몇점인지 확인하는 함수
-    void reset_variable(); // 게임을 restart 할때 class에 저장된 값들을 리셋시키기 위한 함수
-    int current_dice[5] = {0, 0, 0, 0, 0}; // 현재 주사위가 각각 몇점(눈금)인지 저장해두는 배열
-    int blank_flag[12] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; // score section에서 점수를 기입해둔 곳은 button이 활성화되지 않게끔 막는 배열
-    string check_keep[5] = {"0", "0", "0", "0", "0"}; // 주사위를 hold했는지 여부를 저장해두는 배열
-};
 ``` 
 ---
