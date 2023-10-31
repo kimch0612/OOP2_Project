@@ -250,6 +250,54 @@ void MainWindow::on_oneonebutton_clicked()
     set_next_turn(); // 다음 턴으로 전환
 }
 ```
+#### void MainWindow::init_dice()
+```c++
+void MainWindow::init_dice()
+{
+    QPixmap dice_images[6]; // 주사위 6개의 이미지를 배열로 정의함
+    dice_images[0].load(":/dice/images/one.png");
+    dice_images[1].load(":/dice/images/two.png");
+    dice_images[2].load(":/dice/images/three.png");
+    dice_images[3].load(":/dice/images/four.png");
+    dice_images[4].load(":/dice/images/five.png");
+    dice_images[5].load(":/dice/images/six.png");
+    int dice[5]; // dice_gen()을 통해 생성한 주사위를 임시 저장할 배열 선언
+
+    for (int i = 0; i < 5; i++) {
+        dice[i] = dice_gen();
+        QLabel* diceLabel = nullptr; // 포인터 변수 diceLabel 선언
+
+        switch (i) { // 생성해서 나온 숫자를 몇번째 칸에 띄울지 매칭함
+        case 0:
+            diceLabel = ui->diceone;
+            break;
+        case 1:
+            diceLabel = ui->dicetwo;
+            break;
+        case 2:
+            diceLabel = ui->dicethree;
+            break;
+        case 3:
+            diceLabel = ui->dicefour;
+            break;
+        case 4:
+            diceLabel = ui->dicefive;
+            break;
+        }
+
+        if (diceLabel) {
+            // 매칭한 주사위 이미지의 사이즈를 셋팅하고 표시함
+            diceLabel->setPixmap(dice_images[dice[i] - 1].scaled(50, 50, Qt::KeepAspectRatio));
+
+            if (turn % 2 == 1) { // 현재 턴에 맞는 Player의 current_dice에 값을 저장함
+                usr1.current_dice[i] = dice[i];
+            } else {
+                usr2.current_dice[i] = dice[i];
+            }
+        }
+    }
+}
+```
 ### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
