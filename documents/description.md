@@ -42,7 +42,7 @@
 | string | check_keep[5] | 주사위를 hold했는지 여부를 저장해두는 배열 |
 ---
 ### 3. 프로젝트에서 사용한 함수 설명
-mainwindow.cpp
+### mainwindow.cpp
 #### MainWindow::MainWindow(QWidget *parent)
 ```c++
 MainWindow::MainWindow(QWidget *parent)
@@ -117,7 +117,107 @@ void MainWindow::on_exitbutton_clicked() // MainWindow 내에 있는 exit 버튼
     QCoreApplication::exit(0); // 프로그램 종료
 }
 ```
-functions.cpp
+#### void MainWindow::on_creditsbutton_clicked()
+```c++
+void MainWindow::on_creditsbutton_clicked()
+{
+    // Credit에 필요한 objects는 표시, 불필요한 objects는 숨김처리 함
+    ui->playingplayer->setText("이 프로그램에 사용한 Open Source / Copyleft Source");
+    ui->gamestart->setVisible(false);
+    ui->startbutton->setVisible(false);
+    ui->howtobutton->setVisible(false);
+    ui->creditsbutton->setVisible(false);
+    ui->exitbutton->setVisible(false);
+    ui -> creditone -> setVisible(true);
+    ui -> backbutton -> setVisible(true);
+}
+```
+#### void MainWindow::on_backbutton_clicked()
+```c++
+void MainWindow::on_backbutton_clicked()
+{
+    // Credit에 진입할 때 했던 설정을 반대로 설정해 되돌림
+    ui->gamestart->setVisible(true);
+    ui->startbutton->setVisible(true);
+    ui->howtobutton->setVisible(true);
+    ui->creditsbutton->setVisible(true);
+    ui->exitbutton->setVisible(true);
+    ui->playingplayer->setText("");
+    ui -> backbutton -> setVisible(false);
+    ui -> creditone -> setVisible(false);
+}
+```
+#### void MainWindow::set_next_turn()
+```c++
+void MainWindow::set_next_turn()
+{
+    string temp;
+
+    if (++turn <= 24){ // 1을 증가시킨 턴이 24보다 작거나 같다면 (게임이 끝나지 않았다면)
+        if (turn % 2 == 1){ // 턴이 홀수인 경우 Player 1으로 셋팅
+            ui->playingplayer->setText("Player 1 is in control...");
+            for (int i=0; i<5; i++){
+                // 이전 턴에서 사용한 check_keep과 current_dice를 초기화 함
+                usr1.check_keep[i] = "0";
+                usr1.current_dice[i] = 0;
+            }
+            /*만약 digits가 6이거나 (1부터 6까지 전부 점수를 채웠거나) bonus의 값이 63보다 같거나 큰 경우에 if문을 들어감
+            여기서, Player 1 턴인데 왜 Player 2의 bonus를 계산하는가?
+            Player1 턴으로 넘어왔다는 것은 즉, Player 2의 턴이 끝났다는 말이기도 하므로
+            혹시 Player 2가 이 조건을 만족하는지 검사하는 것*/
+            if (usr2.digits == 6 || usr2.bonus >= 63){ 
+                if (usr2.bonus >= 63){ // digits로 조건을 만족해서 들어온 케이스를 위한 if문
+                    ui -> bonustwo -> setText("✓");
+                    usr2.all += 35; // usr2의 점수에 35점을 더함
+                    // GUI에 사용하는 string은 일반 string이 아니므로 전용 QString으로 Casting함
+                    QString all_qstr = QString::fromStdString(to_string(usr2.all));
+                    ui -> totaltwo -> setText(all_qstr);
+                    usr2.digits = 0; // 턴을 넘길 때마다 중복해서 if문이 실행되는 것을 막기위해 0으로 초기화
+                } else { // digits가 6이었으나 bonus의 값이 63을 넘기지 못한경우
+                    ui -> bonustwo -> setText("X");
+                    usr2.digits = 0;
+                }
+            }
+        }
+        else if (turn % 2 == 0){ // 턴이 홀수인 경우 Player 2로 셋팅
+            ui->playingplayer->setText("Player 2 is in control...");
+            for (int i=0; i<5; i++){
+                usr2.check_keep[i] = "0";
+                usr2.current_dice[i] = 0;
+            }
+            if (usr1.digits == 6 || usr1.bonus >= 63){ // 위와 마찬가지로 Player 1의 bonus를 검사
+                if (usr1.bonus >= 63){
+                    usr1.all += 35;
+                    ui -> bonusone -> setText("✓");
+                    QString all_qstr = QString::fromStdString(to_string(usr1.all));
+                    ui -> totalone -> setText(all_qstr);
+                    usr1.digits = 0;
+                } else {
+                    ui -> bonusone -> setText("X");
+                    usr1.digits = 0;
+                }
+            }
+        }
+        current_turn = 3; // 남은 턴의 횟수를 3으로 초기화
+        temp = to_string(current_turn) + " left";
+        QString lefttime_qstr = QString::fromStdString(temp);
+        ui -> lefttime -> setText(lefttime_qstr);
+        init_dice();  // 주사위 초기값 설정
+        refresh_keep(); // hold돼 있는 설정들 초기화
+        refresh_player_button(); // 현재 턴에 맞는 button 표시
+        Calc_Current_Score(); // 현재 나온 주사위로 얻을 수 있는 점수 계산
+        timer = 30; // timer를 30초로 다시 초기화
+        // 타이머 두개를 멈췄다 다시 시작함으로 재시작 기능 구현
+        Timer->stop();
+        Timer_label->stop();
+        Timer->start(30000);
+        Timer_label->start(1000);
+    } else { // 턴이 24를 넘겨 종료됐다면
+        Final_Score(); // 최종 승자 결정
+    }
+}
+```
+### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
 int user_score:: sum_digit(int flag)
