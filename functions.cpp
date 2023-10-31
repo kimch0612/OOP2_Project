@@ -46,11 +46,11 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
         case 7:
             all += 35;
             break;
-        case 8: // Choice
+        case 8:
             for (i=0; i<5; i++) temp += current_dice[i];
             all += temp;
             break;
-        case 9: // 4 kind
+        case 9:
             for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
             {
@@ -59,7 +59,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
             }
             all += temp;
             break;
-        case 10: // Full House
+        case 10:
             for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
             {
@@ -76,7 +76,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
                 }
             }
             break;
-        case 11: // S. Straight
+        case 11:
             for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
                 if (tmp[i] == 1) check_num++;
