@@ -81,7 +81,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
             break;
         case 9: // 4 kind
         /*4 kind의 경우에는 주사위 4개가 동일해야 하므로 
-        tmp배열에 '주사위 눈금 - 1'칸에 1씩 값을 더해 주사위의 개수를 카운트한다..*/
+        tmp배열에 '주사위 눈금 - 1'칸에 1씩 값을 더해 주사위의 개수를 카운트한다.*/
             for (i=0; i<5; i++)
                 tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
@@ -169,5 +169,16 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
 ```c++
 /*작동 방식은 sum_digit 함수와 완전히 동일하고, 점수를 반영할 필요가 없으므로
 all에 값을 더하는 작업만 삭제된 함수이다.*/
+``` 
+#### int dice_gen(void)
+```c++
+int dice_gen(void)
+{
+    random_device rd; // 랜덤 값을 생성하기 위해 시드 값(랜덤 시드)를 생성한다.
+    mt19937 gen(rd()); // Mersenne Twister 19937 엔진을 초기화하고 시드 값을 사용한다.
+    // 균등 분포에서 1부터 6까지의 정수를 생성하는 객체를 생성한다.
+    uniform_int_distribution<int> dis(1, 6); 
+    return dis(gen); // 생성한 객체를 return한다.
+}
 ``` 
 ---
