@@ -463,6 +463,90 @@ void MainWindow::refresh_player_button()
     }
 }
 ```
+#### void MainWindow::on_keep1b_clicked() // 1번째 주사위의 hold 버튼 클릭 시
+```c++
+/*keep 함수는 1부터 5까지 존재하며, 각각의 작동 방식은 모두 동일함
+이 문서에서는 keep1b만 예시로 설명함*/
+void MainWindow::on_keep1b_clicked()
+{
+    // 삼항연산자로 내가 수정하고자 하는 Player의 check_keep의 주소값을 받아옴
+    string& CheckKeep = (turn % 2 == 1) ? usr1.check_keep[0] : usr2.check_keep[0];
+
+    if (CheckKeep == "0") { // 만약 값이 0이라면 keep1의 text는 hold로, 값은 1로 설정함
+        ui->keep1->setText("hold");
+        CheckKeep = "1";
+    } else { // 값이 1이라면 keep1의 text는 지우고, 값은 0으로 설정함
+        ui->keep1->setText("");
+        CheckKeep = "0";
+    }
+}
+```
+#### void MainWindow::on_howtobutton_clicked()
+```c++
+void MainWindow::on_howtobutton_clicked() // MainWindow에서 manual 버튼을 클릭했을 때
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/kimch0612/OOP2_Project/blob/master/documents/manual.md", QUrl::TolerantMode)); // 해당 URL로 이동하게끔 설정
+    if (++cheat==3) ui->pushButton_2->setVisible(true);
+}
+```
+#### void MainWindow::Final_Score()
+```c++
+void MainWindow::Final_Score()
+{
+    // 게임 플레이중에 사용한 label들을 모두 비활성화
+    QList<QWidget*> widgetsToHide = {
+        ui->category, ui->playingplayer, ui->diceone,
+        ui->dicetwo, ui->dicethree, ui->dicefour,
+        ui->dicefive, ui->keep1b, ui->keep2b,
+        ui->keep3b, ui->keep4b, ui->keep5b,
+        ui->reroll, ui->lefttime, ui->keep1,
+        ui->keep2, ui->keep3, ui->keep4,
+        ui->keep5, ui->timer_label
+    };
+    for (QWidget* widget : widgetsToHide) {
+        widget->setVisible(false);
+    }
+    ui->gamestart->setVisible(true);
+    ui->gamestart->setText("Game Set!");
+    // calc_score(usr1, usr2) 함수를 실행해 나온 값을 기준으로 누가 이겼는지 표시함
+    if (calc_score(usr1, usr2) == 0)
+        ui->gameset->setText("User 1 Win!");
+    else if (calc_score(usr1, usr2) == 1)
+        ui->gameset->setText("User 2 Win!");
+    else
+        ui->gameset->setText("Draw");
+    // restart 버튼과 exit 버튼을 활성화
+    ui->restart->setVisible(true);
+    ui->exitbutton->setVisible(true);
+}
+```
+#### void MainWindow:: timer_update()
+```c++
+// 1초마다 Timer_label에 의해 실행되는 함수
+void MainWindow:: timer_update()
+{
+    // timer에서 1초만큼 감소시킨 값을 Player에게 보여줌으로써 자신의 턴이 몇초가 남았는지 알려줌
+    timer--;
+    string temp = "⏳" + to_string(timer) + "sec";
+    QString lefttimer = QString::fromStdString(temp);
+    ui->timer_label->setText(lefttimer);
+}
+```
+#### void MainWindow:: timeout()
+```c++
+// 30초가 지나면 Timer에 의해 실행되는 함수
+void MainWindow:: timeout()
+{
+    current_turn = 0; // 남은 턴을 0으로 초기화
+    string temp2 = "⏳0sec"; // 남은 시간을 0으로 표시
+    QString lefttimer = QString::fromStdString(temp2);
+    ui->timer_label->setText(lefttimer);
+    string temp1 = "timeout!"; // timeout 표시
+    QString lefttime_qstr = QString::fromStdString(temp1);
+    ui -> lefttime -> setText(lefttime_qstr);
+    Timer_label->stop(); // 같이 돌고있던 Timer_label 중지
+}
+```
 ### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
