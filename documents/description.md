@@ -298,6 +298,46 @@ void MainWindow::init_dice()
     }
 }
 ```
+#### void MainWindow::refresh_dice()
+```c++
+void MainWindow::refresh_dice()
+{
+    // 주사위 이미지와 값을 임시 저장해둘 dice_images와 dice 배열 선언
+    QPixmap dice_images[6];
+    dice_images[0].load(":/dice/images/one.png");
+    dice_images[1].load(":/dice/images/two.png");
+    dice_images[2].load(":/dice/images/three.png");
+    dice_images[3].load(":/dice/images/four.png");
+    dice_images[4].load(":/dice/images/five.png");
+    dice_images[5].load(":/dice/images/six.png");
+    int dice[5];
+    // 삼항연산자를 통해 현재 턴이 누구인지 확인하고, currentUser에 저장함
+    user_score& currentUser = (turn % 2 == 1) ? usr1 : usr2;
+
+    QLabel* diceLabels[5] = { // 주사위의 Label 정의
+        ui->diceone,
+        ui->dicetwo,
+        ui->dicethree,
+        ui->dicefour,
+        ui->dicefive
+    };
+
+    for (int i = 0; i < 5; i++){
+        /*check_keep에 1이 저장돼있지 않다면 (hold 버튼을 눌러두지 않았다면)
+        dice_gen() 함수를 통해 새로 생성한 값을 i번째 dice에 저장하고
+        1이 저장돼있다면 i번째 current_dice의 값을 dice에 저장함*/
+        if (currentUser.check_keep[i] != "1")
+            dice[i] = dice_gen();
+        else
+            dice[i] = currentUser.current_dice[i];
+
+        //현재의 값에 맞는 주사위를 띄움
+        diceLabels[i]->setPixmap(dice_images[dice[i] - 1].scaled(50, 50, Qt::KeepAspectRatio));
+    }
+    for (int i = 0; i < 5; i++)
+        currentUser.current_dice[i] = dice[i]; // current_dice와 dice를 동기화함
+}
+```
 ### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
