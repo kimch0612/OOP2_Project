@@ -217,6 +217,39 @@ void MainWindow::set_next_turn()
     }
 }
 ```
+#### MainWindow::on_oneonebutton_clicked()
+```c++
+/*점수를 기입하는 버튼의 Object name은 [button number][Player]button 으로 구성되어있다.
+ex) oneonebutton / onetwobutton
+    choiceonebutton / yahtzeetwobutton
+작동하는 방식은 모두 거의 유사하므로 대표로 oneonebutton만 기술함*/
+void MainWindow::on_oneonebutton_clicked()
+{
+    int score, all, bonus;
+
+    score = usr1.sum_digit(1); // sum_digit에 flag 1을 주고 return받은 값을 score에 대입함
+    all = usr1.all; // Player 1의 점수를 all에 저장함
+    /*Player 1의 bonus 점수를 bonus에 저장함
+    bonus는 1부터 6까지만 존재함*/
+    bonus = usr1.bonus;
+    /*Player 1이 1번째 칸에 점수를 기입했다는 뜻으로
+    Aces(0)부터 Yahztee(11)까지 총 12개의 칸이 존재한다.
+    이는 추후에 refresh_player_button() 함수를 호출했을 때 이미 기입한 칸에는 점수 기입 버튼이
+    다시 활성화되지 않게끔 막는 역할을 한다.*/
+    usr1.blank_flag[0] = 1;
+
+    // GUI에서 사용할 수 있게끔 Casting함
+    QString text_qstr = QString::fromStdString(to_string(score));
+    QString all_qstr = QString::fromStdString(to_string(all));
+    QString bonus_qstr = QString::fromStdString(to_string(bonus));
+    // GUI의 Label값을 최신화 함
+    ui -> oneone -> setText(text_qstr);
+    ui -> totalone -> setText(all_qstr);
+    ui -> bonusone -> setText(bonus_qstr);
+    ui -> oneonebutton -> setVisible(false);
+    set_next_turn(); // 다음 턴으로 전환
+}
+```
 ### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
