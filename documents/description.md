@@ -1,10 +1,9 @@
 # Yahztee Dice Program Description
 
 ## 목차
-1. [GUI 파트에서 사용한 Object들의 Object-Name 설명](#1-gui-파트에서-사용한-object들의-object-name-설명)
+1. [GUI 파트에서 사용한 Object들의 Object-Name 설명]()
 2. [프로젝트에서 사용한 변수 설명](#2-프로젝트에서-사용한-변수-설명)
 3. [프로젝트에서 사용한 함수 설명](#3-프로젝트에서-사용한-함수-설명)
-
 ---
 ### 1. GUI 파트에서 사용한 Object의 Object Name 설명
 | Section | Type | Name | Purpose |
