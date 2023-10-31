@@ -400,6 +400,69 @@ void MainWindow::Calc_Current_Score()
     }
 }
 ```
+#### void MainWindow::refresh_keep()
+```c++
+void MainWindow::refresh_keep()
+{
+    // hold가 적혀있던 label들의 값을 초기화함
+    ui -> keep1 -> setText("");
+    ui -> keep2 -> setText("");
+    ui -> keep3 -> setText("");
+    ui -> keep4 -> setText("");
+    ui -> keep5 -> setText("");
+}
+```
+#### void MainWindow::refresh_player_button()
+```c++
+void MainWindow::refresh_player_button()
+{
+    // Player 1과 2의 버튼을 배열에 정의
+    QPushButton* usr1_buttons[] = {
+        ui->oneonebutton,
+        ui->twoonebutton,
+        ui->threeonebutton,
+        ui->fouronebutton,
+        ui->fiveonebutton,
+        ui->sixonebutton,
+        ui->choiceonebutton,
+        ui->fkindonebutton,
+        ui->fullhouseonebutton,
+        ui->sstraightonebutton,
+        ui->lstraightonebutton,
+        ui->yahtzeeonebutton
+    };
+    QPushButton* usr2_buttons[] = {
+        ui->onetwobutton,
+        ui->twotwobutton,
+        ui->threetwobutton,
+        ui->fourtwobutton,
+        ui->fivetwobutton,
+        ui->sixtwobutton,
+        ui->choicetwobutton,
+        ui->fkindtwobutton,
+        ui->fullhousetwobutton,
+        ui->sstraighttwobutton,
+        ui->lstraighttwobutton,
+        ui->yahtzeetwobutton
+    };
+    if (turn % 2 == 1) { // Player 1의 턴이라면
+        for (QPushButton* button : usr2_buttons)
+            button->setVisible(false); // Player 2의 버튼을 모두 비활성화
+        for (int i = 0; i < 12; i++) {
+            // blank_flag가 1이 아닌 버튼들에 한해서만 활성화
+            if (usr1.blank_flag[i] != 1)
+                usr1_buttons[i]->setVisible(true);
+        }
+    } else {
+        for (QPushButton* button : usr1_buttons)
+            button->setVisible(false);
+        for (int i = 0; i < 12; i++) {
+            if (usr2.blank_flag[i] != 1)
+                usr2_buttons[i]->setVisible(true);
+        }
+    }
+}
+```
 ### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
