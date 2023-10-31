@@ -217,7 +217,7 @@ void MainWindow::set_next_turn()
     }
 }
 ```
-#### MainWindow::on_oneonebutton_clicked()
+#### MainWindow::on_oneonebutton_clicked() // Player 1의 Aces 버튼 클릭 시
 ```c++
 /*점수를 기입하는 버튼의 Object name은 [button number][Player]button 으로 구성되어있다.
 ex) oneonebutton / onetwobutton
@@ -336,6 +336,68 @@ void MainWindow::refresh_dice()
     }
     for (int i = 0; i < 5; i++)
         currentUser.current_dice[i] = dice[i]; // current_dice와 dice를 동기화함
+}
+```
+#### void MainWindow::on_reroll_clicked()
+```c++
+void MainWindow::on_reroll_clicked() // reroll 버튼 클릭 시
+{
+    if (current_turn > 0){
+        string temp;
+        refresh_dice(); // 주사위 재생성
+        current_turn--; // 남은 턴 횟수를 1만큼 감소시킴
+        temp = to_string(current_turn) + " left"; // 남은 턴을 알려주는 label에 사용할 text 정의
+        QString lefttime_qstr = QString::fromStdString(temp);
+        ui -> lefttime -> setText(lefttime_qstr);
+        Calc_Current_Score(); // 새로 뽑은 주사위로 얻을 수 있는 점수 계산
+    }
+}
+```
+#### void MainWindow::Calc_Current_Score()
+```c++
+void MainWindow::Calc_Current_Score()
+{
+    // Player 1과 2의 버튼들을 각각 배열로 정의함
+    QPushButton* usr1_buttons[] = {
+        ui->oneonebutton,
+        ui->twoonebutton,
+        ui->threeonebutton,
+        ui->fouronebutton,
+        ui->fiveonebutton,
+        ui->sixonebutton,
+        ui->choiceonebutton,
+        ui->fkindonebutton,
+        ui->fullhouseonebutton,
+        ui->sstraightonebutton,
+        ui->lstraightonebutton,
+        ui->yahtzeeonebutton
+    };
+    QPushButton* usr2_buttons[] = {
+        ui->onetwobutton,
+        ui->twotwobutton,
+        ui->threetwobutton,
+        ui->fourtwobutton,
+        ui->fivetwobutton,
+        ui->sixtwobutton,
+        ui->choicetwobutton,
+        ui->fkindtwobutton,
+        ui->fullhousetwobutton,
+        ui->sstraighttwobutton,
+        ui->lstraighttwobutton,
+        ui->yahtzeetwobutton
+    };
+    if (turn%2==1){ // Player 1의 턴이라면
+        for (int i=0; i<12; i++){
+            Aces부터 Yahtzee까지 쭉 돌면서 점수를 계산하고, 그 값을 button의 text에 반영함
+            QString tmp_qstr = QString::fromStdString(to_string(usr1.calc_current_score(i)));
+            usr1_buttons[i]->setText(tmp_qstr);
+        }
+    } else { // Player 2의 턴이라면
+        for (int i=0; i<12; i++){ // 위와 동일
+            QString tmp_qstr = QString::fromStdString(to_string(usr2.calc_current_score(i)));
+            usr2_buttons[i]->setText(tmp_qstr);
+        }
+    }
 }
 ```
 ### functions.cpp
