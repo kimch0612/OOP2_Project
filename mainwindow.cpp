@@ -682,8 +682,7 @@ void MainWindow::refresh_dice()
 
 void MainWindow::on_reroll_clicked()
 {
-    if (current_turn > 0)
-    {
+    if (current_turn > 0){
         string temp;
         refresh_dice();
         current_turn--;
@@ -724,18 +723,13 @@ void MainWindow::Calc_Current_Score()
         ui->lstraighttwobutton,
         ui->yahtzeetwobutton
     };
-    if (turn%2==1)
-    {
-        for (int i=0; i<12; i++)
-        {
+    if (turn%2==1){
+        for (int i=0; i<12; i++){
             QString tmp_qstr = QString::fromStdString(to_string(usr1.calc_current_score(i)));
             usr1_buttons[i]->setText(tmp_qstr);
         }
-    }
-    else
-    {
-        for (int i=0; i<12; i++)
-        {
+    } else {
+        for (int i=0; i<12; i++){
             QString tmp_qstr = QString::fromStdString(to_string(usr2.calc_current_score(i)));
             usr2_buttons[i]->setText(tmp_qstr);
         }
@@ -745,15 +739,10 @@ void MainWindow::Calc_Current_Score()
 void MainWindow::refresh_keep()
 {
     ui -> keep1 -> setText("");
-    ui -> keep1b -> setVisible(true);
     ui -> keep2 -> setText("");
-    ui -> keep2b -> setVisible(true);
     ui -> keep3 -> setText("");
-    ui -> keep3b -> setVisible(true);
     ui -> keep4 -> setText("");
-    ui -> keep4b -> setVisible(true);
     ui -> keep5 -> setText("");
-    ui -> keep5b -> setVisible(true);
 }
 
 void MainWindow::refresh_player_button()
@@ -787,10 +776,6 @@ void MainWindow::refresh_player_button()
         ui->yahtzeetwobutton
     };
     if (turn % 2 == 1) {
-        /*
-        함수포인터를 이용해서 코드를 최적화함.
-        https://github.com/kimch0612/OOP2_Project/commit/3aa930bcb2ee8e69e83b7ac70dc1077a4f46ce75
-        */
         for (QPushButton* button : usr2_buttons)
             button->setVisible(false);
         for (int i = 0; i < 12; i++) {
