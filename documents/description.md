@@ -43,8 +43,80 @@
 ---
 ### 3. 프로젝트에서 사용한 함수 설명
 mainwindow.cpp
+#### MainWindow::MainWindow(QWidget *parent)
 ```c++
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    setWindowIcon(QIcon(":/icon/images/icon.png")); // 프로그램의 icon 설정
+    setStyleSheet("background-color:blck"); // 프로그램의 배경 색 설정
+    QMainWindow::setWindowFlags( Qt::WindowTitleHint |  Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint );
+    ui->setupUi(this);
+    QList<QWidget*> widgetsToHide = { // 처음 시작했을 때 불필요한 Object의 리스트
+        ui->oneonebutton, ui->twoonebutton, ui->threeonebutton, ui->fouronebutton, ui->fiveonebutton, ui->sixonebutton,
+        ui->choiceonebutton, ui->fkindonebutton, ui->fullhouseonebutton, ui->sstraightonebutton, ui->lstraightonebutton, ui->yahtzeeonebutton,
+        ui->totalone, ui->onetwobutton, ui->twotwobutton, ui->threetwobutton, ui->fourtwobutton, ui->fivetwobutton, ui->sixtwobutton,
+        ui->choicetwobutton, ui->fkindtwobutton, ui->fullhousetwobutton, ui->sstraighttwobutton, ui->lstraighttwobutton, ui->yahtzeetwobutton,
+        ui->totaltwo, ui->backbutton, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
+        ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->creditone, ui->backbutton, ui->bonusone, ui->bonustwo,
+        ui->bonusonebutton, ui->pushButton, ui->backbutton, ui->restart, ui->pushButton_2
+    };
+    for (QWidget* widget : widgetsToHide) {
+        widget->setVisible(false); // 모두 보이지 않게끔 설정함
+    }
+    // credit 내에 있는 첫번째 item의 hyper link 설정
+    ui -> creditone -> setText("<a href=\"https://www.pngwing.com/en/free-png-sptdk/\">Program Title icon</a>");
+    ui -> creditone -> setTextFormat(Qt::RichText);
+    ui -> creditone -> setTextInteractionFlags(Qt::TextBrowserInteraction);
+    ui -> creditone -> setOpenExternalLinks(true);
+}
 ``` 
+#### void MainWindow::on_startbutton_clicked()
+``` c++
+void MainWindow::on_startbutton_clicked() // MainWindow에 있는 Start button을 Click 했을 때 실행할 이벤트 
+{
+    QList<QWidget*> widgetsToHide = {ui->gamestart, ui->startbutton, ui->howtobutton, ui->creditsbutton, ui->exitbutton, ui->backbutton, ui->gamestart, ui->restart};
+    for (QWidget* widget : widgetsToHide) {
+        widget->setVisible(false); // 게임을 시작했을 때 불필요한 요소들을 보이지 않게끔 처리
+    }
+    QList<QWidget*> widgetsToShow = {
+        ui->oneonebutton, ui->twoonebutton, ui->threeonebutton, ui->fouronebutton, ui->fiveonebutton, ui->sixonebutton,
+        ui->choiceonebutton, ui->fkindonebutton, ui->fullhouseonebutton, ui->sstraightonebutton, ui->lstraightonebutton, ui->yahtzeeonebutton,
+        ui->totalone, ui->totaltwo, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
+        ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->bonusone, ui->bonustwo
+    };
+    for (QWidget* widget : widgetsToShow) {
+        widget->setVisible(true); // 게임을 시작했을 때 필요한 요소들을 보이게끔 처리
+    }
+    
+    //턴이 홀수라면 Player 1, 짝수라면 Player 2가 플레이 중이라고 Label을 업데이트
+    if (turn % 2 == 1)
+        ui->playingplayer->setText("Player 1 is in control...");
+    else if (turn % 2 == 0)
+        ui->playingplayer->setText("Player 2 is in control...");
+
+    init_dice(); // 주사위 초기값 설정
+    ui -> lefttime -> setText("3 left"); // 남은 턴 횟수 표시
+    ui -> category -> setText("← Choose category"); // 카테고리 관련 라벨 표시
+    Calc_Current_Score(); // 현재 나온 주사위로 얻을 수 있는 점수 계산
+    // Turn 종료 관련 Timer 선언 및 시작
+    Timer = new QTimer(this);
+    connect(Timer, SIGNAL(timeout()), this, SLOT(timeout()));
+    Timer->start(30000);
+    // User에게 자신의 턴이 몇 초나 남았는지 알려주는 Timer 선언 및 시작
+    Timer_label = new QTimer(this);
+    connect(Timer_label, SIGNAL(timeout()), this, SLOT(timer_update()));
+    Timer_label->start(1000);
+}
+```
+#### void MainWindow::on_exitbutton_clicked()
+```c++
+void MainWindow::on_exitbutton_clicked() // MainWindow 내에 있는 exit 버튼 클릭 시
+{
+    QCoreApplication::exit(0); // 프로그램 종료
+}
+```
 functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
