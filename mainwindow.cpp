@@ -104,53 +104,40 @@ void MainWindow::set_next_turn()
 {
     string temp;
 
-    if (++turn <= 24)
-    {
-        if (turn % 2 == 1)
-        {
+    if (++turn <= 24){
+        if (turn % 2 == 1){
             ui->playingplayer->setText("Player 1 is in control...");
-            for (int i=0; i<5; i++)
-            {
+            for (int i=0; i<5; i++){
                 usr1.check_keep[i] = "0";
                 usr1.current_dice[i] = 0;
             }
-            if (usr2.digits == 6 || usr2.bonus >= 63)
-            {
-                if (usr2.bonus >= 63)
-                {
+            if (usr2.digits == 6 || usr2.bonus >= 63){
+                if (usr2.bonus >= 63){
                     ui -> bonustwo -> setText("✓");
                     usr2.all += 35;
                     QString all_qstr = QString::fromStdString(to_string(usr2.all));
                     ui -> totaltwo -> setText(all_qstr);
                     usr2.digits = 0;
-                }
-                else
-                {
+                } else {
                     ui -> bonustwo -> setText("X");
                     usr2.digits = 0;
                 }
             }
         }
-        else if (turn % 2 == 0)
-        {
+        else if (turn % 2 == 0){
             ui->playingplayer->setText("Player 2 is in control...");
-            for (int i=0; i<5; i++)
-            {
+            for (int i=0; i<5; i++){
                 usr2.check_keep[i] = "0";
                 usr2.current_dice[i] = 0;
             }
-            if (usr1.digits == 6 || usr1.bonus >= 63)
-            {
-                if (usr1.bonus >= 63)
-                {
+            if (usr1.digits == 6 || usr1.bonus >= 63){
+                if (usr1.bonus >= 63){
                     usr1.all += 35;
                     ui -> bonusone -> setText("✓");
                     QString all_qstr = QString::fromStdString(to_string(usr1.all));
                     ui -> totalone -> setText(all_qstr);
                     usr1.digits = 0;
-                }
-                else
-                {
+                } else {
                     ui -> bonusone -> setText("X");
                     usr1.digits = 0;
                 }
@@ -680,8 +667,7 @@ void MainWindow::refresh_dice()
         ui->dicefive
     };
 
-    for (int i = 0; i < 5; i++)
-    {
+    for (int i = 0; i < 5; i++){
         if (currentUser.check_keep[i] != "1")
             dice[i] = dice_gen();
         else
