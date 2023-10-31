@@ -130,84 +130,67 @@ int user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2
     switch(flag)
     {
     case 0:
-            for (i=0; i<5; i++)
-                if (current_dice[i] == 1) temp += current_dice[i];
+            for (i=0; i<5; i++) if (current_dice[i] == 1) temp += current_dice[i];
             break;
     case 1:
-            for (i=0; i<5; i++)
-                if (current_dice[i] == 2) temp += current_dice[i];
+            for (i=0; i<5; i++) if (current_dice[i] == 2) temp += current_dice[i];
             break;
     case 2:
-            for (i=0; i<5; i++)
-                if (current_dice[i] == 3) temp += current_dice[i];
+            for (i=0; i<5; i++) if (current_dice[i] == 3) temp += current_dice[i];
             break;
     case 3:
-            for (i=0; i<5; i++)
-                if (current_dice[i] == 4) temp += current_dice[i];
+            for (i=0; i<5; i++) if (current_dice[i] == 4) temp += current_dice[i];
             break;
     case 4:
-            for (i=0; i<5; i++)
-                if (current_dice[i] == 5) temp += current_dice[i];
+            for (i=0; i<5; i++) if (current_dice[i] == 5) temp += current_dice[i];
             break;
     case 5:
-            for (i=0; i<5; i++)
-                if (current_dice[i] == 6) temp += current_dice[i];
+            for (i=0; i<5; i++) if (current_dice[i] == 6) temp += current_dice[i];
             break;
     case 6: // Choice
-            for (i=0; i<5; i++)
-                temp += current_dice[i];
+            for (i=0; i<5; i++) temp += current_dice[i];
             break;
     case 7: // 4 kind
-            for (i=0; i<5; i++)
-                tmp[current_dice[i] - 1] += 1;
+            for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
             {
                 if (tmp[i] >= 4)
                 {
-                    for (int index=0; index<6; index++)
-                        temp += tmp[index] * (index + 1);
+                    for (int index=0; index<6; index++) temp += tmp[index] * (index + 1);
                 }
             }
             break;
     case 8: // Full House
-            for (i=0; i<5; i++)
-                tmp[current_dice[i] - 1] += 1;
+            for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
             {
                 if (tmp[i] == 2)
                 {
                     for (int index=0; index<6; index++)
                     {
-                        if (tmp[index] == 3)
-                            temp = tmp[i]*(i+1) + tmp[index]*(index+1);
+                        if (tmp[index] == 3) temp = tmp[i]*(i+1) + tmp[index]*(index+1);
                     }
                 }
             }
             break;
     case 9: // S. Straight
-            for (i=0; i<5; i++)
-                tmp[current_dice[i] - 1] += 1;
+            for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
                 if (tmp[i] == 1) check_num++;
                 else if (tmp[i] == 2 && flag1){
                     check_num++;
                     flag1 = false;
                 }
-            if (check_num >= 4)
-                temp = 15;
+            if (check_num >= 4) temp = 15;
             break;
     case 10: // L. Straight
-            for (i=0; i<5; i++)
-                tmp[current_dice[i] - 1] += 1;
-            for (i=0; i<6; i++)
-                if (tmp[i] == 1) check_num++;
-            if (check_num == 5)
-                temp = 30;
+            for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
+            for (i=0; i<6; i++) if (tmp[i] == 1) check_num++;
+            if (check_num == 5) temp = 30;
             break;
     case 11: // Yahtzee
             for (i=0; i<5; i++){
-                if (current_dice[i] == 0 || current_dice[0] != current_dice[i])
-                    return 0;
+                if (current_dice[i] == 0 || current_dice[0] != current_dice[i]) return 0;
             }
             temp = 50;
             break;
