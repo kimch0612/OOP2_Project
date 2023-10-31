@@ -547,6 +547,53 @@ void MainWindow:: timeout()
     Timer_label->stop(); // 같이 돌고있던 Timer_label 중지
 }
 ```
+#### void MainWindow::on_restart_clicked() // restart 버튼 클릭 시
+```c++
+void MainWindow::on_restart_clicked()
+{
+    // 값을 초기화해야 하는 label들을 배열로 정의
+    QList<QLabel*> widgetsToReset = {
+        ui->oneone, ui->twoone, ui->threeone, ui->fourone, ui->fiveone, ui->sixone,
+        ui->choiceone, ui->fkindone, ui->fullhouseone, ui->sstraightone, ui->lstraightone, ui->yahtzeeone,
+        ui->onetwo, ui->twotwo, ui->threetwo, ui->fourtwo, ui->fivetwo, ui->sixtwo,
+        ui->choicetwo, ui->fkindtwo, ui->fullhousetwo, ui->sstraighttwo, ui->lstraighttwo, ui->yahtzeetwo
+    };
+    for (QLabel* widget : widgetsToReset) {
+        widget->setText(""); // 값을 초기화
+    }
+    QList<QWidget*> widgetsToShow = { // 숨겨놨던 게임에 필요한 Object들을 다시 활성화
+        ui->oneonebutton, ui->twoonebutton, ui->threeonebutton, ui->fouronebutton, ui->fiveonebutton, ui->sixonebutton,
+        ui->choiceonebutton, ui->fkindonebutton, ui->fullhouseonebutton, ui->sstraightonebutton, ui->lstraightonebutton, ui->yahtzeeonebutton,
+        ui->totalone, ui->totaltwo, ui->reroll, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5,
+        ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b, ui->bonusone, ui->bonustwo, ui->category, ui->playingplayer, ui->diceone,
+        ui->dicetwo, ui->dicethree, ui->dicefour, ui->dicefive, ui->keep1b, ui->keep2b, ui->keep3b, ui->keep4b, ui->keep5b,
+        ui->reroll, ui->lefttime, ui->keep1, ui->keep2, ui->keep3, ui->keep4, ui->keep5, ui->timer_label
+    };
+    for (QWidget* widget : widgetsToShow) {
+        widget->setVisible(true);
+    }
+    // restart 버튼과 exit 버튼을 비활성화
+    ui->restart->setVisible(false);
+    ui->exitbutton->setVisible(false);
+    // total과 bonus의 label을 0으로 초기화
+    ui->totalone->setText("0");
+    ui->totaltwo->setText("0");
+    ui->bonusone->setText("0");
+    ui->bonustwo->setText("0");
+    // 승자를 알려주던 label의 text를 삭제
+    ui->gameset->setText("");
+    // Player 1과 2의 멤버 변수들을 초기화
+    usr1.reset_variable();
+    usr2.reset_variable();
+    // 턴과 현재 남은 턴을 초기화
+    turn=1, current_turn=3;
+    // 두개의 Timer를 정지
+    Timer->stop();
+    Timer_label->stop();
+    // 맨 처음에 start 버튼을 누른 것과 동일하게 게임을 시작
+    on_startbutton_clicked();
+}
+```
 ### functions.cpp
 #### int user_score:: sum_digit(int flag)
 ```c++
