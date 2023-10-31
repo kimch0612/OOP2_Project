@@ -1,6 +1,6 @@
 #include "functions.h"
 
-int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
+int user_score:: sum_digit(int flag)
 {
     int i, check_num = 0, temp = 0;
     int tmp[] = {0, 0, 0, 0, 0, 0};
@@ -98,7 +98,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
     return temp;
 }
 
-int user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2)
+int user_score:: calc_current_score(int flag)
 {
     int i, check_num = 0, temp = 0;
     int tmp[] = {0, 0, 0, 0, 0, 0};
