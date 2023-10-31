@@ -11,7 +11,7 @@
 | - | - | - | - |
 ---
 ### 2. 프로젝트에서 사용한 변수 설명
-#### mainwindow.cpp file
+#### mainwindow.cpp
 | Type | Name | Purpose |
 |:---|:---|:---|
 | int | turn | 현재 누구의 턴인지 확인하기 위한 변수 |
@@ -24,14 +24,14 @@
 | int | dice[5] | dice_gen() 함수를 통해 생성한 난수를 저장해두기 위한 지역배열 |
 | string | temp | 함수 내에서 임시적으로 string문을 처리하기 위한 지역변수 |
 | string | check_keep | 이 주사위가 현재 hold되어있는지 확인하는 지역 문자열 |
-#### functions.cpp file
+#### functions.cpp
 | Type | Name | Purpose |
 |:---|:---|:---|
 | int | temp | sum_digit()함수에서 값을 return하기 전까지 결괏값을 임시 저장하는 지역변수 |
 | int | check_num | straight 시리즈에서 값이 유효한지 확인하기 위한 지역변수 |
 | int | tmp[] | - |
 | bool | flag1 | - |
-#### functions.h file
+#### functions.h
 | Type | Name | Purpose |
 |:---|:---|:---|
 | int | all | 점수의 총 합이 저장되어있는 변수 |
@@ -42,11 +42,11 @@
 | string | check_keep[5] | 주사위를 hold했는지 여부를 저장해두는 배열 |
 ---
 ### 3. 프로젝트에서 사용한 함수 설명
-mainwindow.cpp file
+mainwindow.cpp
 ```c++
 ``` 
-functions.cpp file
-#### user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
+functions.cpp
+#### int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
 ```c++
 int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
 {
@@ -165,7 +165,7 @@ int user_score:: sum_digit(int flag, user_score& usr1, user_score& usr2)
     return temp; // 계산한 값을 label에도 적용해줘야 하므로 temp값을 return 해준다.
 }
 ``` 
-#### user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2)
+#### int user_score:: calc_current_score(int flag, user_score& usr1, user_score& usr2)
 ```c++
 /*작동 방식은 sum_digit 함수와 완전히 동일하고, 점수를 반영할 필요가 없으므로
 all에 값을 더하는 작업만 삭제된 함수이다.*/
@@ -179,6 +179,30 @@ int dice_gen(void)
     // 균등 분포에서 1부터 6까지의 정수를 생성하는 객체를 생성한다.
     uniform_int_distribution<int> dis(1, 6); 
     return dis(gen); // 생성한 객체를 return한다.
+}
+``` 
+#### int calc_score(user_score usr1, user_score usr2)
+```c++
+int calc_score(user_score usr1, user_score usr2)
+{
+    if (usr1.all > usr2.all) return 0; // usr1의 점수가 usr2의 점수보다 높다면 0을 리턴한다.
+    else if (usr1.all < usr2.all) return 1; // 그 반대라면 1을 리턴한다.
+    else return 2; // 점수가 동일한 경우 2를 리턴한다.
+}
+``` 
+#### void user_score:: reset_variable()
+```c++
+void user_score:: reset_variable()
+{
+    // functions.h에서 선언한 멤버 변수들을 초기화해준다.
+    all=0, bonus=0, digits=0;
+    for (int i=0; i<5; i++)
+    {
+        current_dice[i] = 0;
+        check_keep[i] = "0";
+    }
+    for (int i=0; i<12; i++)
+        blank_flag[i] = 0;
 }
 ``` 
 ---
