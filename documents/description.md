@@ -750,6 +750,8 @@ void user_score:: reset_variable()
 ``` 
 ---
 ### 3. Program의 FlowChart
-To be added. 
+![image](https://github.com/kimch0612/OOP2_Project/assets/10193967/6225d834-0f2f-4350-a48c-66202d53c841)
+
 
 ---
+끝.
