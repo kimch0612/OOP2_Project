@@ -5,7 +5,7 @@
 | Type | Content |
 |:---|:---|
 | OS | Windows 11 22H2 22621.2283 |
-| Architecture | amd64 |
+| Architecture | Amd64 |
 | Compiler | Desktop Qt 6.5.2 MinGW 64-bit |
 | IDE | Qt Creator 11.0.2 && Code-Server (VSCode) |
 
@@ -22,7 +22,7 @@
 
 ## 빌드 및 실행방법
 - CMakeLists.txt 파일을 Qt Creator IDE로 실행합니다.
-- 디버깅 모드로 빌드 및 실행합니다.
+- 프로젝트를 빌드 및 실행합니다.
 
 ## 이 프로젝트에서 사용하는 문서들
 - [Project Convention](./documents/Convention.md)
