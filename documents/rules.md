@@ -57,7 +57,7 @@
 - Fives: 5가 나온 주사위의 개수와 합계 점수
 - Sixes: 6이 나온 주사위의 개수와 합계 점수
 - Upper Section Bonus: 상위 섹션의 점수 합계가 63 이상일 경우 35점의 보너스를 획득.
-#### c-y dice section: Choice에서의 조건
+#### c-y dice section:에서의 조건
 - Choice: 어떤 숫자든 상관 없이 주사위의 합계.
 - 4 Kind of: 네 개 이상의 동일한 숫자를 얻으면 모든 주사위의 합계.
 - Full House: 세 개의 동일한 숫자와 두 개의 다른 동일한 숫자를 얻으면 25점.
