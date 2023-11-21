@@ -56,7 +56,7 @@
 - Fours: 4가 나온 주사위의 개수와 합계 점수
 - Fives: 5가 나온 주사위의 개수와 합계 점수
 - Sixes: 6이 나온 주사위의 개수와 합계 점수
-- Upper Section Bonus: 상위 섹션의 점수 합계가 63 이상일 경우 35점의 보너스를 획득.
+- Bonus: digit dice section의 점수 합계가 63 이상일 경우 35점의 보너스를 획득.
 #### c-y dice section:에서의 조건
 - Choice: 어떤 숫자든 상관 없이 주사위의 합계.
 - 4 Kind of: 네 개 이상의 동일한 숫자를 얻으면 모든 주사위의 합계.
