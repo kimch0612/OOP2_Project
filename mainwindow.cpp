@@ -165,7 +165,7 @@ void MainWindow::on_oneonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(1);
+    score = usr1.sum_digit(1, 1);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[0] = 1;
@@ -184,7 +184,7 @@ void MainWindow::on_twoonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(2);
+    score = usr1.sum_digit(2, 1);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[1] = 1;
@@ -203,7 +203,7 @@ void MainWindow::on_threeonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(3);
+    score = usr1.sum_digit(3, 1);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[2] = 1;
@@ -223,7 +223,7 @@ void MainWindow::on_fouronebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(4);
+    score = usr1.sum_digit(4, 1);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[3] = 1;
@@ -243,7 +243,7 @@ void MainWindow::on_fiveonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(5);
+    score = usr1.sum_digit(5, 1);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[4] = 1;
@@ -263,7 +263,7 @@ void MainWindow::on_sixonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(6);
+    score = usr1.sum_digit(6, 1);
     all = usr1.all;
     bonus = usr1.bonus;
     usr1.blank_flag[5] = 1;
@@ -283,7 +283,7 @@ void MainWindow::on_choiceonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(8);
+    score = usr1.sum_digit(8, 1);
     all = usr1.all;
     usr1.blank_flag[6] = 1;
 
@@ -300,7 +300,7 @@ void MainWindow::on_fkindonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(9);
+    score = usr1.sum_digit(9, 1);
     all = usr1.all;
     usr1.blank_flag[7] = 1;
 
@@ -317,7 +317,7 @@ void MainWindow::on_fullhouseonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(10);
+    score = usr1.sum_digit(10, 1);
     all = usr1.all;
     usr1.blank_flag[8] = 1;
 
@@ -334,7 +334,7 @@ void MainWindow::on_sstraightonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(11);
+    score = usr1.sum_digit(11, 1);
     all = usr1.all;
     usr1.blank_flag[9] = 1;
 
@@ -351,7 +351,7 @@ void MainWindow::on_lstraightonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(12);
+    score = usr1.sum_digit(12, 1);
     all = usr1.all;
     usr1.blank_flag[10] = 1;
 
@@ -368,7 +368,7 @@ void MainWindow::on_yahtzeeonebutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr1.sum_digit(13);
+    score = usr1.sum_digit(13, 1);
     all = usr1.all;
     usr1.blank_flag[11] = 1;
 
@@ -385,7 +385,7 @@ void MainWindow::on_onetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(1);
+    score = usr2.sum_digit(1, 1);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[0] = 1;
@@ -405,7 +405,7 @@ void MainWindow::on_twotwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(2);
+    score = usr2.sum_digit(2, 1);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[1] = 1;
@@ -425,7 +425,7 @@ void MainWindow::on_threetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(3);
+    score = usr2.sum_digit(3, 1);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[2] = 1;
@@ -445,7 +445,7 @@ void MainWindow::on_fourtwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(4);
+    score = usr2.sum_digit(4, 1);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[3] = 1;
@@ -465,7 +465,7 @@ void MainWindow::on_fivetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(5);
+    score = usr2.sum_digit(5, 1);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[4] = 1;
@@ -485,7 +485,7 @@ void MainWindow::on_sixtwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(6);
+    score = usr2.sum_digit(6, 1);
     all = usr2.all;
     bonus = usr2.bonus;
     usr2.blank_flag[5] = 1;
@@ -505,7 +505,7 @@ void MainWindow::on_choicetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(8);
+    score = usr2.sum_digit(8, 1);
     all = usr2.all;
     usr2.blank_flag[6] = 1;
 
@@ -522,7 +522,7 @@ void MainWindow::on_fkindtwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(9);
+    score = usr2.sum_digit(9, 1);
     all = usr2.all;
     usr2.blank_flag[7] = 1;
 
@@ -539,7 +539,7 @@ void MainWindow::on_fullhousetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(10);
+    score = usr2.sum_digit(10, 1);
     all = usr2.all;
     usr2.blank_flag[8] = 1;
 
@@ -556,7 +556,7 @@ void MainWindow::on_sstraighttwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(11);
+    score = usr2.sum_digit(11, 1);
     all = usr2.all;
     usr2.blank_flag[9] = 1;
 
@@ -573,7 +573,7 @@ void MainWindow::on_lstraighttwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(12);
+    score = usr2.sum_digit(12, 1);
     all = usr2.all;
     usr2.blank_flag[10] = 1;
 
@@ -590,7 +590,7 @@ void MainWindow::on_yahtzeetwobutton_clicked()
 {
     int score, all, bonus;
 
-    score = usr2.sum_digit(13);
+    score = usr2.sum_digit(13, 1);
     all = usr2.all;
     usr2.blank_flag[11] = 1;
 
