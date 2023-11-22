@@ -725,12 +725,12 @@ void MainWindow::Calc_Current_Score()
     };
     if (turn%2==1){
         for (int i=0; i<12; i++){
-            QString tmp_qstr = QString::fromStdString(to_string(usr1.calc_current_score(i)));
+            QString tmp_qstr = QString::fromStdString(to_string(usr1.sum_digit(i, 2)));
             usr1_buttons[i]->setText(tmp_qstr);
         }
     } else {
         for (int i=0; i<12; i++){
-            QString tmp_qstr = QString::fromStdString(to_string(usr2.calc_current_score(i)));
+            QString tmp_qstr = QString::fromStdString(to_string(usr2.sum_digit(i, 2)));
             usr2_buttons[i]->setText(tmp_qstr);
         }
     }
