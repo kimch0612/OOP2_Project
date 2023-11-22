@@ -80,10 +80,11 @@ int user_score:: sum_digit(int flag1, int flag2)
     if ((flag1 <= 1 && 6 <= flag1) && flag2 == 1)
     {
         digits++;
-        all += temp;
         bonus += temp;
+        all += temp;
     }
-    else if ()
+    else if (flag1 > 6 && flag2 == 1)
+        all += temp;
     return temp;
 }
 
