@@ -1,46 +1,28 @@
 #include "functions.h"
 
-int user_score:: sum_digit(int flag)
+int user_score:: sum_digit(int flag1, int flag2)
 {
     int i, check_num = 0, temp = 0;
     int tmp[] = {0, 0, 0, 0, 0, 0};
-    bool flag1 = true;
-    switch(flag){
+    bool flag3 = true;
+    switch(flag1){
         case 1:
             for (i=0; i<5; i++) if (current_dice[i] == 1) temp += current_dice[i];
-            digits++;
-            all += temp;
-            bonus += temp;
             break;
         case 2:
             for (i=0; i<5; i++) if (current_dice[i] == 2) temp += current_dice[i];
-            digits++;
-            all += temp;
-            bonus += temp;
             break;
         case 3:
             for (i=0; i<5; i++) if (current_dice[i] == 3) temp += current_dice[i];
-            digits++;
-            all += temp;
-            bonus += temp;
             break;
         case 4:
             for (i=0; i<5; i++) if (current_dice[i] == 4) temp += current_dice[i];
-            digits++;
-            all += temp;
-            bonus += temp;
             break;
         case 5:
             for (i=0; i<5; i++) if (current_dice[i] == 5) temp += current_dice[i];
-            digits++;
-            all += temp;
-            bonus += temp;
             break;
         case 6:
             for (i=0; i<5; i++) if (current_dice[i] == 6) temp += current_dice[i];
-            digits++;
-            all += temp;
-            bonus += temp;
             break;
         case 7:
             all += 35;
@@ -74,9 +56,9 @@ int user_score:: sum_digit(int flag)
             for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
                 if (tmp[i] == 1) check_num++;
-                else if (tmp[i] == 2 && flag1){
+                else if (tmp[i] == 2 && flag3){
                     check_num++;
-                    flag1 = false;
+                    flag3 = false;
                 }
             if (check_num >= 4) temp = 15;
             all += temp;
@@ -95,6 +77,13 @@ int user_score:: sum_digit(int flag)
             all += temp;
             break;
     }
+    if ((flag1 <= 1 && 6 <= flag1) && flag2 == 1)
+    {
+        digits++;
+        all += temp;
+        bonus += temp;
+    }
+    else if ()
     return temp;
 }
 
@@ -102,7 +91,7 @@ int user_score:: calc_current_score(int flag)
 {
     int i, check_num = 0, temp = 0;
     int tmp[] = {0, 0, 0, 0, 0, 0};
-    bool flag1 = true;
+    bool flag3 = true;
     switch(flag){
     case 0:
             for (i=0; i<5; i++) if (current_dice[i] == 1) temp += current_dice[i];
@@ -110,7 +99,7 @@ int user_score:: calc_current_score(int flag)
     case 1:
             for (i=0; i<5; i++) if (current_dice[i] == 2) temp += current_dice[i];
             break;
-    case 2:
+    case 2:ㄴ
             for (i=0; i<5; i++) if (current_dice[i] == 3) temp += current_dice[i];
             break;
     case 3:
@@ -145,9 +134,9 @@ int user_score:: calc_current_score(int flag)
             for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++)
                 if (tmp[i] == 1) check_num++;
-                else if (tmp[i] == 2 && flag1){
+                else if (tmp[i] == 2 && flag3){
                     check_num++;
-                    flag1 = false;
+                    flag3 = false;
                 }
             if (check_num >= 4) temp = 15;
             break;
