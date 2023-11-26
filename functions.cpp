@@ -44,10 +44,7 @@ int user_score:: sum_digit(int flag1, int flag2)
             for (i=0; i<6; i++){
                 if (tmp[i] == 2){
                     for (int index=0; index<6; index++){
-                        if (tmp[index] == 3){
                             temp += tmp[i]*(i+1) + tmp[index]*(index+1);
-                            all += temp;
-                        }
                     }
                 }
             }
@@ -61,20 +58,17 @@ int user_score:: sum_digit(int flag1, int flag2)
                     flag3 = false;
                 }
             if (check_num >= 4) temp = 15;
-            all += temp;
             break;
         case 12:
             for (i=0; i<5; i++) tmp[current_dice[i] - 1] += 1;
             for (i=0; i<6; i++) if (tmp[i] == 1) check_num++;
             if (check_num == 5) temp = 30;
-            all += temp;
             break;
         case 13:
             for (i=0; i<5; i++){
                 if (current_dice[i] == 0 || current_dice[0] != current_dice[i]) return 0;
             }
             temp = 50;
-            all += temp;
             break;
     }
     if ((flag1 <= 1 && 6 <= flag1) && flag2 == 1)
