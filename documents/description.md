@@ -1,8 +1,8 @@
 # Yahztee Dice Program Description
 
 ## INDEX
-1. [Variables Part](#2-프로젝트에서-사용한-변수-설명)
-2. [Functions Part](#3-프로젝트에서-사용한-함수-설명)
+1. [Variables Part](#1-프로젝트에서-사용한-변수-설명)
+2. [Functions Part](#2-프로젝트에서-사용한-함수-설명)
 3. [FlowChart](#3-program의-flowchart)
 ---
 ### 1. 프로젝트에서 사용한 변수 설명
