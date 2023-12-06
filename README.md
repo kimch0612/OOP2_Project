@@ -32,3 +32,10 @@
 - [주차별 개발 현황](./documents/weekly_changelog.md)
 - [게임 매뉴얼](./documents/manual.md)
 - [게임 룰](./documents/rules.md)
+
+## 프로젝트 팀원
+- 20 김창환 (조장)
+- 20 강형원 (자료조사)
+- 20 김서진 (서기)
+- 20 조현준 (ppt)
+- 20 김준 (형상관리)
